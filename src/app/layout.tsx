@@ -12,7 +12,7 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Landry - Creative Developer",
+  title: "Landry - Developpeur fullstack",
   description:
     "A Creative Developer based in France. I strive to build immersive and beautiful web applications through carefully crafted user-friendly design.",
 }

@@ -58,11 +58,11 @@ export function HeroSection() {
 
               <div className="animate-on-scroll opacity-0" style={{ animationDelay: "0.2s" }}>
                 <h1 className="text-6xl lg:text-7xl font-bold leading-tight">
-                  <span className="block text-gray-900">Creative</span>
+                  <span className="block text-gray-900">a Fullstack</span>
                   <span className="block">
-                    <span className="text-gray-900">UI/UX Desi</span>
-                    <span className="text-orange-500">g</span>
-                    <span className="text-gray-900">ner</span>
+                    <span className="text-gray-900">Develo</span>
+                    <span className="text-orange-500">p</span>
+                    <span className="text-gray-900">per</span>
                   </span>
                 </h1>
               </div>

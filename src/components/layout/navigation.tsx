@@ -1,21 +1,21 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { Menu, X, Search } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Menu, X, Search } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function Navigation() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
-  const pathname = usePathname()
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50)
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navItems = [
     { href: "/", label: "home" },
@@ -25,7 +25,7 @@ export function Navigation() {
     { href: "/testimonial", label: "testimonial" },
     { href: "/blog", label: "blog" },
     { href: "/contact", label: "contact" },
-  ]
+  ];
 
   return (
     <nav
@@ -37,7 +37,7 @@ export function Navigation() {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link href="/" className="text-2xl font-bold text-gray-900">
-            LANDRY
+            r.Landry
           </Link>
 
           <div className="hidden lg:flex items-center space-x-8">
@@ -46,7 +46,9 @@ export function Navigation() {
                 key={item.href}
                 href={item.href}
                 className={`text-sm font-medium transition-colors duration-200 ${
-                  pathname === item.href ? "text-gray-900" : "text-gray-600 hover:text-gray-900"
+                  pathname === item.href
+                    ? "text-gray-900"
+                    : "text-gray-600 hover:text-gray-900"
                 }`}
               >
                 {item.label}
@@ -59,7 +61,10 @@ export function Navigation() {
               <Search size={18} />
             </Button>
 
-            <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden p-2">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="lg:hidden p-2"
+            >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
@@ -82,5 +87,5 @@ export function Navigation() {
         )}
       </div>
     </nav>
-  )
+  );
 }
