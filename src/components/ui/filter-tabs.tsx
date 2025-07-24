@@ -1,12 +1,16 @@
-"use client"
+"use client";
 
 interface FilterTabsProps {
-  categories: string[]
-  activeCategory: string
-  onCategoryChange: (category: string) => void
+  categories: string[];
+  activeCategory: string;
+  onCategoryChange: (category: string) => void;
 }
 
-export function FilterTabs({ categories, activeCategory, onCategoryChange }: FilterTabsProps) {
+export function FilterTabs({
+  categories,
+  activeCategory,
+  onCategoryChange,
+}: FilterTabsProps) {
   return (
     <div className="flex flex-wrap justify-center gap-2 mb-12">
       {categories.map((category) => (
@@ -23,5 +27,5 @@ export function FilterTabs({ categories, activeCategory, onCategoryChange }: Fil
         </button>
       ))}
     </div>
-  )
+  );
 }

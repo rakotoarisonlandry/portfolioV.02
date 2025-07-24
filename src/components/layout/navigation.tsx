@@ -40,7 +40,6 @@ export function Navigation() {
             LANDRY
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link
@@ -55,7 +54,6 @@ export function Navigation() {
             ))}
           </div>
 
-          {/* Search & Menu */}
           <div className="flex items-center space-x-4">
             <Button variant="ghost" size="sm" className="hidden md:flex">
               <Search size={18} />
