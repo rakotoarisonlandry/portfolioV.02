@@ -34,7 +34,6 @@ export function ProjectCard({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Image Container */}
       <div className="relative overflow-hidden">
         <Image
           src={image || "/placeholder.svg"}
