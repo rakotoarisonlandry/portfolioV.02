@@ -1,18 +1,26 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Calendar, Clock, ArrowRight } from "lucide-react"
+import Image from "next/image";
+import Link from "next/link";
+import { Calendar, Clock, ArrowRight } from "lucide-react";
 
 interface BlogCardProps {
-  title: string
-  excerpt: string
-  image: string
-  date: string
-  readTime: string
-  category: string
-  slug: string
+  title: string;
+  excerpt: string;
+  image: string;
+  date: string;
+  readTime: string;
+  category: string;
+  slug: string;
 }
 
-export function BlogCard({ title, excerpt, image, date, readTime, category, slug }: BlogCardProps) {
+export function BlogCard({
+  title,
+  excerpt,
+  image,
+  date,
+  readTime,
+  category,
+  slug,
+}: BlogCardProps) {
   return (
     <article className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
       <div className="relative overflow-hidden">
@@ -24,7 +32,9 @@ export function BlogCard({ title, excerpt, image, date, readTime, category, slug
           className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute top-4 left-4">
-          <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-semibold">{category}</span>
+          <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+            {category}
+          </span>
         </div>
       </div>
 
@@ -51,9 +61,12 @@ export function BlogCard({ title, excerpt, image, date, readTime, category, slug
           className="inline-flex items-center text-orange-500 font-medium text-sm hover:text-orange-600 transition-colors duration-200"
         >
           Read More
-          <ArrowRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform duration-200" />
+          <ArrowRight
+            size={16}
+            className="ml-1 group-hover:translate-x-1 transition-transform duration-200"
+          />
         </Link>
       </div>
     </article>
-  )
+  );
 }
