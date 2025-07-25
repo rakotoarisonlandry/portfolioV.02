@@ -1,23 +1,23 @@
-import { ContactForm } from "@/components/ui/contact-form"
-import { Mail, Phone, MapPin, Clock } from "lucide-react"
+import { ContactForm } from "@/components/ui/contact-form";
+import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
 const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "landry@example.com",
+    value: "rakotorisonlandry@gmail.com",
     description: "Send me an email anytime!",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+33 1 23 45 67 89",
+    value: "+261 34 05 081 80",
     description: "Mon-Fri from 9am to 6pm",
   },
   {
     icon: MapPin,
     label: "Location",
-    value: "Paris, France",
+    value: "Antananarivo, Madagascar",
     description: "Available for remote work",
   },
   {
@@ -26,7 +26,7 @@ const contactInfo = [
     value: "24 hours",
     description: "I'll get back to you quickly",
   },
-]
+];
 
 export default function ContactPage() {
   return (
@@ -39,8 +39,8 @@ export default function ContactPage() {
               Let&apos;s <span className="gradient-text">Connect</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Ready to start your next project? I&apos;d love to hear about your ideas and discuss how we can bring them to
-              life together.
+              Ready to start your next project? I&apos;d love to hear about your
+              ideas and discuss how we can bring them to life together.
             </p>
           </div>
         </div>
@@ -52,10 +52,14 @@ export default function ContactPage() {
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">Get in Touch</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                  Get in Touch
+                </h2>
                 <p className="text-gray-600 leading-relaxed">
-                  I&apos;m always open to discussing new opportunities, creative projects, or potential collaborations.
-                  Whether you have a question or just want to say hi, I&apos;ll do my best to get back to you!
+                  I&apos;m always open to discussing new opportunities, creative
+                  projects, or potential collaborations. Whether you have a
+                  question or just want to say hi, I&apos;ll do my best to get
+                  back to you!
                 </p>
               </div>
 
@@ -70,9 +74,15 @@ export default function ContactPage() {
                         <info.icon className="text-white" size={24} />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-gray-900 mb-1">{info.label}</h3>
-                        <p className="text-gray-900 font-medium mb-1">{info.value}</p>
-                        <p className="text-gray-600 text-sm">{info.description}</p>
+                        <h3 className="font-semibold text-gray-900 mb-1">
+                          {info.label}
+                        </h3>
+                        <p className="text-gray-900 font-medium mb-1">
+                          {info.value}
+                        </p>
+                        <p className="text-gray-600 text-sm">
+                          {info.description}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -104,8 +114,13 @@ export default function ContactPage() {
             {/* Contact Form */}
             <div className="bg-white border border-gray-200 rounded-2xl p-8">
               <div className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-2">Send Message</h2>
-                <p className="text-gray-600">Fill out the form below and I&apos;ll get back to you as soon as possible.</p>
+                <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                  Send Message
+                </h2>
+                <p className="text-gray-600">
+                  Fill out the form below and I&apos;ll get back to you as soon
+                  as possible.
+                </p>
               </div>
               <ContactForm />
             </div>
@@ -117,7 +132,9 @@ export default function ContactPage() {
       <section className="px-6 lg:px-8 mt-20">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Frequently Asked Questions
+            </h2>
             <p className="text-gray-600">Quick answers to common questions</p>
           </div>
 
@@ -145,7 +162,9 @@ export default function ContactPage() {
               },
             ].map((faq, index) => (
               <div key={index} className="bg-gray-50 rounded-2xl p-6">
-                <h3 className="font-semibold text-gray-900 mb-2">{faq.question}</h3>
+                <h3 className="font-semibold text-gray-900 mb-2">
+                  {faq.question}
+                </h3>
                 <p className="text-gray-600">{faq.answer}</p>
               </div>
             ))}
@@ -153,5 +172,5 @@ export default function ContactPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }
