@@ -9,6 +9,16 @@ import Link from "next/link";
 
 export function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null);
+  const navigateToContact = () => {
+    if (typeof window !== "undefined") {
+      window.location.href = "/contact";
+    }
+  };
+  const navigateToMyWork = () => {
+    if (typeof window !== "undefined") {
+      window.location.href = "/work";
+    }
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -41,7 +51,7 @@ export function HeroSection() {
         {/* Top Badge */}
         <div className="flex justify-center mb-12">
           <div className="animate-on-scroll opacity-0">
-            <div className="accent-bg text-white px-6 py-3 rounded-full text-sm font-semibold flex items-center space-x-2">
+            <div className="text-gradient  text-white px-6 py-3 rounded-full text-sm font-semibold flex items-center space-x-2">
               <Sparkles size={16} />
               <span>01+ Yrs Professional Experience</span>
               <Sparkles size={16} />
@@ -52,10 +62,10 @@ export function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
           <div className="space-y-8">
-            <div className="space-y-6">
+            <div className="space-y-4">
               <div className="animate-on-scroll opacity-0">
-                <ProfileBadge text="hello people" />
-                <p className="text-gray-600 mt-4 mb-2">I am</p>
+                <ProfileBadge text="hello world" />
+                <p className="text-gray-600 mt-4 text-lg mb-2">I am</p>
               </div>
 
               <div
@@ -66,7 +76,7 @@ export function HeroSection() {
                   <span className="block text-gray-900">a Fullstack</span>
                   <span className="block">
                     <span className="text-gray-900">Develo</span>
-                    <span className="text-orange-500">p</span>
+                    <span className="text-yellow-400">p</span>
                     <span className="text-gray-900">per</span>
                   </span>
                 </h1>
@@ -125,7 +135,7 @@ export function HeroSection() {
                 {/* Profile Badge */}
                 <div className="absolute -top-4 -right-4 z-10">
                   <div className="bg-white border border-gray-200 rounded-full p-3 shadow-lg">
-                    <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center">
+                    <div className="w-12 h-12 bg-purple-700 rounded-full flex items-center justify-center">
                       <span className="text-white font-bold">L</span>
                     </div>
                   </div>
@@ -144,7 +154,7 @@ export function HeroSection() {
                   </div>
 
                   <Image
-                    src=""
+                    src="placeholder.svg?height=500&width=400"
                     alt="Landry - Creative Developer"
                     width={300}
                     height={400}
@@ -156,11 +166,15 @@ export function HeroSection() {
 
                 {/* Action Buttons */}
                 <div className="flex justify-center space-x-4 mt-8">
-                  <Button className="accent-bg text-white hover:shadow-lg transition-all duration-300">
+                  <Button
+                    onClick={() => navigateToContact()}
+                    className="accent-bg text-white hover:shadow-lg transition-all duration-300"
+                  >
                     Let&apos;s Talk →
                   </Button>
                   <Button
                     variant="outline"
+                    onClick={() => navigateToMyWork()}
                     className="border-gray-300 hover:border-gray-400 bg-transparent"
                   >
                     My Work →

@@ -6,7 +6,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold">.LANDRY</h3>
+            <h3 className="text-2xl font-bold">r.Landry</h3>
             <p className="text-gray-400 text-sm">
               Creative Developer crafting exceptional digital experiences.
             </p>
@@ -55,14 +55,16 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Contact</h4>
             <div className="space-y-2 text-sm text-gray-400">
-              <p>landry@example.com</p>
-              <p>+33 1 23 45 67 89</p>
+              <p>landrybrigea@gmail.com</p>
+              <p>+261 34 05 081 80</p>
             </div>
           </div>
         </div>
 
         <div className="border-t border-gray-800 pt-8 text-center">
-          <p className="text-gray-400 text-sm">© 2025 LANDRY.</p>
+          <p className="text-gray-400 text-sm">
+            © 2025 RAKOTOARISON TSARAEFADAHY LANDRY BRIGEA.
+          </p>
         </div>
       </div>
     </footer>

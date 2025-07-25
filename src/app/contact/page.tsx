@@ -5,7 +5,7 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "rakotorisonlandry@gmail.com",
+    value: "landrybrigea@gmail.com",
     description: "Send me an email anytime!",
   },
   {
@@ -94,10 +94,16 @@ export default function ContactPage() {
                 <h3 className="font-semibold text-gray-900 mb-4">Follow Me</h3>
                 <div className="flex space-x-4">
                   {[
-                    { name: "GitHub", color: "bg-gray-900" },
-                    { name: "LinkedIn", color: "bg-blue-600" },
-                    { name: "Twitter", color: "bg-blue-400" },
-                    { name: "Dribbble", color: "bg-pink-500" },
+                    {
+                      name: "GitHub",
+                      href: "https://github.com/rakotoarisonlandry",
+                      color: "bg-gray-900",
+                    },
+                    {
+                      name: "LinkedIn",
+                      href: "https://www.linkedin.com/in/tsaraefadahy-landry-rakotoarison-224578265/",
+                      color: "bg-blue-600",
+                    },
                   ].map((social) => (
                     <a
                       key={social.name}
