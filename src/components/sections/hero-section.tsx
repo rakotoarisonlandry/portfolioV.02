@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ProfileBadge } from "@/components/ui/profile-badge";
+import Link from "next/link";
 
 export function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -42,7 +43,7 @@ export function HeroSection() {
           <div className="animate-on-scroll opacity-0">
             <div className="accent-bg text-white px-6 py-3 rounded-full text-sm font-semibold flex items-center space-x-2">
               <Sparkles size={16} />
-              <span>3+ Yrs Professional Experience</span>
+              <span>01+ Yrs Professional Experience</span>
               <Sparkles size={16} />
             </div>
           </div>
@@ -76,9 +77,9 @@ export function HeroSection() {
                 style={{ animationDelay: "0.4s" }}
               >
                 <p className="text-lg text-gray-600 max-w-lg leading-relaxed">
-                  A Creative UI/UX Designer and Developer based in France. I
-                  strive to build immersive and beautiful web applications
-                  through carefully crafted user-friendly design.
+                  A Fullstack Developer. I strive to build immersive and
+                  beautiful web applications through carefully crafted
+                  user-friendly design.
                 </p>
               </div>
             </div>
@@ -89,15 +90,27 @@ export function HeroSection() {
             >
               <div className="text-sm text-gray-500">50+ Service Provided</div>
               <div className="flex space-x-4">
-                <div className="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center">
-                  <span className="text-white text-xs">Be</span>
-                </div>
-                <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                <Link
+                  href="https://github.com/rakotoarisonlandry"
+                  target="_blank"
+                  className="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center"
+                >
+                  <span className="text-white text-xs">Git</span>
+                </Link>
+                <Link
+                  href="https://web.facebook.com/rakotoarison.landry.2025"
+                  target="_blank"
+                  className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center"
+                >
                   <span className="text-white text-xs">f</span>
-                </div>
-                <div className="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center">
+                </Link>
+                <Link
+                  href="https://www.linkedin.com/in/tsaraefadahy-landry-rakotoarison-224578265/"
+                  target="_blank"
+                  className="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center"
+                >
                   <span className="text-white text-xs">in</span>
-                </div>
+                </Link>
               </div>
             </div>
           </div>
