@@ -3,8 +3,8 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Search } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Menu, X} from "lucide-react";
+// import { Button } from "@/components/ui/button";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,9 +57,9 @@ export function Navigation() {
           </div>
 
           <div className="flex items-center space-x-4">
-            <Button variant="ghost" size="sm" className="hidden md:flex">
+            {/* <Button variant="ghost" size="sm" className="hidden md:flex">
               <Search size={18} />
-            </Button>
+            </Button> */}
 
             <button
               onClick={() => setIsOpen(!isOpen)}

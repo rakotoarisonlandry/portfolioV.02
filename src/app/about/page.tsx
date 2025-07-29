@@ -1,28 +1,28 @@
-"use client"
+"use client";
 
-import { useEffect, useRef } from "react"
-import Image from "next/image"
+import { useEffect, useRef } from "react";
+import Image from "next/image";
 
 export default function AboutPage() {
-  const pageRef = useRef<HTMLDivElement>(null)
+  const pageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("animate-slide-up")
+            entry.target.classList.add("animate-slide-up");
           }
-        })
+        });
       },
-      { threshold: 0.1 },
-    )
+      { threshold: 0.1 }
+    );
 
-    const elements = pageRef.current?.querySelectorAll(".animate-on-scroll")
-    elements?.forEach((el) => observer.observe(el))
+    const elements = pageRef.current?.querySelectorAll(".animate-on-scroll");
+    elements?.forEach((el) => observer.observe(el));
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div ref={pageRef} className="pt-20">
@@ -33,28 +33,36 @@ export default function AboutPage() {
             <div className="space-y-8">
               <div className="animate-on-scroll opacity-0">
                 <h1 className="text-5xl md:text-6xl font-playfair font-bold text-gray-900 mb-6">
-                  À propos de <span className="gradient-text">moi</span>
+                  About <span className="gradient-text">me</span>
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                  Développeur full-stack passionné avec plus de 3 ans d&apos;expérience dans la création d&apos;applications web
-                  modernes et performantes.
+                  Passionate full-stack developer with over 01+ years of
+                  experience in building modern and high-performance web
+                  applications.
                 </p>
               </div>
 
-              <div className="animate-on-scroll opacity-0" style={{ animationDelay: "0.2s" }}>
+              <div
+                className="animate-on-scroll opacity-0"
+                style={{ animationDelay: "0.2s" }}
+              >
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  Mon parcours a commencé par une fascination pour la technologie et l&apos;envie de créer des solutions qui
-                  ont un impact positif. Aujourd&apos;hui, je combine créativité et expertise technique pour développer des
-                  expériences numériques exceptionnelles.
+                  Always on the lookout for the latest innovations, I love
+                  taking on new challenges and collaborating with dynamic teams
+                  on ambitious projects.
                 </p>
                 <p className="text-gray-700 leading-relaxed">
-                  Toujours à l&apos;affût des dernières innovations, j&apos;aime relever de nouveaux défis et collaborer avec des
-                  équipes dynamiques sur des projets ambitieux.
+                  Toujours à l&apos;affût des dernières innovations, j&apos;aime
+                  relever de nouveaux défis et collaborer avec des équipes
+                  dynamiques sur des projets ambitieux.
                 </p>
               </div>
             </div>
 
-            <div className="animate-on-scroll opacity-0" style={{ animationDelay: "0.4s" }}>
+            <div
+              className="animate-on-scroll opacity-0"
+              style={{ animationDelay: "0.4s" }}
+            >
               <div className="relative">
                 <div className="absolute inset-0 gradient-bg rounded-3xl blur-3xl opacity-20 animate-float"></div>
                 <Image
@@ -82,22 +90,25 @@ export default function AboutPage() {
           <div className="space-y-12">
             {[
               {
-                year: "2024",
-                title: "Développeur Full Stack Senior",
-                company: "Tech Innovation",
-                description: "Lead technique sur des projets d'envergure, mentorat d'équipe junior.",
+                year: "2024 - 2025",
+                title: "Développeur Mobile",
+                company: "Plastikoo",
+                description:
+                  "Lead technique sur des projets d'envergure, mentorat d'équipe junior.",
               },
               {
-                year: "2022",
-                title: "Développeur Full Stack",
-                company: "Digital Solutions",
-                description: "Développement d'applications web complexes avec React et Node.js.",
+                year: "2024",
+                title: "Développeur Front Endn",
+                company: "Orange Madagascar",
+                description:
+                  "Développement d'applications web complexes avec React et Node.js.",
               },
               {
                 year: "2021",
                 title: "Développeur Frontend",
                 company: "StartUp Creative",
-                description: "Création d'interfaces utilisateur modernes et responsives.",
+                description:
+                  "Création d'interfaces utilisateur modernes et responsives.",
               },
             ].map((item, index) => (
               <div
@@ -111,8 +122,12 @@ export default function AboutPage() {
                   </div>
                 </div>
                 <div className="flex-grow bg-white rounded-2xl p-8 shadow-lg magnetic-hover">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{item.title}</h3>
-                  <p className="text-primary font-semibold mb-4">{item.company}</p>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-primary font-semibold mb-4">
+                    {item.company}
+                  </p>
                   <p className="text-gray-600">{item.description}</p>
                 </div>
               </div>
@@ -134,15 +149,18 @@ export default function AboutPage() {
             {[
               {
                 title: "Innovation",
-                description: "Toujours à la recherche de nouvelles solutions créatives et efficaces.",
+                description:
+                  "Toujours à la recherche de nouvelles solutions créatives et efficaces.",
               },
               {
                 title: "Qualité",
-                description: "Code propre, performances optimales et attention aux détails.",
+                description:
+                  "Code propre, performances optimales et attention aux détails.",
               },
               {
                 title: "Collaboration",
-                description: "Travail d'équipe et communication transparente pour le succès.",
+                description:
+                  "Travail d'équipe et communication transparente pour le succès.",
               },
             ].map((value, index) => (
               <div
@@ -151,9 +169,13 @@ export default function AboutPage() {
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div className="w-20 h-20 gradient-bg rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <span className="text-white font-bold text-2xl">{index + 1}</span>
+                  <span className="text-white font-bold text-2xl">
+                    {index + 1}
+                  </span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{value.title}</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  {value.title}
+                </h3>
                 <p className="text-gray-600">{value.description}</p>
               </div>
             ))}
@@ -161,5 +183,5 @@ export default function AboutPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }

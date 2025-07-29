@@ -3,7 +3,13 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Download, SparklesIcon, ChevronDown } from "lucide-react";
+import {
+  Download,
+  SparklesIcon,
+  ChevronDown,
+  ArrowBigRight,
+  ArrowRight,
+} from "lucide-react";
 import { saveAs } from "file-saver";
 
 const tabs = [
@@ -37,7 +43,11 @@ export function AboutSection() {
     handleDownloadInFrench();
     setShowDownloadOptions(false);
   };
-
+  const navigateToAbout = () => {
+    if (typeof window !== "undefined") {
+      window.location.href = "/about";
+    }
+  };
   return (
     <section className="py-20 px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -88,15 +98,31 @@ export function AboutSection() {
                     </p>
                   </div>
                   <div className="relative">
-                    <Button
-                      className="bg-gray-900 text-white hover:bg-gray-800 flex items-center gap-1"
-                      onClick={() => setShowDownloadOptions(!showDownloadOptions)}
-                    >
-                      <Download size={16} className="mr-2" />
-                      Download CV
-                      <ChevronDown size={16} className={`transition-transform ${showDownloadOptions ? 'rotate-180' : ''}`} />
-                    </Button>
-                    
+                    <span className="flex space-x-5">
+                      <Button
+                        className="bg-gray-900 text-white hover:bg-gray-800 flex items-center gap-1"
+                        onClick={() =>
+                          setShowDownloadOptions(!showDownloadOptions)
+                        }
+                      >
+                        <Download size={16} className="mr-2" />
+                        Download CV
+                        <ChevronDown
+                          size={16}
+                          className={`transition-transform ${
+                            showDownloadOptions ? "rotate-180" : ""
+                          }`}
+                        />
+                      </Button>
+                      <Button
+                        onClick={() => navigateToAbout()}
+                        className="accent-bg text-white hover:shadow-lg transition-all duration-300"
+                      >
+                        more about me
+                        <ArrowRight height={18} />
+                      </Button>
+                    </span>
+
                     {showDownloadOptions && (
                       <div className="absolute z-10 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                         <div className="py-1">
@@ -143,13 +169,20 @@ export function AboutSection() {
                   <div className="relative">
                     <Button
                       className="bg-gray-900 text-white hover:bg-gray-800 flex items-center gap-1"
-                      onClick={() => setShowDownloadOptions(!showDownloadOptions)}
+                      onClick={() =>
+                        setShowDownloadOptions(!showDownloadOptions)
+                      }
                     >
                       <Download size={16} className="mr-2" />
                       Download CV
-                      <ChevronDown size={16} className={`transition-transform ${showDownloadOptions ? 'rotate-180' : ''}`} />
+                      <ChevronDown
+                        size={16}
+                        className={`transition-transform ${
+                          showDownloadOptions ? "rotate-180" : ""
+                        }`}
+                      />
                     </Button>
-                    
+
                     {showDownloadOptions && (
                       <div className="absolute z-10 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                         <div className="py-1">
