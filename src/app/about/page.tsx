@@ -51,11 +51,11 @@ export default function AboutPage() {
                   taking on new challenges and collaborating with dynamic teams
                   on ambitious projects.
                 </p>
-                <p className="text-gray-700 leading-relaxed">
-                  Toujours à l&apos;affût des dernières innovations, j&apos;aime
-                  relever de nouveaux défis et collaborer avec des équipes
-                  dynamiques sur des projets ambitieux.
-                </p>
+                {/* <p className="text-gray-700 leading-relaxed">
+                  Always on the lookout for the latest innovations, I thrive on
+                  tackling new challenges and collaborating with dynamic teams
+                  on ambitious projects
+                </p> */}
               </div>
             </div>
 
@@ -92,23 +92,23 @@ export default function AboutPage() {
               {
                 year: "2024 - 2025",
                 title: "Développeur Mobile",
-                company: "Plastikoo",
+                company: "Startup Plastikoo",
                 description:
                   "Lead technique sur des projets d'envergure, mentorat d'équipe junior.",
               },
               {
                 year: "2024",
-                title: "Développeur Front Endn",
+                title: "Développeur Front End",
                 company: "Orange Madagascar",
                 description:
-                  "Développement d'applications web complexes avec React et Node.js.",
+                  "Développement d'applications web complexes avec NEXTjs et Node.js.",
               },
               {
-                year: "2021",
-                title: "Développeur Frontend",
-                company: "StartUp Creative",
+                year: "2023",
+                title: "Développeur fullstack",
+                company: "Ny Havana 67Ha",
                 description:
-                  "Création d'interfaces utilisateur modernes et responsives.",
+                  "Création d'application dédié aux emploiés. Développement de fonctionnalités back-end et front-end.",
               },
             ].map((item, index) => (
               <div

@@ -16,13 +16,6 @@ const services = [
     price: "Starting at €4,000",
   },
   {
-    icon: Palette,
-    title: "UI/UX Design",
-    description: "User-centered design solutions that create engaging and intuitive digital experiences.",
-    features: ["User Research", "Wireframing", "Prototyping", "Design Systems"],
-    price: "Starting at €1,500",
-  },
-  {
     icon: Globe,
     title: "E-commerce Solutions",
     description: "Complete e-commerce platforms with payment integration, inventory management, and analytics.",
