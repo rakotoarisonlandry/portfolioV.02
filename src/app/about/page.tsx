@@ -25,9 +25,9 @@ export default function AboutPage() {
   }, []);
 
   return (
-    <div ref={pageRef} className="pt-20">
+    <div ref={pageRef} className="pt-20 ">
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 flex items-center justify-center lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
@@ -51,11 +51,6 @@ export default function AboutPage() {
                   taking on new challenges and collaborating with dynamic teams
                   on ambitious projects.
                 </p>
-                {/* <p className="text-gray-700 leading-relaxed">
-                  Always on the lookout for the latest innovations, I thrive on
-                  tackling new challenges and collaborating with dynamic teams
-                  on ambitious projects
-                </p> */}
               </div>
             </div>
 

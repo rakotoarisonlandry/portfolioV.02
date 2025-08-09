@@ -7,7 +7,6 @@ import {
   Download,
   SparklesIcon,
   ChevronDown,
-  ArrowBigRight,
   ArrowRight,
 } from "lucide-react";
 import { saveAs } from "file-saver";
@@ -61,7 +60,6 @@ export function AboutSection() {
                   </div>
                 </div>
               </div>
-
               <Image
                 src="/placeholder.svg?height=500&width=400"
                 alt="About Landry"
