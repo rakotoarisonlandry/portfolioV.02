@@ -6,60 +6,59 @@ const testimonials = [
     id: 1,
     name: "SARRON Sandra",
     role: "Marketing et Communication",
-    image: "/placeholder.svg?height=80&width=80",
+    image: "/assets/sarron.png",
     rating: 4,
     text: "Landry excels at team collaboration and communication, consistently meets deadlines, and takes full ownership of his responsibilities.",
-    project: "Plastikôo plateforme",
+    project: "Plastikôo plateform",
   },
   {
     id: 2,
     name: "Nomena Andrianiaina",
-    role: "Mobile Déveloper ",
-    // company: "InnovateLab",
-    image: "/placeholder.svg?height=80&width=80",
+    role: "Mobile Developer ",
+    image: "/assets/nomena.png",
     rating: 4,
     text: "Working with Landry was a genuine pleasure. He demonstrated professionalism, active listening skills, and exceptional teamwork throughout our collaboration.",
-    project: "Application mobile  pour une consultation rapide via l'IA",
+    project: "Mobile app for fast AI-powered consultation",
   },
   {
     id: 3,
     name: "Nomenjanahary Riry",
-    role: "Mobile Déveloper",
-    image: "/placeholder.svg?height=80&width=80",
+    role: "Mobile Developer",
+    image: "/assets/riry.png",
     rating: 5,
     text: "I had the opportunity to collaborate with Landry on a mobile application development project. From the outset, he demonstrated remarkable adaptability to technical requirements, combining autonomous problem-solving with active listening skills. His energy and commitment to rapid, high-quality deliveries made the collaboration seamless and enjoyable.",
-    project: "Sekolintsika plateforme",
+    project: "Sekolintsika plateform",
   },
   {
     id: 4,
-    name: "David Thompson",
-    role: "Founder",
-    company: "StartupXYZ",
-    image: "/placeholder.svg?height=80&width=80",
-    rating: 5,
-    text: "Landry's technical consulting helped us make crucial decisions that saved us months of development time. Highly recommended!",
-    project: "Technical Consulting",
+    name: " Razafindrabe Tanteliniaina Vanessa",
+    role: "Designer web and développer chez Plastikôo",
+    // company: "StartupXYZ",
+    image: "/assets/vanessa.png",
+    rating: 4,
+    text: "Landry is someone serious and committed to what he does. He demonstrated responsiveness and collaboration throughout the project. He was a person who was: dynamic, a good listener, with strong adaptability skills.",
+    project: "Plastikôo Web application.",
   },
   {
     id: 5,
-    name: "Lisa Wang",
-    role: "CTO",
+    name: "RAKOTONDRAZAKA Fitia Ismael",
+    role: "Backend Développer",
     company: "DataFlow",
-    image: "/placeholder.svg?height=80&width=80",
-    rating: 5,
-    text: "The dashboard Landry built for us is not only beautiful but also incredibly functional. Our team productivity has increased significantly.",
+    image: "/assets/ismael.png",
+    rating: 4.5,
+    text: "He has unwavering motivation and a thirst for knowledge; he's the person you want on your team.",
     project: "SaaS Dashboard",
   },
-  {
-    id: 6,
-    name: "James Miller",
-    role: "Business Owner",
-    company: "Local Bistro",
-    image: "/placeholder.svg?height=80&width=80",
-    rating: 5,
-    text: "Our restaurant's online ordering system has been a game-changer. Landry's work directly contributed to our 30% revenue increase.",
-    project: "Restaurant App",
-  },
+  // {
+  //   id: 6,
+  //   name: "James Miller",
+  //   role: "Business Owner",
+  //   company: "Local Bistro",
+  //   image: "/placeholder.svg?height=80&width=80",
+  //   rating: 5,
+  //   text: "Our restaurant's online ordering system has been a game-changer. Landry's work directly contributed to our 30% revenue increase.",
+  //   project: "Restaurant App",
+  // },
 ];
 
 export default function TestimonialPage() {
@@ -73,7 +72,7 @@ export default function TestimonialPage() {
               Client <span className="gradient-text">Testimonials</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Don&apos;t just take my word for it. Here&apos;s what my clients
+              Don&apos;t just take my word for it. Here&apos;s what my colaborator
               have to say about working with me.
             </p>
           </div>
@@ -81,7 +80,7 @@ export default function TestimonialPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="px-6 lg:px-8 mb-20">
+      {/* <section className="px-6 lg:px-8 mb-20">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div className="space-y-2">
@@ -102,7 +101,7 @@ export default function TestimonialPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Testimonials Grid */}
       <section className="px-6 lg:px-8 mb-20">
@@ -118,7 +117,7 @@ export default function TestimonialPage() {
                   size={32}
                 />
 
-                <div className="flex items-center mb-6">
+                <div className="flex  items-center mb-6">
                   <Image
                     src={testimonial.image || "/placeholder.svg"}
                     alt={testimonial.name}
@@ -126,11 +125,13 @@ export default function TestimonialPage() {
                     height={60}
                     className="rounded-full mr-4"
                   />
-                  <div>
+                  <div className="text-justify">
                     <h3 className="font-bold text-gray-900">
                       {testimonial.name}
                     </h3>
-                    <p className="text-gray-600 text-sm">{testimonial.role}</p>
+                    <p className="text-gray-600 text-sm text-left">
+                      {testimonial.role}
+                    </p>
                     <p className="text-gray-500 text-sm">
                       {testimonial.company}
                     </p>
@@ -138,13 +139,46 @@ export default function TestimonialPage() {
                 </div>
 
                 <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="text-yellow-400 fill-current"
-                      size={16}
-                    />
-                  ))}
+                  {[...Array(5)].map((_, i) => {
+                    if (i < Math.floor(testimonial.rating)) {
+                      // Étoile pleine
+                      return (
+                        <Star
+                          key={i}
+                          className="text-yellow-400 fill-current"
+                          size={16}
+                        />
+                      );
+                    } else if (
+                      i === Math.floor(testimonial.rating) &&
+                      testimonial.rating % 1 !== 0
+                    ) {
+                      // Demi-étoile
+                      return (
+                        <div key={i} className="relative">
+                          <Star
+                            className="text-gray-300 fill-current"
+                            size={16}
+                          />
+                          <div className="absolute left-0 top-0 w-1/2 overflow-hidden">
+                            <Star
+                              className="text-yellow-400 fill-current"
+                              size={16}
+                            />
+                          </div>
+                        </div>
+                      );
+                    } else {
+                      // Étoile vide
+                      return (
+                        <Star
+                          key={i}
+                          className="text-gray-300 fill-current"
+                          size={16}
+                        />
+                      );
+                    }
+                  })}
                 </div>
 
                 <p className="text-gray-700 leading-relaxed mb-4">

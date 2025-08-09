@@ -45,7 +45,6 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Services</h4>
             <div className="space-y-2 text-sm text-gray-400">
-              <p>UI/UX Design</p>
               <p>Web Development</p>
               <p>Mobile Apps</p>
               <p>Consulting</p>

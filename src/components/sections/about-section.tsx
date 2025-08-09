@@ -99,7 +99,7 @@ export function AboutSection() {
             <div className="space-y-6">
               {activeTab === "who" && (
                 <div className="space-y-4">
-                  <div className="text-gray-700 flex space-x-4 leading-relaxed">
+                  <div className="text-gray-700 flex text-justify space-x-4 leading-relaxed">
                     <span>
                       <SparklesIcon color="purple" />
                     </span>

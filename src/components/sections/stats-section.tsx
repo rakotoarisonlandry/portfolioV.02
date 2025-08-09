@@ -8,7 +8,6 @@ export function StatsSection() {
           <StatCard value="01" suffix="+" label="yrs professional experience" animated />
           <StatCard value="22" suffix="+" label="projects in github" animated />
           <StatCard value="100" suffix="%" label="client satisfaction" animated />
-          {/* <StatCard value="50" suffix="+" label="services provided" animated /> */}
         </div>
       </div>
     </section>

@@ -3,7 +3,8 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X} from "lucide-react";
+import { Menu, X } from "lucide-react";
+import { Button } from "../ui/button";
 // import { Button } from "@/components/ui/button";
 
 export function Navigation() {
@@ -16,15 +17,19 @@ export function Navigation() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
+  const navigateToContact = () => {
+    if (typeof window !== "undefined") {
+      window.location.href = "/contact";
+    }
+  };
   const navItems = [
     { href: "/", label: "home" },
     { href: "/about", label: "about" },
     { href: "/work", label: "work" },
     { href: "/services", label: "services" },
     { href: "/testimonial", label: "testimonial" },
-    { href: "/blog", label: "blog" },
-    { href: "/contact", label: "contact" },
+    // { href: "/blog", label: "blog" },
+    // { href: "/contact", label: "contact" },
   ];
 
   return (
@@ -54,6 +59,18 @@ export function Navigation() {
                 {item.label}
               </Link>
             ))}
+            <Link
+              href="/contact"
+              onClick={() => setIsOpen(false)}
+              className="block py-2 text-gray-600 hover:text-gray-900 transition-colors"
+            >
+              <Button
+                onClick={() => navigateToContact()}
+                className="accent-bg rounded-full text-white hover:shadow-lg transition-all duration-300"
+              >
+                Contact →
+              </Button>
+            </Link>
           </div>
 
           <div className="flex items-center space-x-4">
