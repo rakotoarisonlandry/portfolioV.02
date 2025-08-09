@@ -50,9 +50,28 @@ export function AboutSection() {
   };
   return (
     <section className="py-20 px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-14">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
-          {/* Left Content */}
+          <div className="flex justify-start">
+            <div className="relative">
+              <div className="absolute -top-4 -right-4 z-10">
+                <div className="bg-white border border-gray-200 rounded-full p-3 shadow-lg">
+                  <div className="w-12 h-12 bg-purple-700 rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold">L</span>
+                  </div>
+                </div>
+              </div>
+
+              <Image
+                src="/placeholder.svg?height=500&width=400"
+                alt="About Landry"
+                width={400}
+                height={500}
+                className="rounded-3xl shadow-2xl"
+              />
+            </div>
+          </div>
+
           <div className="space-y-8">
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -224,25 +243,6 @@ export function AboutSection() {
           </div>
 
           {/* Right Content - Profile Image */}
-          <div className="flex justify-center">
-            <div className="relative">
-              <div className="absolute -top-4 -right-4 z-10">
-                <div className="bg-white border border-gray-200 rounded-full p-3 shadow-lg">
-                  <div className="w-12 h-12 bg-purple-700 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold">L</span>
-                  </div>
-                </div>
-              </div>
-
-              <Image
-                src="/placeholder.svg?height=500&width=400"
-                alt="About Landry"
-                width={400}
-                height={500}
-                className="rounded-3xl shadow-2xl"
-              />
-            </div>
-          </div>
         </div>
       </div>
     </section>

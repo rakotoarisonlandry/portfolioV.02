@@ -47,7 +47,7 @@ export function HeroSection() {
 
   return (
     <section ref={sectionRef} className="pt-24 pb-16 px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-14">
         {/* Top Badge */}
         <div className="flex justify-center mb-12">
           <div className="animate-on-scroll opacity-0">
@@ -59,7 +59,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2  items-center">
           {/* Left Content */}
           <div className="space-y-8">
             <div className="space-y-4">
@@ -95,7 +95,7 @@ export function HeroSection() {
             </div>
 
             <div
-              className="animate-on-scroll opacity-0 flex items-center space-x-6"
+              className="animate-on-scroll opacity-0 flex items-center space-x-1"
               style={{ animationDelay: "0.6s" }}
             >
               <div className="text-sm text-gray-500">50+ Service Provided</div>
