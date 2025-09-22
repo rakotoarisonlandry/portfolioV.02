@@ -1,7 +1,19 @@
 import Image from "next/image";
 import { Star, Quote } from "lucide-react";
+import Link from "next/link";
 
-const testimonials = [
+type Testimonial = {
+  id: number;
+  name: string;
+  role: string;
+  image: string;
+  rating: number;
+  text: string;
+  project: string;
+  company?: string;
+};
+
+const testimonials: Testimonial[] = [
   {
     id: 1,
     name: "SARRON Sandra",
@@ -10,6 +22,7 @@ const testimonials = [
     rating: 4,
     text: "Landry excels at team collaboration and communication, consistently meets deadlines, and takes full ownership of his responsibilities.",
     project: "Plastikôo plateform",
+    company: "Plastikôo",
   },
   {
     id: 2,
@@ -19,6 +32,7 @@ const testimonials = [
     rating: 4,
     text: "Working with Landry was a genuine pleasure. He demonstrated professionalism, active listening skills, and exceptional teamwork throughout our collaboration.",
     project: "Mobile app for fast AI-powered consultation",
+    company: "Sekolintsika",
   },
   {
     id: 3,
@@ -28,37 +42,28 @@ const testimonials = [
     rating: 5,
     text: "I had the opportunity to collaborate with Landry on a mobile application development project. From the outset, he demonstrated remarkable adaptability to technical requirements, combining autonomous problem-solving with active listening skills. His energy and commitment to rapid, high-quality deliveries made the collaboration seamless and enjoyable.",
     project: "Sekolintsika plateform",
+    company: "Sekolintsika",
   },
   {
     id: 4,
     name: " Razafindrabe Tanteliniaina Vanessa",
-    role: "Designer web and développer chez Plastikôo",
-    // company: "StartupXYZ",
+    role: "Designer and développeur",
     image: "/assets/vanessa.png",
     rating: 4,
     text: "Landry is someone serious and committed to what he does. He demonstrated responsiveness and collaboration throughout the project. He was a person who was: dynamic, a good listener, with strong adaptability skills.",
     project: "Plastikôo Web application.",
+    company: "Plastikôo",
   },
   {
     id: 5,
     name: "RAKOTONDRAZAKA Fitia Ismael",
     role: "Backend Développer",
-    company: "DataFlow",
     image: "/assets/ismael.png",
     rating: 4.5,
     text: "He has unwavering motivation and a thirst for knowledge; he's the person you want on your team.",
     project: "SaaS Dashboard",
+    company: "Freelance",
   },
-  // {
-  //   id: 6,
-  //   name: "James Miller",
-  //   role: "Business Owner",
-  //   company: "Local Bistro",
-  //   image: "/placeholder.svg?height=80&width=80",
-  //   rating: 5,
-  //   text: "Our restaurant's online ordering system has been a game-changer. Landry's work directly contributed to our 30% revenue increase.",
-  //   project: "Restaurant App",
-  // },
 ];
 
 export default function TestimonialPage() {
@@ -69,7 +74,7 @@ export default function TestimonialPage() {
         <div className="max-w-7xl mx-auto text-center">
           <div className="space-y-6">
             <h1 className="text-5xl lg:text-6xl font-bold text-gray-900">
-              Client <span className="gradient-text">Testimonials</span>
+              <span className="gradient-text">Testimonials</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Don&apos;t just take my word for it. Here&apos;s what my colaborator
@@ -129,7 +134,7 @@ export default function TestimonialPage() {
                     <h3 className="font-bold text-gray-900">
                       {testimonial.name}
                     </h3>
-                    <p className="text-gray-600 text-sm text-left">
+                    <p className="text-gray-600  text-sm text-justify">
                       {testimonial.role}
                     </p>
                     <p className="text-gray-500 text-sm">
@@ -181,7 +186,7 @@ export default function TestimonialPage() {
                   })}
                 </div>
 
-                <p className="text-gray-700 leading-relaxed mb-4">
+                <p className="text-gray-700 text-justify leading-relaxed mb-4">
                   &quot;{testimonial.text}&quot;
                 </p>
 
@@ -235,9 +240,9 @@ export default function TestimonialPage() {
               committed to delivering exceptional results that exceed your
               expectations.
             </p>
-            <button className="accent-bg text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
+            <Link href="/contact" className="accent-bg text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
               Start Your Project
-            </button>
+            </Link >
           </div>
         </div>
       </section>

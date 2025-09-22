@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { saveAs } from "file-saver";
 import { Button } from "@/components/ui/button";
 import {
   Award,
@@ -16,7 +15,6 @@ import {
 } from "lucide-react";
 
 export default function AboutPage() {
-  const [setShowDownloadOptions] = useState(false);
   const [activeTab, setActiveTab] = useState("skills");
   const pageRef = useRef<HTMLDivElement>(null);
 
@@ -579,10 +577,10 @@ export default function AboutPage() {
               Ready to collaborate?
             </h2>
             <p className="text-lg md:text-xl text-gray-300 mb-6 md:mb-8 leading-relaxed">
-              I'm available for freelance missions and innovative projects. Contact me to discuss your next technical challenge.
+              I&apos;m available for freelance missions and innovative projects. Contact me to discuss your next technical challenge.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
-              <Button className="bg-white text-gray-900 hover:bg-gray-100 px-6 py-3 text-base font-medium shadow-md">
+              <Button className="text-gradient text-gray-900 hover:bg-white px-6 py-3 text-base font-medium shadow-md">
                 <Mail className="mr-2" size={18} />
                 Contact Me
               </Button>

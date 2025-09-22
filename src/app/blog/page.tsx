@@ -1,4 +1,5 @@
 import { BlogCard } from "@/components/ui/blog-card"
+import Image from "next/image"
 
 const blogPosts = [
   {
@@ -101,10 +102,12 @@ export default function BlogPage() {
                 </button>
               </div>
               <div className="relative">
-                <img
+                <Image
                   src={blogPosts[0].image || "/placeholder.svg"}
                   alt={blogPosts[0].title}
                   className="w-full h-64 lg:h-80 object-cover rounded-2xl shadow-lg"
+                  width={400}
+                  height={250}
                 />
               </div>
             </div>

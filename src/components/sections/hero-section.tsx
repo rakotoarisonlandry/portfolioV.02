@@ -77,7 +77,7 @@ export function HeroSection() {
                   <span className="block">
                     <span className="text-gray-900">Develo</span>
                     <span className="text-yellow-400">p</span>
-                    <span className="text-gray-900">per</span>
+                    <span className="text-gray-900">er</span>
                   </span>
                 </h1>
               </div>
@@ -87,7 +87,7 @@ export function HeroSection() {
                 style={{ animationDelay: "0.4s" }}
               >
                 <p className="text-lg text-gray-600 max-w-lg leading-relaxed">
-                  A Fullstack Developer. I strive to build immersive and
+                  As a fullstack developer. I strive to build immersive and
                   beautiful web applications through carefully crafted
                   user-friendly design.
                 </p>
