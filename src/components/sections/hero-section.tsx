@@ -46,7 +46,7 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="pt-24 pb-16 px-6 lg:px-8">
+    <section ref={sectionRef} className="pt-24 pb-16 px-6 lg:px-28">
       <div className="max-w-7xl mx-14">
         {/* Top Badge */}
         <div className="flex justify-center mb-12">
@@ -142,23 +142,23 @@ export function HeroSection() {
                 </div>
 
                 {/* Main Profile Container */}
-                <div className="bg-gray-900 rounded-[3rem] pb-8 relative overflow-hidden">
-                  <div className="absolute top-6 left-6 right-6">
+                <div className="bg-gray-900 rounded-[3rem]  relative overflow-hidden">
+                  {/* <div className="absolute top-6 left-6 right-6">
                     <div className="text-white/80 font-script leading-tight text-lg">
                       <span className="">Rakotoarison</span>
                       <span> Tsaraefadahy Landry Brigea</span>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="absolute top-4 right-4">
                     <Sparkles className="text-white/20" size={24} />
                   </div>
 
                   <Image
-                    src="placeholder.svg?height=500&width=400"
+                    src="/assets/profile.png"
                     alt="Landry - Creative Developer"
-                    width={300}
-                    height={400}
-                    className="rounded-2xl"
+                    width={350}
+                    height={300}
+                    className="rounded-2xl h-full "
                   />
 
                   {/* Signature */}
