@@ -61,7 +61,7 @@ export function AboutSection() {
                 </div>
               </div>
               <Image
-                src="/placeholder.svg?height=500&width=400"
+                src="/assets/profile.png"
                 alt="About Landry"
                 width={400}
                 height={500}
