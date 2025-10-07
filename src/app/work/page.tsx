@@ -22,7 +22,7 @@ const projects = [
     title: "Mobile Plastikoo App",
     description:
       "Secure mobile banking application with biometric authentication and real-time transactions.",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/assets/profile.png",
     tags: ["React Native", "Mysql", "TypeScript"],
     category: "Mobile App",
     liveUrl: "https://example.com",
@@ -33,26 +33,16 @@ const projects = [
     title: "Brand Identity Design",
     description:
       "Complete brand identity package including logo, color palette, and brand guidelines.",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/assets/profile.png",
     tags: ["Figma", "Illustrator", "Branding"],
     category: "Design",
   },
-  // {
-  //   id: 4,
-  //   title: "SaaS Dashboard",
-  //   description:
-  //     "Analytics dashboard for SaaS companies with real-time data visualization and reporting.",
-  //   image: "/placeholder.svg?height=300&width=400",
-  //   tags: ["Vue.js", "D3.js", "Python", "PostgreSQL"],
-  //   category: "Web Development",
-  //   liveUrl: "https://example.com",
-  // },
   {
     id: 4,
     title: "Restaurant App UI",
     description:
       "Food delivery app interface with intuitive navigation and seamless ordering experience.",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/assets/profile.png",
     tags: ["Figma", "Prototyping", "UI/UX"],
     category: "Design",
   },
@@ -61,7 +51,7 @@ const projects = [
     title: "E-tatasiaka App",
     description:
       "Cross-platform fitness app with workout tracking, nutrition logging, and social features.",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/assets/profile.png",
     tags: ["Flutter", "Firebase", "Health APIs"],
     category: "Mobile App",
     githubUrl: "https://github.com",
@@ -71,7 +61,7 @@ const projects = [
     title: "Sekolinitsika App",
     description:
       "Cross-platform fitness app with workout tracking, nutrition logging, and social features.",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/assets/profile.png",
     tags: ["Flutter", "Firebase", "Health APIs"],
     category: "Mobile App",
     githubUrl: "https://github.com",
