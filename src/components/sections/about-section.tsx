@@ -14,9 +14,7 @@ import { saveAs } from "file-saver";
 const tabs = [
   { id: "who", label: "who i am" },
   { id: "education", label: "education" },
-  { id: "awards", label: "awards" },
   { id: "experience", label: "experience" },
-  { id: "skills", label: "skills" },
 ];
 
 export function AboutSection() {
@@ -106,7 +104,7 @@ export function AboutSection() {
                     <p>
                       My full name is{" "}
                       <span className="font-semibold">
-                        Rakotoarison Tsarefadahy Landry Brigea
+                        Rakotoarison Tsarefadahy Landr  y Brigea
                       </span>
                       , a passionate Fullstack Developer with over 01+ years of
                       experience in building dynamic web and mobile
@@ -231,7 +229,7 @@ export function AboutSection() {
               {activeTab === "experience" && (
                 <div className="space-y-4">
                   <p className="text-gray-700 leading-relaxed">
-                    3+ years of professional experience in UI/UX design and web
+                    02+ years of professional experience in UI/UX design and web
                     development, working with clients worldwide to create
                     exceptional digital experiences.
                   </p>

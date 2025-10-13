@@ -53,7 +53,7 @@ export function HeroSection() {
           <div className="animate-on-scroll opacity-0">
             <div className="text-gradient  text-white px-6 py-3 rounded-full text-sm font-semibold flex items-center space-x-2">
               <Sparkles size={16} />
-              <span>01+ Yrs Professional Experience</span>
+              <span>02+ Yrs Experience</span>
               <Sparkles size={16} />
             </div>
           </div>
@@ -98,7 +98,6 @@ export function HeroSection() {
               className="animate-on-scroll opacity-0 flex items-center space-x-1"
               style={{ animationDelay: "0.6s" }}
             >
-              <div className="text-sm text-gray-500">50+ Service Provided</div>
               <div className="flex space-x-4">
                 <Link
                   href="https://github.com/rakotoarisonlandry"

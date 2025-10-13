@@ -40,7 +40,7 @@ export function StatCard({ value, label, suffix = "", animated = false }: StatCa
         <div className="text-3xl font-bold text-gray-900">
           {value}
           {suffix}
-          {suffix && <span className="text-orange-400">+</span>}
+          {suffix && suffix ==="%" ||  suffix ===``?<span className="text-orange-400">%</span>:<span className="text-orange-400">+</span>}
         </div>
         <ArrowUpRight size={20} className="text-gray-400 group-hover:text-orange-500 transition-colors duration-200" />
       </div>

@@ -38,8 +38,8 @@ export function ProjectCard({
         <Image
           src={image || "/placeholder.svg"}
           alt={title}
-          width={featured ? 800 : 400}
-          height={featured ? 600 : 300}
+          width={featured ? 800 : 800}
+          height={featured ? 600 : 600}
           className="w-full h-64 md:h-80 object-cover transition-transform duration-700 group-hover:scale-105"
         />
 

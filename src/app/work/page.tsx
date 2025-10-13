@@ -7,29 +7,40 @@ import { FilterTabs } from "@/components/ui/filter-tabs";
 const projects = [
   {
     id: 1,
-    title: "E-commerce Platform",
+    title: "Portfolio.v1",
     description:
       "Modern e-commerce solution with advanced filtering, payment integration, and admin dashboard.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/assets/portfoliov1.png",
     tags: ["React", "Node.js", "MongoDB", "Stripe"],
     category: "Web Development",
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
+    liveUrl: "https://plastikoo.mg",
+    githubUrl: "https://github.com/rakotoarisonlandry/Plastikoo_Front",
     featured: true,
   },
   {
     id: 2,
-    title: "Mobile Plastikoo App",
+    title: "E-commerce Platform",
     description:
-      "Secure mobile banking application with biometric authentication and real-time transactions.",
-    image: "/assets/profile.png",
-    tags: ["React Native", "Mysql", "TypeScript"],
-    category: "Mobile App",
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
+      "Modern e-commerce solution with advanced filtering, payment integration, and admin dashboard.",
+    image: "/assets/plastikoofront.png",
+    tags: ["React", "Node.js", "MongoDB", "Stripe"],
+    category: "Web Development",
+    liveUrl: "https://plastikoo.mg",
+    githubUrl: "https://github.com/rakotoarisonlandry/Plastikoo_Front",
   },
   {
     id: 3,
+    title: "Mobile Plastikoo App",
+    description:
+      "Secure mobile banking application with biometric authentication and real-time transactions.",
+    image: "/assets/mobileapk.png",
+    tags: ["React Native", "Mysql", "TypeScript"],
+    category: "Mobile App",
+    liveUrl: "",
+    githubUrl: "https://github.com/rakotoarisonlandry/Plastikoo_Mobile",
+  },
+  {
+    id: 4,
     title: "Brand Identity Design",
     description:
       "Complete brand identity package including logo, color palette, and brand guidelines.",
@@ -38,7 +49,7 @@ const projects = [
     category: "Design",
   },
   {
-    id: 4,
+    id: 5,
     title: "Restaurant App UI",
     description:
       "Food delivery app interface with intuitive navigation and seamless ordering experience.",
@@ -47,7 +58,7 @@ const projects = [
     category: "Design",
   },
   {
-    id: 5,
+    id: 6,
     title: "E-tatasiaka App",
     description:
       "Cross-platform fitness app with workout tracking, nutrition logging, and social features.",
@@ -57,7 +68,7 @@ const projects = [
     githubUrl: "https://github.com",
   },
   {
-    id: 6,
+    id: 7,
     title: "Sekolinitsika App",
     description:
       "Cross-platform fitness app with workout tracking, nutrition logging, and social features.",
