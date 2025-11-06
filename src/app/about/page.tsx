@@ -148,7 +148,7 @@ export default function AboutPage() {
                       {category === "mobile" && (
                         <Smartphone className="text-purple-600" size={20} />
                       )}
-                      {category === "database" && (
+                      {category === "database" && ( 
                         <Database className="text-amber-600" size={20} />
                       )}
                       {category === "other" && (
