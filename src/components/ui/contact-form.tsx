@@ -20,17 +20,29 @@ export function ContactForm() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    const res = await fetch("/contact/api", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
 
     setIsSubmitting(false);
-    setIsSubmitted(true);
 
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
+    if (res.ok) {
+      setIsSubmitted(true);
+
+      // Reset form
       setFormData({ name: "", email: "", subject: "", message: "" });
-    }, 3000);
+
+      // Hide success alert after 3s
+      setTimeout(() => {
+        setIsSubmitted(false);
+      }, 3000);
+    } else {
+      alert("❌ Une erreur est survenue, merci d'essayer plus tard !");
+    }
   };
 
   const handleChange = (
