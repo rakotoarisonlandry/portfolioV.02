@@ -27,9 +27,9 @@ export default function AboutPage() {
       "Tailwind CSS",
     ],
     backend: ["Node.js", "Express.js", "Java Spring Boot"],
-    mobile: ["React Native"],
-    database: ["MySQL", "Convex (real-time)"],
-    other: ["UI/UX Design", "API Development", "Deployment"],
+    mobile: ["React Native","Flutter"],
+    database: ["MySQL", "Convex (real-time)","PostGreSQL","MongoDb"],
+    other: ["UI/UX Design", "API Development", "Deployment",""],
   };
 
   const languages = [

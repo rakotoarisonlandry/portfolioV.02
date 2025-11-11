@@ -107,8 +107,9 @@ export default function ContactPage() {
                   ].map((social) => (
                     <a
                       key={social.name}
-                      href="#"
-                      className={`${social.color} text-white px-4 py-2 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity duration-200`}
+                      href={social.href}
+                      target="_blank"
+                      className={`${social.color} text-white px-4 py-2  rounded-lg text-sm font-medium hover:opacity-90 transition-opacity duration-200`}
                     >
                       {social.name}
                     </a>
