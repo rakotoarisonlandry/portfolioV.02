@@ -26,10 +26,16 @@ export default function AboutPage() {
       "JavaScript",
       "Tailwind CSS",
     ],
-    backend: ["Node.js", "Express.js", "Java Spring Boot"],
-    mobile: ["React Native","Flutter"],
-    database: ["MySQL", "Convex (real-time)","PostGreSQL","MongoDb"],
-    other: ["UI/UX Design", "API Development", "Deployment",""],
+    backend: ["Node.js", "Express.js", "Spring Boot (Java)", "REST APIs"],
+    mobile: ["React Native", "Flutter"],
+    database: ["MySQL", "PostgreSQL", "MongoDB", "Convex (real-time storage)"],
+    devops: ["Docker", "Jenkins", "CI/CD Pipelines", "Deployment"],
+    tools_and_design: [
+      "UI/UX Design (Figma)",
+      "Git",
+      "Version Control",
+      "API Documentation (Swagger/Postman)",
+    ],
   };
 
   const languages = [
@@ -68,8 +74,7 @@ export default function AboutPage() {
       name: "BLOG APP",
       type: "Internship Project",
       tech: ["React.js", "Express.js", "Tailwind CSS", "MySQL"],
-      description:
-        "Internship project completed at NY HAVANA 67Ha company.",
+      description: "Internship project completed at NY HAVANA 67Ha company.",
       status: "Internship",
     },
   ];
@@ -99,7 +104,10 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3 md:mb-4">
-              Skills & <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Expertise</span>
+              Skills &{" "}
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Expertise
+              </span>
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               My technical capabilities and professional background
@@ -148,7 +156,7 @@ export default function AboutPage() {
                       {category === "mobile" && (
                         <Smartphone className="text-purple-600" size={20} />
                       )}
-                      {category === "database" && ( 
+                      {category === "database" && (
                         <Database className="text-amber-600" size={20} />
                       )}
                       {category === "other" && (
@@ -178,15 +186,21 @@ export default function AboutPage() {
                     key={index}
                     className="bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100 text-center"
                   >
-                    <h3 className="font-bold text-lg md:text-xl mb-2">{lang.name}</h3>
-                    <p className="text-gray-600 mb-4 text-sm md:text-base">{lang.level}</p>
+                    <h3 className="font-bold text-lg md:text-xl mb-2">
+                      {lang.name}
+                    </h3>
+                    <p className="text-gray-600 mb-4 text-sm md:text-base">
+                      {lang.level}
+                    </p>
                     <div className="w-full bg-gray-200 rounded-full h-2 mb-1">
                       <div
                         className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-1000"
                         style={{ width: `${lang.percentage}%` }}
                       ></div>
                     </div>
-                    <p className="text-xs text-gray-500">{lang.percentage}% proficiency</p>
+                    <p className="text-xs text-gray-500">
+                      {lang.percentage}% proficiency
+                    </p>
                   </div>
                 ))}
               </div>
@@ -213,7 +227,8 @@ export default function AboutPage() {
                         National Computer Science School (ENI)
                       </p>
                       <p className="text-gray-600 text-sm md:text-base">
-                        Specialization: Software Engineering, Databases, Systems and Network Administration
+                        Specialization: Software Engineering, Databases, Systems
+                        and Network Administration
                       </p>
                     </div>
                   </div>
@@ -238,7 +253,9 @@ export default function AboutPage() {
                         National Computer Science School (ENI)
                       </p>
                       <p className="text-gray-600 text-sm md:text-base">
-                        Thesis: Design and implementation of a web and mobile platform for collecting and transforming plastic waste into construction materials
+                        Thesis: Design and implementation of a web and mobile
+                        platform for collecting and transforming plastic waste
+                        into construction materials
                       </p>
                     </div>
                   </div>
@@ -278,7 +295,9 @@ export default function AboutPage() {
                             {interest === "Development" && "💻"}
                           </span>
                         </div>
-                        <h3 className="font-bold text-base md:text-lg">{interest}</h3>
+                        <h3 className="font-bold text-base md:text-lg">
+                          {interest}
+                        </h3>
                       </div>
                     )
                   )}
@@ -316,7 +335,10 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3 md:mb-4">
-              My <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Professional Journey</span>
+              My{" "}
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Professional Journey
+              </span>
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Key milestones in my career development
@@ -347,9 +369,7 @@ export default function AboutPage() {
                 location: "GARE SOARANO",
                 description:
                   "Internship at Orange Digital Center with participation in the Orange Summer Challenge. Development of innovative applications.",
-                achievements: [
-                  "🥇 First place Orange Summer Challenge 2024",
-                ],
+                achievements: ["🥇 First place Orange Summer Challenge 2024"],
                 status: "completed",
               },
               {
@@ -448,7 +468,10 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3 md:mb-4">
-              Featured <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Projects</span>
+              Featured{" "}
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Projects
+              </span>
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               My most significant work and contributions
@@ -519,10 +542,14 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3 md:mb-4">
-              My Core <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Values</span>
+              My Core{" "}
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Values
+              </span>
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Principles that guide my development approach and team collaboration
+              Principles that guide my development approach and team
+              collaboration
             </p>
           </div>
 
@@ -577,7 +604,8 @@ export default function AboutPage() {
               Ready to collaborate?
             </h2>
             <p className="text-lg md:text-xl text-gray-300 mb-6 md:mb-8 leading-relaxed">
-              I&apos;m available for freelance missions and innovative projects. Contact me to discuss your next technical challenge.
+              I&apos;m available for freelance missions and innovative projects.
+              Contact me to discuss your next technical challenge.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <Button className="text-gradient text-gray-900 hover:bg-white px-6 py-3 text-base font-medium shadow-md">
