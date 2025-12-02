@@ -3,12 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import {
-  Download,
-  SparklesIcon,
-  ChevronDown,
-  ArrowRight,
-} from "lucide-react";
+import { Download, SparklesIcon, ChevronDown, ArrowRight } from "lucide-react";
 import { saveAs } from "file-saver";
 
 const tabs = [
@@ -104,7 +99,7 @@ export function AboutSection() {
                     <p>
                       My full name is{" "}
                       <span className="font-semibold">
-                        Rakotoarison Tsarefadahy Landr  y Brigea
+                        Rakotoarison Tsarefadahy Landr y Brigea
                       </span>
                       , a passionate Fullstack Developer with over 01+ years of
                       experience in building dynamic web and mobile
