@@ -22,14 +22,14 @@ export function AboutSection() {
   const [showDownloadOptions, setShowDownloadOptions] = useState(false);
 
   const handleDownloadInEnglish = () => {
-    const fileUrl = "https://landrybrigea.vercel.app/assets/file/Obtention_de_diplôme_de _licence.pdf";
+    const fileUrl = "/assets/files/Obtention_de_diplôme_de _licence.pdf";
     const fileName = "RAKOTOARISON_LANDRY_v.Anglais.pdf";
     saveAs(fileUrl, fileName);
     setShowDownloadOptions(false);
   };
 
   const handleDownloadInFrench = () => {
-    const fileUrl = "https://landrybrigea.vercel.app/assets/file/RAKOTOARISON_LANDRY.pdf";
+    const fileUrl = "/assets/files/RAKOTOARISON_LANDRY.pdf";
     const fileName = "RAKOTOARISON_LANDRY_v.Francais.pdf";
     saveAs(fileUrl, fileName);
     setShowDownloadOptions(false);
