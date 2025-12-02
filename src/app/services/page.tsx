@@ -116,9 +116,6 @@ export default function ServicesPage() {
                     <span className="text-2xl font-bold text-gray-900">
                       {service.price}
                     </span>
-                    <button className="bg-gray-900 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors duration-200">
-                      Get Quote
-                    </button>
                   </div>
                 </div>
               </div>
