@@ -66,7 +66,7 @@ const projects = [
       "Chat application with real-time messaging, multimedia sharing, and group chats.",
     image: "/assets/e-tatasiaka.png",
     tags: ["Nextjs", "supabase", "Prisma"],
-    category: ["Design", "Mobile App"],
+    category: ["Design"],
     githubUrl: "https://github.com/rakotoarisonlandry/tatasiaka/",
   },
 ];
