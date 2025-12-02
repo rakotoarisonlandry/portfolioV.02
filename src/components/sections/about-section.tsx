@@ -59,7 +59,7 @@ export function AboutSection() {
                 </div>
               </div>
               <Image
-                src="/assets/profile.png"
+                src="/assets/about.png"
                 alt="About Landry"
                 width={400}
                 height={500}

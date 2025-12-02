@@ -1,18 +1,19 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Image from "next/image"
-import { ExternalLink, Github, ArrowUpRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
-
+import { useState } from "react";
+import Image from "next/image";
+import { ExternalLink, Github } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "./hover-card";
 interface ProjectCardProps {
-  title: string
-  description: string
-  image: string
-  tags: string[]
-  liveUrl?: string
-  githubUrl?: string
-  featured?: boolean
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
+  liveUrl?: string;
+  githubUrl?: string;
+  featured?: boolean;
 }
 
 export function ProjectCard({
@@ -24,7 +25,7 @@ export function ProjectCard({
   githubUrl,
   featured = false,
 }: ProjectCardProps) {
-  const [isHovered, setIsHovered] = useState(false)
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div
@@ -34,13 +35,16 @@ export function ProjectCard({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="relative overflow-hidden">
+      <div
+        className="relative cursor-pointer overflow-hidden"
+        // onClick={() => liveUrl && window.open(liveUrl, "_blank")}
+      >
         <Image
           src={image || "/placeholder.svg"}
           alt={title}
           width={featured ? 800 : 800}
-          height={featured ? 600 : 600}
-          className="w-full h-64 md:h-80 object-cover transition-transform duration-700 group-hover:scale-105"
+          height={featured ? 400 : 400}
+          className="w-full h-64 md:h-80  object-cover transition-transform duration-700 group-hover:scale-105"
         />
 
         {/* Overlay */}
@@ -57,21 +61,51 @@ export function ProjectCard({
           }`}
         >
           {githubUrl && (
-            <Button size="sm" variant="secondary" className="bg-white/90 hover:bg-white">
-              <Github size={16} />
-            </Button>
+            <HoverCard>
+              <HoverCardTrigger asChild>
+                <Link
+                  href={githubUrl}
+                  target="_blank"
+                  className="bg-white/90 p-4 rounded-full hover:bg-white"
+                >
+                  <Github size={16} />
+                </Link>
+              </HoverCardTrigger>
+              <HoverCardContent className="w-44">
+                <div className="flex flex-col space-y-2">
+                  <p className="text-sm text-gray-700">
+                    View the source code on GitHub
+                  </p>
+                </div>
+              </HoverCardContent>
+            </HoverCard>
           )}
           {liveUrl && (
-            <Button size="sm" variant="secondary" className="bg-white/90 hover:bg-white">
-              <ExternalLink size={16} />
-            </Button>
+            <HoverCard>
+              <HoverCardTrigger asChild>
+                <Link
+                  href={liveUrl}
+                  target="_blank"
+                  className="bg-white/90 p-4 rounded-full items-center hover:bg-white"
+                >
+                  <ExternalLink size={20} />
+                </Link>
+              </HoverCardTrigger>
+              <HoverCardContent className="w-21">
+                <div className="flex flex-col">
+                  <p className="text-sm text-gray-700">Go Live</p>
+                </div>
+              </HoverCardContent>
+            </HoverCard>
           )}
         </div>
 
         {/* Featured Badge */}
         {featured && (
           <div className="absolute top-4 left-4">
-            <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-semibold">Featured</span>
+            <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+              Featured
+            </span>
           </div>
         )}
       </div>
@@ -82,15 +116,11 @@ export function ProjectCard({
           <h3 className="text-xl font-bold text-gray-900 group-hover:text-orange-500 transition-colors duration-200">
             {title}
           </h3>
-          <ArrowUpRight
-            size={20}
-            className={`text-gray-400 transition-all duration-200 ${
-              isHovered ? "text-orange-500 transform translate-x-1 -translate-y-1" : ""
-            }`}
-          />
         </div>
 
-        <p className="text-gray-600 text-sm mb-4 leading-relaxed">{description}</p>
+        <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+          {description}
+        </p>
 
         {/* Tags */}
         <div className="flex flex-wrap gap-2">
@@ -105,5 +135,5 @@ export function ProjectCard({
         </div>
       </div>
     </div>
-  )
+  );
 }

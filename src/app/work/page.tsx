@@ -7,25 +7,25 @@ import { FilterTabs } from "@/components/ui/filter-tabs";
 const projects = [
   {
     id: 1,
-    title: "Portfolio.v1",
+    title: "E-commerce Platform",
     description:
       "Modern e-commerce solution with advanced filtering, payment integration, and admin dashboard.",
-    image: "/assets/portfoliov1.png",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
-    category: "Web Development",
-    liveUrl: "https://plastikoo.mg",
+    image: "/assets/e-commerce.png",
+    tags: ["Nextjs", "TypeScript", "Supabase", "tailwindcss", "Stripe"],
+    category: ["Web Development", "Design"],
+    liveUrl: "https://lnluxeshop.vercel.app",
     githubUrl: "https://github.com/rakotoarisonlandry/Plastikoo_Front",
     featured: true,
   },
   {
     id: 2,
-    title: "E-commerce Platform",
+    title: "Portfolio.v1",
     description:
-      "Modern e-commerce solution with advanced filtering, payment integration, and admin dashboard.",
-    image: "/assets/plastikoofront.png",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
-    category: "Web Development",
-    liveUrl: "https://plastikoo.mg",
+      "Personal portfolio website showcasing projects, skills, and contact information.",
+    image: "/assets/portfoliov1.png",
+    tags: ["Nextjs", "TypeScript", "tailwindcss"],
+    category: ["Web Development", "Design"],
+    liveUrl: "https://landryportfolio.onrender.com/",
     githubUrl: "https://github.com/rakotoarisonlandry/Plastikoo_Front",
   },
   {
@@ -36,46 +36,38 @@ const projects = [
     image: "/assets/mobileapk.png",
     tags: ["React Native", "Mysql", "TypeScript"],
     category: "Mobile App",
-    liveUrl: "",
-    githubUrl: "https://github.com/rakotoarisonlandry/Plastikoo_Mobile",
+    // githubUrl: "https://github.com/rakotoarisonlandry/Plastikoo_Mobile",
   },
   {
     id: 4,
-    title: "Brand Identity Design",
+    title: "Plastikoo plateform",
     description:
-      "Complete brand identity package including logo, color palette, and brand guidelines.",
-    image: "/assets/profile.png",
+      "Web platform for managing plastic waste collection, recycling processes, and user engagement.",
+    image: "/assets/plastikoofront.png",
+    liveUrl: "https://plastikoo.mg/",
     tags: ["Figma", "Illustrator", "Branding"],
-    category: "Design",
+    category: "Web Development",
   },
   {
     id: 5,
-    title: "Restaurant App UI",
+    title: "Portfolio.v2",
     description:
-      "Food delivery app interface with intuitive navigation and seamless ordering experience.",
-    image: "/assets/profile.png",
-    tags: ["Figma", "Prototyping", "UI/UX"],
-    category: "Design",
+      "Redesigned personal portfolio with enhanced UI/UX and responsive design.",
+    image: "/assets/portfoliov2.png",
+    tags: ["NextJs", "", "TypeScript", "tailwindcss"],
+    liveUrl: "https://landrybrigea.vercel.app/",
+    githubUrl: "https://github.com/rakotoarisonlandry/Portfolio.v2",
+    category: ["Web Development", "Design"],
   },
   {
     id: 6,
     title: "E-tatasiaka App",
     description:
-      "Cross-platform fitness app with workout tracking, nutrition logging, and social features.",
-    image: "/assets/profile.png",
-    tags: ["Flutter", "Firebase", "Health APIs"],
-    category: "Mobile App",
-    githubUrl: "https://github.com",
-  },
-  {
-    id: 7,
-    title: "Sekolinitsika App",
-    description:
-      "Cross-platform fitness app with workout tracking, nutrition logging, and social features.",
-    image: "/assets/profile.png",
-    tags: ["Flutter", "Firebase", "Health APIs"],
-    category: "Mobile App",
-    githubUrl: "https://github.com",
+      "Chat application with real-time messaging, multimedia sharing, and group chats.",
+    image: "/assets/e-tatasiaka.png",
+    tags: ["Nextjs", "supabase", "Prisma"],
+    category: ["Design", "Mobile App"],
+    githubUrl: "https://github.com/rakotoarisonlandry/tatasiaka/",
   },
 ];
 
@@ -87,8 +79,11 @@ export default function WorkPage() {
   const filteredProjects =
     activeCategory === "All"
       ? projects
-      : projects.filter((project) => project.category === activeCategory);
-
+      : projects.filter((project) =>
+          Array.isArray(project.category)
+            ? project.category.includes(activeCategory)
+            : project.category === activeCategory
+        );
   return (
     <div className="pt-24 pb-16">
       {/* Hero Section */}

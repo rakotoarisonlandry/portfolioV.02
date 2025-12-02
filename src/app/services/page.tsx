@@ -41,19 +41,6 @@ const services = [
     price: "Starting at €3,500",
   },
   {
-    icon: Zap,
-    title: "Performance Optimization",
-    description:
-      "Optimize your existing applications for better speed, SEO, and user experience.",
-    features: [
-      "Speed Optimization",
-      "SEO Improvement",
-      "Code Refactoring",
-      "Performance Monitoring",
-    ],
-    price: "Starting at €1,000",
-  },
-  {
     icon: Users,
     title: "Consulting & Strategy",
     description:
