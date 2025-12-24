@@ -46,7 +46,7 @@ export default function AboutPage() {
 
   const projects = [
     {
-      name: "PLASTIKÔO",
+      name: "PLASTIKÔO",  
       type: "Award-winning International Startup",
       tech: ["Next.js", "React Native", "Node.js", "Tailwind CSS", "MySQL"],
       description:

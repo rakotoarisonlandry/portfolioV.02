@@ -6,6 +6,7 @@ import { Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ProfileBadge } from "@/components/ui/profile-badge";
 import Link from "next/link";
+import { section } from "framer-motion/client";
 
 export function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -40,6 +41,9 @@ export function HeroSection() {
 
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
+    }
+    else if(!sectionRef.current){
+      console.log("section reference  is null");
     }
 
     return () => observer.disconnect();
@@ -141,7 +145,7 @@ export function HeroSection() {
                 </div>
 
                 {/* Main Profile Container */}
-                <div className="bg-gray-900 rounded-3xl  relative overflow-hidden">
+                <div className="bg-gray-900 rounded-full  relative overflow-hidden">
                   {/* <div className="absolute top-6 left-6 right-6">
                     <div className="text-white/80 font-script leading-tight text-lg">
                       <span className="">Rakotoarison</span>
@@ -155,9 +159,9 @@ export function HeroSection() {
                   <Image
                     src="/assets/profile.png"
                     alt="Landry - Creative Developer"
-                    width={380}
-                    height={380}
-                    className="rounded-3xl h-full "
+                    width={300}
+                    height={300}
+                    className="rounded-full "
                   />
 
                   {/* Signature */}
