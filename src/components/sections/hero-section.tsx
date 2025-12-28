@@ -144,12 +144,6 @@ export function HeroSection() {
 
                 {/* Main Profile Container */}
                 <div className="bg-gray-900 rounded-4xl  relative overflow-hidden">
-                  {/* <div className="absolute top-6 left-6 right-6">
-                    <div className="text-white/80 font-script leading-tight text-lg">
-                      <span className="">Rakotoarison</span>
-                      <span> Tsaraefadahy Landry Brigea</span>
-                    </div>
-                  </div> */}
                   <div className="absolute top-4 right-4">
                     <Sparkles className="text-white/20" size={24} />
                   </div>
