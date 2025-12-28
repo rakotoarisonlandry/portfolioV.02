@@ -143,7 +143,7 @@ export function HeroSection() {
                 </div>
 
                 {/* Main Profile Container */}
-                <div className="bg-gray-900 rounded-full  relative overflow-hidden">
+                <div className="bg-gray-900 rounded-4xl  relative overflow-hidden">
                   {/* <div className="absolute top-6 left-6 right-6">
                     <div className="text-white/80 font-script leading-tight text-lg">
                       <span className="">Rakotoarison</span>
@@ -159,7 +159,7 @@ export function HeroSection() {
                     alt="Landry - Creative Developer"
                     width={300}
                     height={300}
-                    className="rounded-full "
+                    className="rounded-4xl "
                   />
 
                   {/* Signature */}
