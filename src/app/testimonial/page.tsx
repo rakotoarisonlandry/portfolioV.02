@@ -211,19 +211,7 @@ export default function TestimonialPage() {
               He took our complex requirements and turned them into an elegant,
               user-friendly solution.&quot;
             </blockquote>
-            <div className="flex items-center justify-center space-x-4">
-              <Image
-                src="/placeholder.svg?height=60&width=60"
-                alt="Featured client"
-                width={60}
-                height={60}
-                className="rounded-full"
-              />
-              <div className="text-left">
-                <div className="font-bold text-gray-900">Alex Thompson</div>
-                <div className="text-gray-600">CTO, TechVision</div>
-              </div>
-            </div>
+
           </div>
         </div>
       </section>
