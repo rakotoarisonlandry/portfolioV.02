@@ -6,7 +6,6 @@ import { Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ProfileBadge } from "@/components/ui/profile-badge";
 import Link from "next/link";
-import { section } from "framer-motion/client";
 
 export function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -52,7 +51,6 @@ export function HeroSection() {
   return (
     <section ref={sectionRef} className="pt-24 pb-16 px-6 lg:px-28">
       <div className="max-w-7xl mx-20">
-        {/* Top Badge */}
         <div className="flex justify-center mb-12">
           <div className="animate-on-scroll opacity-0">
             <div className="text-gradient  text-white px-6 py-3 rounded-full text-sm font-semibold flex items-center space-x-2">
