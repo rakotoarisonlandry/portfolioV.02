@@ -6,19 +6,10 @@ import { Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ProfileBadge } from "@/components/ui/profile-badge";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 
 export function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null);
-  const navigateToContact = () => {
-    if (typeof window !== "undefined") {
-      window.location.href = "/contact";
-    }
-  };
-  const navigateToMyWork = () => {
-    if (typeof window !== "undefined") {
-      window.location.href = "/work";
-    }
-  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -147,7 +138,6 @@ export function HeroSection() {
                   <div className="absolute top-4 right-4">
                     <Sparkles className="text-white/20" size={24} />
                   </div>
-
                   <Image
                     src="/assets/profile.png"
                     alt="Landry - Creative Developer"
@@ -162,14 +152,14 @@ export function HeroSection() {
                 {/* Action Buttons */}
                 <div className="flex justify-center space-x-4 mt-8">
                   <Button
-                    onClick={() => navigateToContact()}
+                    onClick={() => redirect("/contact")}
                     className="accent-bg text-white hover:shadow-lg transition-all duration-300"
                   >
                     Let&apos;s Talk →
                   </Button>
                   <Button
                     variant="outline"
-                    onClick={() => navigateToMyWork()}
+                    onClick={() => redirect("/work")}
                     className="border-gray-300 hover:border-gray-400 bg-transparent"
                   >
                     My Work →

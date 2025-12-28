@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Download, SparklesIcon, ChevronDown, ArrowRight } from "lucide-react";
 import { saveAs } from "file-saver";
+import { redirect } from "next/navigation";
 
 const tabs = [
   { id: "who", label: "who i am" },
@@ -34,11 +35,6 @@ export function AboutSection() {
     handleDownloadInEnglish();
     handleDownloadInFrench();
     setShowDownloadOptions(false);
-  };
-  const navigateToAbout = () => {
-    if (typeof window !== "undefined") {
-      window.location.href = "/about";
-    }
   };
   return (
     <section className="py-20 px-6 lg:px-8">
@@ -125,7 +121,7 @@ export function AboutSection() {
                         />
                       </Button>
                       <Button
-                        onClick={() => navigateToAbout()}
+                        onClick={() => redirect("/about")}
                         className="accent-bg text-white hover:shadow-lg transition-all duration-300"
                       >
                         more about me

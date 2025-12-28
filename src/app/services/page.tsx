@@ -1,4 +1,7 @@
+"use client";
+import { Button } from "@/components/ui/button";
 import { Code, Smartphone, Globe, Zap, Users } from "lucide-react";
+import { redirect } from "next/navigation";
 
 const services = [
   {
@@ -7,7 +10,7 @@ const services = [
     description:
       "Custom web applications built with modern technologies like React, Next.js, and Node.js.",
     features: [
-      "Responsiv e Design",
+      "Responsive Design",
       "Performance Optimization",
       "SEO Friendly",
       "Modern Frameworks",
@@ -190,12 +193,12 @@ export default function ServicesPage() {
               together. I&apos;m here to help you succeed.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="text-gradient text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
+              <Button onClick={() => redirect("/")} className="text-gradient text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
                 Get Started
-              </button>
-              <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full font-semibold hover:border-gray-400 transition-all duration-300">
+              </Button>
+              <Button onClick={() => redirect("/")} className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full font-semibold hover:border-gray-400 transition-all duration-300">
                 View Portfolio
-              </button>
+              </Button>
             </div>
           </div>
         </div>

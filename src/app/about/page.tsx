@@ -12,7 +12,10 @@ import {
   Mail,
   ExternalLink,
   Calendar,
+  Link,
 } from "lucide-react";
+import { navigate } from "next/dist/client/components/segment-cache/navigation";
+import { redirect } from "next/navigation";
 
 export default function AboutPage() {
   const [activeTab, setActiveTab] = useState("skills");
@@ -46,7 +49,7 @@ export default function AboutPage() {
 
   const projects = [
     {
-      name: "PLASTIKÔO",  
+      name: "PLASTIKÔO",
       type: "Award-winning International Startup",
       tech: ["Next.js", "React Native", "Node.js", "Tailwind CSS", "MySQL"],
       description:
@@ -608,9 +611,9 @@ export default function AboutPage() {
               Contact me to discuss your next technical challenge.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
-              <Button className="text-gradient text-gray-900 hover:bg-white px-6 py-3 text-base font-medium shadow-md">
-                <Mail className="mr-2" size={18} />
-                Contact Me
+              <Button onClick={() => redirect("/contact")} className="text-gradient text-gray-900 hover:bg-white px-6 py-3 text-base font-medium shadow-md">
+                  <Mail className="mr-2" size={18} />
+                  Contact Me
               </Button>
               <Button
                 variant="outline"
