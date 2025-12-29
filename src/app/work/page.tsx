@@ -13,8 +13,8 @@ const projects = [
     image: "/assets/e-commerce.png",
     tags: ["Nextjs", "TypeScript", "Supabase", "tailwindcss", "Stripe"],
     category: ["Web Development", "Design"],
-    liveUrl: "https://lnluxeshop.vercel.app",
-    githubUrl: "https://github.com/rakotoarisonlandry/Plastikoo_Front",
+    liveUrl: "https://ln-techparadise.vercel.app/",
+    githubUrl: "https://github.com/rakotoarisonlandry/Tech-Paradise",
     featured: true,
   },
   {
@@ -77,7 +77,7 @@ const projects = [
       "Using Petri nets to model, simulate and optimize urban transport flows with 5 interconnected stations and 3 automated trains.",
     image: "/assets/petri.png",
     tags: ["Nextjs"],
-    category: ["Design"],
+    category: ["Web Development", "Design"],
     githubUrl: "https://github.com/rakotoarisonlandry/petri-network-simulation",
   },
 ];
