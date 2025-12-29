@@ -36,7 +36,6 @@ const projects = [
     image: "/assets/mobileapk.png",
     tags: ["React Native", "Mysql", "TypeScript"],
     category: "Mobile App",
-    // githubUrl: "https://github.com/rakotoarisonlandry/Plastikoo_Mobile",
   },
   {
     id: 4,
