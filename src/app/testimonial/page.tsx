@@ -174,7 +174,6 @@ export default function TestimonialPage() {
                         </div>
                       );
                     } else {
-                      // Étoile vide
                       return (
                         <Star
                           key={i}

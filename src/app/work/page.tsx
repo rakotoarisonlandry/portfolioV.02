@@ -63,11 +63,22 @@ const projects = [
     id: 6,
     title: "E-tatasiaka App",
     description:
-      "Chat application with real-time messaging, multimedia sharing, and group chats.",
+    "Chat application with real-time messaging, multimedia sharing, and group chats.",
     image: "/assets/e-tatasiaka.png",
     tags: ["Nextjs", "supabase", "Prisma"],
     category: ["Design"],
     githubUrl: "https://github.com/rakotoarisonlandry/tatasiaka/",
+  },
+  {
+    id: 7,
+    title: "Automated Metropolitan Traffic Management",
+    liveUrl: "https://petri-network-simulation.vercel.app/",
+    description:
+      "Using Petri nets to model, simulate and optimize urban transport flows with 5 interconnected stations and 3 automated trains.",
+    image: "/assets/petri.png",
+    tags: ["Nextjs"],
+    category: ["Design"],
+    githubUrl: "https://github.com/rakotoarisonlandry/petri-network-simulation",
   },
 ];
 
