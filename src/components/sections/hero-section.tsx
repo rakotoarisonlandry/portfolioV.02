@@ -127,7 +127,7 @@ export function HeroSection() {
                 {/* <div className="bg-gray-900 rounded-4xl  relative overflow-hidden">
                   <div className="absolute top-4 right-4">
                     <Sparkles className="text-white/20" size={24} />
-                  </div> */}
+                  </div> */}  
                 <Image
                   src="/assets/profil.jpg"
                   alt="Landry - Creative Developer"
