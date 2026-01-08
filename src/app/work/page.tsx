@@ -52,7 +52,7 @@ const projects = [
     title: "Portfolio.v2",
     description:
       "Redesigned personal portfolio with enhanced UI/UX and responsive design.",
-    image: "/assets/portfoliov2.png",
+    image: "/assets/portfolioV2.png",
     tags: ["NextJs", "", "TypeScript", "tailwindcss"],
     liveUrl: "https://landrybrigea.vercel.app/",
     githubUrl: "https://github.com/rakotoarisonlandry/Portfolio.v2",

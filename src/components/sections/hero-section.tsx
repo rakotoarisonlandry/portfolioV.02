@@ -123,11 +123,6 @@ export function HeroSection() {
               style={{ animationDelay: "0.8s" }}
             >
               <div className="relative">
-                {/* Main Profile Container */}
-                {/* <div className="bg-gray-900 rounded-4xl  relative overflow-hidden">
-                  <div className="absolute top-4 right-4">
-                    <Sparkles className="text-white/20" size={24} />
-                  </div> */}  
                 <Image
                   src="/assets/profil.jpg"
                   alt="Landry - Creative Developer"
@@ -135,11 +130,6 @@ export function HeroSection() {
                   height={400}
                   className="rounded-4xl "
                 />
-
-                {/* Signature */}
-                {/* </div> */}
-
-                {/* Action Buttons */}
                 <div className="flex justify-center space-x-4 mt-8">
                   <Button
                     onClick={() => redirect("/contact")}
