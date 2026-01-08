@@ -31,8 +31,7 @@ export function HeroSection() {
 
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
-    }
-    else if(!sectionRef.current){
+    } else if (!sectionRef.current) {
       console.log("section reference  is null");
     }
 
@@ -124,30 +123,21 @@ export function HeroSection() {
               style={{ animationDelay: "0.8s" }}
             >
               <div className="relative">
-                {/* Profile Badge */}
-                <div className="absolute -top-4 -right-4 z-10">
-                  <div className="bg-white border border-gray-200 rounded-full p-3 shadow-lg">
-                    <div className="w-12 h-12 bg-purple-700 rounded-full flex items-center justify-center">
-                      <span className="text-white font-bold">L</span>
-                    </div>
-                  </div>
-                </div>
-
                 {/* Main Profile Container */}
-                <div className="bg-gray-900 rounded-4xl  relative overflow-hidden">
+                {/* <div className="bg-gray-900 rounded-4xl  relative overflow-hidden">
                   <div className="absolute top-4 right-4">
                     <Sparkles className="text-white/20" size={24} />
-                  </div>
-                  <Image
-                    src="/assets/profile.png"
-                    alt="Landry - Creative Developer"
-                    width={300}
-                    height={300}
-                    className="rounded-4xl "
-                  />
+                  </div> */}
+                <Image
+                  src="/assets/profil.jpg"
+                  alt="Landry - Creative Developer"
+                  width={400}
+                  height={400}
+                  className="rounded-4xl "
+                />
 
-                  {/* Signature */}
-                </div>
+                {/* Signature */}
+                {/* </div> */}
 
                 {/* Action Buttons */}
                 <div className="flex justify-center space-x-4 mt-8">
