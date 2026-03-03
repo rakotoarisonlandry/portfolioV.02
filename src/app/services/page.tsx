@@ -15,7 +15,6 @@ const services = [
       "SEO Friendly",
       "Modern Frameworks",
     ],
-    price: "Starting at €2,500",
   },
   {
     icon: Smartphone,
@@ -28,7 +27,6 @@ const services = [
       "App Store Deployment",
       "Push Notifications",
     ],
-    price: "Starting at €4,000",
   },
   {
     icon: Globe,
@@ -41,7 +39,6 @@ const services = [
       "Analytics Dashboard",
       "Admin Panel",
     ],
-    price: "Starting at €3,500",
   },
   {
     icon: Users,
@@ -54,7 +51,6 @@ const services = [
       "Team Training",
       "Best Practices",
     ],
-    price: "€150/hour",
   },
 ];
 

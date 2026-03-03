@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 export function Footer() {
+  const currentYear = new Date().getFullYear();
   return (
     <footer className="bg-gray-900 text-white py-12 px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -63,7 +64,7 @@ export function Footer() {
 
         <div className="border-t border-gray-800 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            © 2026 RAKOTOARISON TSARAEFADAHY LANDRY BRIGEA.
+            © {currentYear} RAKOTOARISON TSARAEFADAHY LANDRY BRIGEA.
           </p>
         </div>
       </div>
