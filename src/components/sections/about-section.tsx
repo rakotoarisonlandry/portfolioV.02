@@ -95,7 +95,7 @@ export function AboutSection() {
                     <p>
                       My full name is{" "}
                       <span className="font-semibold">
-                        Rakotoarison Tsarefadahy Landr y Brigea
+                        Rakotoarison Tsarefadahy Landry Brigea
                       </span>
                       , a passionate Fullstack Developer with over 01+ years of
                       experience in building dynamic web and mobile
@@ -106,7 +106,7 @@ export function AboutSection() {
                   <div className="relative">
                     <span className="flex space-x-5">
                       <Button
-                        className="bg-gray-900 text-white hover:bg-gray-800 flex items-center gap-1"
+                        className="bg-gray-900 size text-white hover:bg-gray-800 flex items-center gap-1"
                         onClick={() =>
                           setShowDownloadOptions(!showDownloadOptions)
                         }
