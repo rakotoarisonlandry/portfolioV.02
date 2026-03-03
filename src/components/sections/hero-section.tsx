@@ -87,7 +87,7 @@ export function HeroSection() {
             </div>
 
             <div
-              className="animate-on-scroll opacity-0 flex relative sm:hidden  items-center space-x-1"
+              className="animate-on-scroll opacity-0 lg:flex hidden lg:relative  items-center space-x-1"
               style={{ animationDelay: "0.6s" }}
             >
               <div className="flex space-x-4">
@@ -124,7 +124,7 @@ export function HeroSection() {
               style={{ animationDelay: "0.8s" }}
             >
               <div
-              className="animate-on-scroll lg:hidden opacity-0 flex items-center space-x-1"
+              className="animate-on-scroll lg:hidden opacity-0 flex justify-center items-center space-x-1"
               style={{ animationDelay: "0.6s" }}
             >
               <div className="flex space-x-4">

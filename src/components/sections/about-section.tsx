@@ -40,7 +40,7 @@ export function AboutSection() {
     <section className="py-20 px-6 lg:px-8">
       <div className="max-w-7xl mx-14">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
-          <div className="flex justify-start">
+          <div className="lg:flex hidden  justify-start">
             <div className="relative">
               <div className="absolute -top-4 -right-4 z-10">
                 <div className="bg-white border border-gray-200 rounded-full p-3 shadow-lg">
