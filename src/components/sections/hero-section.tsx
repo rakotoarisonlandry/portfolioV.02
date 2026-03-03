@@ -39,8 +39,8 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="pt-24 pb-16 px-6 lg:px-28">
-      <div className="max-w-7xl mx-20">
+    <section ref={sectionRef} className="pt-24 pb-16 lg:px-28">
+      <div className="max-w-7xl mx-10 lg:mx-20">
         <div className="flex justify-center mb-12">
           <div className="animate-on-scroll opacity-0">
             <div className="text-gradient  text-white px-6 py-3 rounded-full text-sm font-semibold flex items-center space-x-2">
@@ -64,7 +64,7 @@ export function HeroSection() {
                 className="animate-on-scroll opacity-0"
                 style={{ animationDelay: "0.2s" }}
               >
-                <h1 className="text-6xl lg:text-7xl font-bold leading-tight">
+                <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight">
                   <span className="block text-gray-900">a Fullstack</span>
                   <span className="block">
                     <span className="text-gray-900">Develo</span>
@@ -87,7 +87,7 @@ export function HeroSection() {
             </div>
 
             <div
-              className="animate-on-scroll opacity-0 flex items-center space-x-1"
+              className="animate-on-scroll opacity-0 flex relative sm:hidden  items-center space-x-1"
               style={{ animationDelay: "0.6s" }}
             >
               <div className="flex space-x-4">
@@ -118,10 +118,39 @@ export function HeroSection() {
 
           {/* Right Content - Profile Image */}
           <div className="flex justify-center lg:justify-end">
+            
             <div
               className="animate-on-scroll opacity-0"
               style={{ animationDelay: "0.8s" }}
             >
+              <div
+              className="animate-on-scroll lg:hidden opacity-0 flex items-center space-x-1"
+              style={{ animationDelay: "0.6s" }}
+            >
+              <div className="flex space-x-4">
+                <Link
+                  href="https://github.com/rakotoarisonlandry"
+                  target="_blank"
+                  className="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center"
+                >
+                  <span className="text-white text-xs">Git</span>
+                </Link>
+                <Link
+                  href="https://web.facebook.com/rakotoarison.landry.2025"
+                  target="_blank"
+                  className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center"
+                >
+                  <span className="text-white text-xs">f</span>
+                </Link>
+                <Link
+                  href="https://www.linkedin.com/in/tsaraefadahy-landry-rakotoarison-224578265/"
+                  target="_blank"
+                  className="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center"
+                >
+                  <span className="text-white text-xs">in</span>
+                </Link>
+              </div>
+            </div>
               <div className="relative">
                 <Image
                   src="/assets/profil.jpg"

@@ -63,7 +63,7 @@ export function Footer() {
 
         <div className="border-t border-gray-800 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            © 2025 RAKOTOARISON TSARAEFADAHY LANDRY BRIGEA.
+            © 2026 RAKOTOARISON TSARAEFADAHY LANDRY BRIGEA.
           </p>
         </div>
       </div>
