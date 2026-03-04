@@ -109,14 +109,6 @@ export default function ServicesPage() {
                     ))}
                   </ul>
                 </div>
-
-                <div className="border-t border-gray-100 pt-6">
-                  <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold text-gray-900">
-                      {service.price}
-                    </span>
-                  </div>
-                </div>
               </div>
             ))}
           </div>
@@ -189,10 +181,16 @@ export default function ServicesPage() {
               together. I&apos;m here to help you succeed.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button onClick={() => redirect("/")} className="text-gradient text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
+              <Button
+                onClick={() => redirect("/")}
+                className="text-gradient text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transition-all duration-300"
+              >
                 Get Started
               </Button>
-              <Button onClick={() => redirect("/")} className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full font-semibold hover:border-gray-400 transition-all duration-300">
+              <Button
+                onClick={() => redirect("/")}
+                className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full font-semibold hover:border-gray-400 transition-all duration-300"
+              >
                 View Portfolio
               </Button>
             </div>

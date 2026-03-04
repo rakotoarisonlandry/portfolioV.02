@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
-import { Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ProfileBadge } from "@/components/ui/profile-badge";
 import Link from "next/link";
@@ -40,7 +40,7 @@ export function HeroSection() {
 
   return (
     <section ref={sectionRef} className="pt-24 pb-16 lg:px-28">
-      <div className="max-w-7xl mx-10 lg:mx-20">
+      <div className="max-w-7xl mx-10">
         <div className="flex justify-center mb-12">
           <div className="animate-on-scroll opacity-0">
             <div className="text-gradient  text-white px-6 py-3 rounded-full text-sm font-semibold flex items-center space-x-2">
@@ -164,14 +164,16 @@ export function HeroSection() {
                     onClick={() => redirect("/contact")}
                     className="accent-bg text-white hover:shadow-lg transition-all duration-300"
                   >
-                    Let&apos;s Talk →
+                    Let&apos;s Talk 
+                    <ArrowRight size={18} />
                   </Button>
                   <Button
                     variant="outline"
                     onClick={() => redirect("/work")}
                     className="border-gray-300 hover:border-gray-400 bg-transparent"
                   >
-                    My Work →
+                    My Work 
+                    <ArrowRight size={18} />
                   </Button>
                 </div>
               </div>

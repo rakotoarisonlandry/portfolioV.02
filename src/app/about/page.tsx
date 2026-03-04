@@ -13,6 +13,10 @@ import {
   ExternalLink,
   Calendar,
   Link,
+  Music,
+  Handshake,
+  Zap,
+  Lightbulb,
 } from "lucide-react";
 import { navigate } from "next/dist/client/components/segment-cache/navigation";
 import { redirect } from "next/navigation";
@@ -91,7 +95,7 @@ export default function AboutPage() {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     const elements = pageRef.current?.querySelectorAll(".animate-on-scroll");
@@ -292,17 +296,18 @@ export default function AboutPage() {
                       >
                         <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
                           <span className="text-white text-xl md:text-2xl">
-                            {interest === "Singing" && "🎤"}
-                            {interest === "Guitar" && "🎸"}
-                            {interest === "Football" && "⚽"}
-                            {interest === "Development" && "💻"}
+                            {interest === "Singing , Guitar" && (
+                              <Music size={20} />
+                            )}
+                            {interest === "Football" && <Globe size={20} />}
+                            {interest === "Development" && <Code size={20} />}
                           </span>
                         </div>
                         <h3 className="font-bold text-base md:text-lg">
                           {interest}
                         </h3>
                       </div>
-                    )
+                    ),
                   )}
                 </div>
                 <div className="mt-8 md:mt-12 bg-white rounded-xl p-6 md:p-8 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
@@ -497,8 +502,8 @@ export default function AboutPage() {
                       project.status === "In Progress"
                         ? "bg-green-100 text-green-800"
                         : project.status === "Personal Project"
-                        ? "bg-blue-100 text-blue-800"
-                        : "bg-gray-100 text-gray-800"
+                          ? "bg-blue-100 text-blue-800"
+                          : "bg-gray-100 text-gray-800"
                     }`}
                   >
                     {project.status}
@@ -562,19 +567,19 @@ export default function AboutPage() {
                 title: "Innovation",
                 description:
                   "Always seeking creative and efficient new solutions to solve complex technical challenges.",
-                icon: "💡",
+                icon: Lightbulb,
               },
               {
                 title: "Quality",
                 description:
                   "Clean code, optimal performance and attention to detail to deliver robust and maintainable solutions.",
-                icon: "⚡",
+                icon: Zap,
               },
               {
                 title: "Collaboration",
                 description:
                   "Teamwork and transparent communication for project success and everyone's fulfillment.",
-                icon: "🤝",
+                icon: Handshake,
               },
             ].map((value, index) => (
               <div
@@ -584,7 +589,7 @@ export default function AboutPage() {
               >
                 <div className="bg-white rounded-xl p-5 md:p-6 shadow-md hover:shadow-lg transition-all border border-gray-100 h-full">
                   <div className="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl md:text-3xl text-white group-hover:scale-105 transition-transform">
-                    {value.icon}
+                    <value.icon />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
                     {value.title}
@@ -611,9 +616,12 @@ export default function AboutPage() {
               Contact me to discuss your next technical challenge.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
-              <Button onClick={() => redirect("/contact")} className="text-gradient text-gray-900 hover:bg-white px-6 py-3 text-base font-medium shadow-md">
-                  <Mail className="mr-2" size={18} />
-                  Contact Me
+              <Button
+                onClick={() => redirect("/contact")}
+                className="text-gradient text-gray-900 hover:bg-white px-6 py-3 text-base font-medium shadow-md"
+              >
+                <Mail className="mr-2" size={18} />
+                Contact Me
               </Button>
               <Button
                 variant="outline"
