@@ -114,7 +114,7 @@ export function AboutSection() {
                         <Download size={16} className="mr-2" />
                         Download CV
                         <ChevronDown
-                          size={16}
+                          size={14}
                           className={`transition-transform ${
                             showDownloadOptions ? "rotate-180" : ""
                           }`}
@@ -125,7 +125,7 @@ export function AboutSection() {
                         className="accent-bg text-white hover:shadow-lg transition-all duration-300"
                       >
                         more about me
-                        <ArrowRight height={18} />
+                        <ArrowRight height={14} />
                       </Button>
                     </span>
 
