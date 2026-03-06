@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import { ArrowRight, Menu, X } from "lucide-react";
 import { Button } from "../ui/button";
 // import { Button } from "@/components/ui/button";
 
@@ -28,8 +28,6 @@ export function Navigation() {
     { href: "/work", label: "work" },
     { href: "/services", label: "services" },
     { href: "/testimonial", label: "testimonial" },
-    // { href: "/blog", label: "blog" },
-    // { href: "/contact", label: "contact" },
   ];
 
   return (
@@ -41,11 +39,13 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link href="/" className="text-2xl font-bold text-gray-900">
-            r.Landry
-          </Link>
+          <div className="flex-1">
+            <Link href="/" className="text-2xl font-bold text-gray-900">
+              r.Landry
+            </Link>
+          </div>
 
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex justify-center items-center space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -59,6 +59,8 @@ export function Navigation() {
                 {item.label}
               </Link>
             ))}
+          </div>
+          <div className="hidden lg:flex justify-end flex-1 ">
             <Link
               href="/contact"
               onClick={() => setIsOpen(false)}
@@ -66,9 +68,10 @@ export function Navigation() {
             >
               <Button
                 onClick={() => navigateToContact()}
-                className="accent-bg rounded-full text-white hover:shadow-lg transition-all duration-300"
+                className="accent-bg rounded-full flex items-center gap-2 text-white hover:shadow-lg transition-all duration-300"
               >
-                Contact →
+                Contact
+                <ArrowRight size={14} />
               </Button>
             </Link>
           </div>

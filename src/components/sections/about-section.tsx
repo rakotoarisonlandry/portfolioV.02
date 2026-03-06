@@ -38,7 +38,7 @@ export function AboutSection() {
   };
   return (
     <section className="py-20 px-6 lg:px-8">
-      <div className="max-w-7xl lg:mx-14 mx-4">
+      <div className="max-w-7xl mx-6 lg:mx-auto sm:mx-4">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           <div className="lg:flex hidden justify-start">
             <div className="relative">

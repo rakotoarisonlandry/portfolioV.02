@@ -26,7 +26,7 @@ export function HeroSection() {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (sectionRef.current) {
@@ -40,7 +40,7 @@ export function HeroSection() {
 
   return (
     <section ref={sectionRef} className="pt-24 pb-16 lg:px-28">
-      <div className="max-w-7xl mx-10">
+      <div className="max-w-7xl mx-6 lg:mx-auto sm:mx-4">
         <div className="flex justify-center mb-12">
           <div className="animate-on-scroll opacity-0">
             <div className="text-gradient  text-white px-6 py-3 rounded-full text-sm font-semibold flex items-center space-x-2">
@@ -118,39 +118,38 @@ export function HeroSection() {
 
           {/* Right Content - Profile Image */}
           <div className="flex justify-center lg:justify-end">
-            
             <div
               className="animate-on-scroll opacity-0"
               style={{ animationDelay: "0.8s" }}
             >
               <div
-              className="animate-on-scroll lg:hidden opacity-0 flex justify-center items-center space-x-1"
-              style={{ animationDelay: "0.6s" }}
-            >
-              <div className="flex space-x-4">
-                <Link
-                  href="https://github.com/rakotoarisonlandry"
-                  target="_blank"
-                  className="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center"
-                >
-                  <span className="text-white text-xs">Git</span>
-                </Link>
-                <Link
-                  href="https://web.facebook.com/rakotoarison.landry.2025"
-                  target="_blank"
-                  className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center"
-                >
-                  <span className="text-white text-xs">f</span>
-                </Link>
-                <Link
-                  href="https://www.linkedin.com/in/tsaraefadahy-landry-rakotoarison-224578265/"
-                  target="_blank"
-                  className="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center"
-                >
-                  <span className="text-white text-xs">in</span>
-                </Link>
+                className="animate-on-scroll lg:hidden opacity-0 flex justify-center items-center space-x-1"
+                style={{ animationDelay: "0.6s" }}
+              >
+                <div className="flex space-x-4">
+                  <Link
+                    href="https://github.com/rakotoarisonlandry"
+                    target="_blank"
+                    className="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center"
+                  >
+                    <span className="text-white text-xs">Git</span>
+                  </Link>
+                  <Link
+                    href="https://web.facebook.com/rakotoarison.landry.2025"
+                    target="_blank"
+                    className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center"
+                  >
+                    <span className="text-white text-xs">f</span>
+                  </Link>
+                  <Link
+                    href="https://www.linkedin.com/in/tsaraefadahy-landry-rakotoarison-224578265/"
+                    target="_blank"
+                    className="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center"
+                  >
+                    <span className="text-white text-xs">in</span>
+                  </Link>
+                </div>
               </div>
-            </div>
               <div className="relative">
                 <Image
                   src="/assets/profil.jpg"
@@ -162,18 +161,18 @@ export function HeroSection() {
                 <div className="flex justify-center space-x-4 mt-8">
                   <Button
                     onClick={() => redirect("/contact")}
-                    className="accent-bg text-white hover:shadow-lg transition-all duration-300"
+                    className="accent-bg rounded-full flex items-center gap-2 text-white hover:shadow-lg transition-all duration-300"
                   >
-                    Let&apos;s Talk 
-                    <ArrowRight size={18} />
+                    Let&apos;s Talk
+                    <ArrowRight size={14} />
                   </Button>
                   <Button
                     variant="outline"
                     onClick={() => redirect("/work")}
-                    className="border-gray-300 hover:border-gray-400 bg-transparent"
+                    className="border-gray-300 rounded-full flex items-center gap-2 hover:border-gray-400 bg-transparent"
                   >
-                    My Work 
-                    <ArrowRight size={18} />
+                    My Work
+                    <ArrowRight size={14} />
                   </Button>
                 </div>
               </div>
