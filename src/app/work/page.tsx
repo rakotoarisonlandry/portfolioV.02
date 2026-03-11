@@ -60,11 +60,18 @@ const projects = [
   },
   {
     id: 6,
-    title: "E-tatasiaka App",
+    title: "E-tatasiaka Apk & Web",
     description:
-    "Chat application with real-time messaging, multimedia sharing, and group chats.",
+      "Chat application with real-time messaging, multimedia sharing, and group chats.",
     image: "/assets/e-tatasiaka.png",
-    tags: ["Nextjs", "supabase", "Prisma"],
+    tags: [
+      "Nextjs",
+      "React Native",
+      "TypeScript",
+      "tailwindcss",
+      "supabase",
+      "Prisma",
+    ],
     category: ["Design"],
     githubUrl: "https://github.com/rakotoarisonlandry/tatasiaka/",
   },
@@ -92,7 +99,7 @@ export default function WorkPage() {
       : projects.filter((project) =>
           Array.isArray(project.category)
             ? project.category.includes(activeCategory)
-            : project.category === activeCategory
+            : project.category === activeCategory,
         );
   return (
     <div className="pt-24 pb-16">
