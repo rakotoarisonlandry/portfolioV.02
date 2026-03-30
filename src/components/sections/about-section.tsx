@@ -107,18 +107,12 @@ export function AboutSection() {
                     <span className="flex space-x-5">
                       <Button
                         className="bg-gray-900 size text-white hover:bg-gray-800 flex items-center gap-1"
-                        onClick={() =>
-                          setShowDownloadOptions(!showDownloadOptions)
+                        onClick={handleDownloadInFrench
                         }
                       >
                         <Download size={16} className="mr-2" />
                         Download CV
-                        <ChevronDown
-                          size={14}
-                          className={`transition-transform ${
-                            showDownloadOptions ? "rotate-180" : ""
-                          }`}
-                        />
+                        
                       </Button>
                       <Button
                         onClick={() => redirect("/about")}
@@ -129,7 +123,7 @@ export function AboutSection() {
                       </Button>
                     </span>
 
-                    {showDownloadOptions && (
+                    {/* {showDownloadOptions && (
                       <div className="absolute z-10 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                         <div className="py-1">
                           <button
@@ -152,7 +146,7 @@ export function AboutSection() {
                           </button>
                         </div>
                       </div>
-                    )}
+                    )} */}
                   </div>
                 </div>
               )}
