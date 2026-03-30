@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Download, SparklesIcon, ChevronDown, ArrowRight } from "lucide-react";
+import { Download, SparklesIcon, ArrowRight } from "lucide-react";
 import { saveAs } from "file-saver";
 import { redirect } from "next/navigation";
 
@@ -17,12 +17,12 @@ export function AboutSection() {
   const [activeTab, setActiveTab] = useState("who");
   const [showDownloadOptions, setShowDownloadOptions] = useState(false);
 
-  const handleDownloadInEnglish = () => {
-    const fileUrl = "/assets/files/Obtention_de_diplôme_de _licence.pdf";
-    const fileName = "RAKOTOARISON_LANDRY_v.Anglais.pdf";
-    saveAs(fileUrl, fileName);
-    setShowDownloadOptions(false);
-  };
+  // const handleDownloadInEnglish = () => {
+  //   const fileUrl = "/assets/files/Obtention_de_diplôme_de _licence.pdf";
+  //   const fileName = "RAKOTOARISON_LANDRY_v.Anglais.pdf";
+  //   saveAs(fileUrl, fileName);
+  //   setShowDownloadOptions(false);
+  // };
 
   const handleDownloadInFrench = () => {
     const fileUrl = "/assets/files/RAKOTOARISON_LANDRY.pdf";
@@ -31,11 +31,11 @@ export function AboutSection() {
     setShowDownloadOptions(false);
   };
 
-  const handleDownloadBoth = () => {
-    handleDownloadInEnglish();
-    handleDownloadInFrench();
-    setShowDownloadOptions(false);
-  };
+  // const handleDownloadBoth = () => {
+  //   handleDownloadInEnglish();
+  //   handleDownloadInFrench();
+  //   setShowDownloadOptions(false);
+  // };
   return (
     <section className="py-20 px-6 lg:px-8">
       <div className="max-w-7xl mx-6 lg:mx-auto sm:mx-4">
