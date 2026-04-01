@@ -214,25 +214,6 @@ export default function TestimonialPage() {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gray-900 text-white rounded-3xl p-12">
-            <h2 className="text-3xl font-bold mb-4">
-              Ready to Join My Happy Clients?
-            </h2>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let&apos;s work together to create something amazing. I&apos;m
-              committed to delivering exceptional results that exceed your
-              expectations.
-            </p>
-            <Link href="/contact" className="accent-bg text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
-              Start Your Project
-            </Link >
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
