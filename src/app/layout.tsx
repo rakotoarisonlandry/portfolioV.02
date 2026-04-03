@@ -25,16 +25,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr" className={poppins.variable}>
-      {/*
-        bg-[#0a0a0f] = couleur de base identique au canvas
-        text-white   = toutes les pages passent en dark par défaut
-      */}
       <body className="bg-white text-white font-poppins antialiased">
-
-        {/* Canvas GSAP global — fixed, derrière tout le contenu */}
         <BackgroundCanvas />
-
-        {/* Tout le reste est au-dessus du canvas (z-index: 1+) */}
         <div className="relative z-10 flex flex-col min-h-screen">
           <Navigation />
           <main className="flex-1">{children}</main>
