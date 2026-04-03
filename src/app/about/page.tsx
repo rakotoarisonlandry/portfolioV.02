@@ -107,7 +107,7 @@ export default function AboutPage() {
   return (
     <div ref={pageRef} className="pt-20">
       {/* Skills & Info Tabs */}
-      <section className="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <section className="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-transparent">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3 md:mb-4">
@@ -135,7 +135,7 @@ export default function AboutPage() {
                 className={`flex items-center gap-2 px-4 py-2 md:px-6 md:py-3 rounded-full transition-all text-sm md:text-base ${
                   activeTab === tab.id
                     ? "bg-gray-900 text-white shadow-md"
-                    : "bg-white text-gray-700 hover:bg-gray-100 shadow-sm"
+                    : "bg-transparent text-gray-700 hover:bg-gray-100 shadow-sm"
                 }`}
               >
                 <tab.icon size={18} />
@@ -151,7 +151,7 @@ export default function AboutPage() {
                 {Object.entries(skills).map(([category, items]) => (
                   <div
                     key={category}
-                    className="bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100"
+                    className="bg-transparent rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100"
                   >
                     <div className="flex items-center gap-3 mb-4">
                       {category === "frontend" && (
@@ -191,7 +191,7 @@ export default function AboutPage() {
                 {languages.map((lang, index) => (
                   <div
                     key={index}
-                    className="bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100 text-center"
+                    className="bg-transparent rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow border border-gray-100 text-center"
                   >
                     <h3 className="font-bold text-lg md:text-xl mb-2">
                       {lang.name}
@@ -215,7 +215,7 @@ export default function AboutPage() {
 
             {activeTab === "education" && (
               <div className="space-y-6">
-                <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
+                <div className="bg-transparent rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
                   <div className="flex items-start gap-4">
                     <div className="bg-blue-100 p-3 rounded-full flex-shrink-0">
                       <Award className="text-blue-600" size={20} />
@@ -241,7 +241,7 @@ export default function AboutPage() {
                   </div>
                 </div>
 
-                <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
+                <div className="bg-transparent rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
                   <div className="flex items-start gap-4">
                     <div className="bg-green-100 p-3 rounded-full flex-shrink-0">
                       <Award className="text-green-600" size={20} />
@@ -269,13 +269,13 @@ export default function AboutPage() {
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-4">
-                  <div className="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
+                  <div className="bg-transparent rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
                     <h4 className="font-bold mb-1">Scientific Baccalaureate</h4>
                     <p className="text-xs text-gray-600">
                       2019-2020 • Antananarivo-67Ha
                     </p>
                   </div>
-                  <div className="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
+                  <div className="bg-transparent rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
                     <h4 className="font-bold mb-1">Literary Baccalaureate</h4>
                     <p className="text-xs text-gray-600">
                       2020-2021 • Antananarivo-Ampefiloha
@@ -292,7 +292,7 @@ export default function AboutPage() {
                     (interest, index) => (
                       <div
                         key={index}
-                        className="bg-white rounded-xl p-4 md:p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-100"
+                        className="bg-transparent rounded-xl p-4 md:p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-100"
                       >
                         <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
                           <span className="text-white text-xl md:text-2xl">
@@ -310,7 +310,7 @@ export default function AboutPage() {
                     ),
                   )}
                 </div>
-                <div className="mt-8 md:mt-12 bg-white rounded-xl p-6 md:p-8 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
+                <div className="mt-8 md:mt-12 bg-transparent rounded-xl p-6 md:p-8 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
                   <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">
                     Personal Qualities
                   </h3>
@@ -416,7 +416,7 @@ export default function AboutPage() {
                   </div>
 
                   <div className="flex-grow">
-                    <div className="bg-white rounded-xl p-5 md:p-6 shadow-md hover:shadow-lg transition-shadow border-l-4 border-blue-500">
+                    <div className="bg-transparent rounded-xl p-5 md:p-6 shadow-md hover:shadow-lg transition-shadow border-l-4 border-blue-500">
                       <div className="flex flex-wrap items-center gap-2 mb-3">
                         <span
                           className={`px-2.5 py-1 rounded-full text-xs font-medium ${
@@ -472,7 +472,7 @@ export default function AboutPage() {
       </section>
 
       {/* Projects Showcase */}
-      <section className="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <section className="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-transparent">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3 md:mb-4">
@@ -490,7 +490,7 @@ export default function AboutPage() {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-white rounded-xl p-5 md:p-6 shadow-md hover:shadow-lg transition-all border border-gray-100"
+                className="animate-on-scroll opacity-0 bg-transparent rounded-xl p-5 md:p-6 shadow-md hover:shadow-lg transition-all border border-gray-100"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-center justify-between mb-3">
@@ -587,7 +587,7 @@ export default function AboutPage() {
                 className="animate-on-scroll opacity-0 text-center group"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="bg-white rounded-xl p-5 md:p-6 shadow-md hover:shadow-lg transition-all border border-gray-100 h-full">
+                <div className="bg-transparent rounded-xl p-5 md:p-6 shadow-md hover:shadow-lg transition-all border border-gray-100 h-full">
                   <div className="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl md:text-3xl text-white group-hover:scale-105 transition-transform">
                     <value.icon />
                   </div>
@@ -618,14 +618,14 @@ export default function AboutPage() {
             <div className="flex flex-wrap justify-center gap-3">
               <Button
                 onClick={() => redirect("/contact")}
-                className="text-gradient text-gray-900 hover:bg-white px-6 py-3 text-base font-medium shadow-md"
+                className="text-gradient text-gray-900 hover:bg-transparent px-6 py-3 text-base font-medium shadow-md"
               >
                 <Mail className="mr-2" size={18} />
                 Contact Me
               </Button>
               <Button
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-gray-900 px-6 py-3 text-base font-medium shadow-md"
+                className="border-white text-white hover:bg-transparent hover:text-gray-900 px-6 py-3 text-base font-medium shadow-md"
               >
                 <ExternalLink className="mr-2" size={18} />
                 View Portfolio

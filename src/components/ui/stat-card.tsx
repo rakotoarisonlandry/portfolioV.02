@@ -34,7 +34,7 @@ export function StatCard({ value, label, suffix = "", animated = false }: StatCa
   return (
     <div
       ref={cardRef}
-      className="group bg-white border border-gray-100 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 magnetic-hover"
+      className="group bg-transparent border border-gray-100 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 magnetic-hover"
     >
       <div className="flex items-start justify-between mb-4">
         <div className="text-3xl font-bold text-gray-900">

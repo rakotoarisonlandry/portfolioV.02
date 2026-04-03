@@ -116,7 +116,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Process Section */}
-      <section className="px-6 lg:px-8 mb-20 bg-gray-50 py-20">
+      <section className="px-6 lg:px-8 mb-20 bg-transparent py-20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">

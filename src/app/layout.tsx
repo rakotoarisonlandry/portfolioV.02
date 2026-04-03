@@ -4,6 +4,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "@/components/layout/navigation";
 import { Footer } from "@/components/layout/footer";
+import { BackgroundCanvas } from "@/components/layout/background-canvas";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
   description:
     "A Fullstack Developer. I strive to build immersive and beautiful web applications through carefully crafted user-friendly design.",
 };
+
 export default function RootLayout({
   children,
 }: {
@@ -23,10 +25,22 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr" className={poppins.variable}>
-      <body className="bg-white text-gray-900 font-poppins antialiased">
-        <Navigation />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
+      {/*
+        bg-[#0a0a0f] = couleur de base identique au canvas
+        text-white   = toutes les pages passent en dark par défaut
+      */}
+      <body className="bg-[#0a0a0f] text-white font-poppins antialiased">
+
+        {/* Canvas GSAP global — fixed, derrière tout le contenu */}
+        <BackgroundCanvas />
+
+        {/* Tout le reste est au-dessus du canvas (z-index: 1+) */}
+        <div className="relative z-10 flex flex-col min-h-screen">
+          <Navigation />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </div>
+
       </body>
     </html>
   );

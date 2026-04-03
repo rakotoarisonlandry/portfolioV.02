@@ -152,7 +152,7 @@ export function HeroSection() {
               </div>
               <div className="relative">
                 <Image
-                  src="/assets/profil.jpg"
+                  src="/assets/profil.png"
                   alt="Landry - Creative Developer"
                   width={400}
                   height={400}
@@ -169,7 +169,7 @@ export function HeroSection() {
                   <Button
                     variant="outline"
                     onClick={() => redirect("/work")}
-                    className="border-gray-300 rounded-full flex items-center gap-2 hover:border-gray-400 bg-transparent"
+                    className="border-gray-300 text-black rounded-full text- flex items-center gap-2 hover:border-gray-400 bg-transparent"
                   >
                     My Work
                     <ArrowRight size={14} />
