@@ -20,7 +20,7 @@ export default function Loader() {
         animationData={animationData}
         loop
         autoplay
-        style={{ width: 300, height: 300 }}
+        style={{ width: 270, height: 270 }}
       />
     </div>
   );
