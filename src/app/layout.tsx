@@ -29,7 +29,7 @@ export default function RootLayout({
         bg-[#0a0a0f] = couleur de base identique au canvas
         text-white   = toutes les pages passent en dark par défaut
       */}
-      <body className="bg-[#0a0a0f] text-white font-poppins antialiased">
+      <body className="bg-white text-white font-poppins antialiased">
 
         {/* Canvas GSAP global — fixed, derrière tout le contenu */}
         <BackgroundCanvas />
