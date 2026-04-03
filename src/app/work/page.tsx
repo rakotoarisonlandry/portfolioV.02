@@ -150,23 +150,6 @@ export default function WorkPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="px-6 lg:px-8 mt-20">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-orange-50 to-yellow-50 rounded-3xl p-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Have a project in mind?
-            </h2>
-            <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-              Let&apos;s collaborate and bring your ideas to life. I&apos;m
-              always excited to work on new challenges.
-            </p>
-            <button className="accent-bg text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
-              Start a Project
-            </button>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
