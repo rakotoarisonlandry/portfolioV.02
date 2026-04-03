@@ -169,7 +169,7 @@ export default function AboutPage() {
                       {category === "other" && (
                         <Globe className="text-gray-600" size={20} />
                       )}
-                      <h3 className="font-bold text-lg capitalize">
+                      <h3 className="font-bold text-gray-900 text-lg capitalize">
                         {category}
                       </h3>
                     </div>
