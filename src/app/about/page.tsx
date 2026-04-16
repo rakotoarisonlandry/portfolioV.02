@@ -19,13 +19,19 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-
 const skills = {
   Frontend: {
     icon: Code,
     color: "text-sky-600",
     bg: "bg-sky-50",
-    items: ["React.js", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS"],
+    items: [
+      "React.js",
+      "Next.js",
+      "TypeScript",
+      "JavaScript",
+      "java",
+      "Tailwind CSS",
+    ],
   },
   Backend: {
     icon: Database,
@@ -37,7 +43,7 @@ const skills = {
     icon: Smartphone,
     color: "text-violet-600",
     bg: "bg-violet-50",
-    items: ["React Native", "Flutter"],
+    items: ["React Native(Expo)", "Flutter"],
   },
   Database: {
     icon: Database,
@@ -70,7 +76,8 @@ const education = [
     date: "2024 – 2025",
     degree: "Master's in Computer Science (In Progress)",
     school: "National Computer Science School (ENI)",
-    detail: "Software Engineering · Databases · Systems & Network Administration",
+    detail:
+      "Software Engineering · Databases · Systems & Network Administration",
     color: "bg-sky-100 text-sky-700",
   },
   {
@@ -105,8 +112,12 @@ const interests = [
 ];
 
 const qualities = [
-  "Highly serious", "Competitive spirit", "Team player",
-  "Rigorous", "Dynamic", "Adaptable",
+  "Highly serious",
+  "Competitive spirit",
+  "Team player",
+  "Rigorous",
+  "Dynamic",
+  "Adaptable",
 ];
 
 const timeline = [
@@ -142,7 +153,10 @@ const timeline = [
     type: "Internship",
     description:
       "Development of employee-facing applications with React.js, Express.js, and MySQL.",
-    achievements: ["Complete employee management app", "Intuitive user interface"],
+    achievements: [
+      "Complete employee management app",
+      "Intuitive user interface",
+    ],
     current: false,
   },
 ];
@@ -161,8 +175,7 @@ const projects = [
     name: "E-TATASIKA",
     type: "Advanced Messaging Application",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Convex"],
-    description:
-      "Real-time chat with file sharing, video and audio calls.",
+    description: "Real-time chat with file sharing, video and audio calls.",
     status: "Personal Project",
   },
   {
@@ -200,8 +213,12 @@ const values = [
   },
 ];
 
-
-function SectionHeading({ eyebrow, title, accent, subtitle }: {
+function SectionHeading({
+  eyebrow,
+  title,
+  accent,
+  subtitle,
+}: {
   eyebrow?: string;
   title: string;
   accent: string;
@@ -230,7 +247,6 @@ function SectionHeading({ eyebrow, title, accent, subtitle }: {
   );
 }
 
-
 export default function AboutPage() {
   const [activeTab, setActiveTab] = useState("skills");
   const pageRef = useRef<HTMLDivElement>(null);
@@ -245,9 +261,11 @@ export default function AboutPage() {
           }
         });
       },
-      { threshold: 0.08 }
+      { threshold: 0.08 },
     );
-    pageRef.current?.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+    pageRef.current
+      ?.querySelectorAll(".reveal")
+      .forEach((el) => observer.observe(el));
     return () => observer.disconnect();
   }, []);
 
@@ -262,16 +280,18 @@ export default function AboutPage() {
     s === "In Progress"
       ? "bg-emerald-100 text-emerald-700"
       : s === "Personal Project"
-      ? "bg-sky-100 text-sky-700"
-      : "bg-gray-100 text-gray-600";
+        ? "bg-sky-100 text-sky-700"
+        : "bg-gray-100 text-gray-600";
 
   return (
     <div
       ref={pageRef}
       className="pt-24 pb-0 bg-white"
-      style={{
-        "--reveal-duration": "0.55s",
-      } as React.CSSProperties}
+      style={
+        {
+          "--reveal-duration": "0.55s",
+        } as React.CSSProperties
+      }
     >
       <section className="py-20 px-5 sm:px-8 lg:px-10">
         <div className="max-w-6xl mx-auto">
@@ -302,32 +322,44 @@ export default function AboutPage() {
 
           {/* Tab panels */}
           <div className="min-h-[360px]">
-
             {/* Skills */}
             {activeTab === "skills" && (
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                {Object.entries(skills).map(([cat, { icon: Icon, color, bg, items }]) => (
-                  <div
-                    key={cat}
-                    className="reveal group rounded-2xl border border-gray-100 p-5 hover:border-gray-200 hover:shadow-md transition-all duration-300"
-                    style={{ opacity: 0, transform: "translateY(20px)", transition: "opacity 0.5s ease, transform 0.5s ease" }}
-                  >
-                    <div className="flex items-center gap-3 mb-4">
-                      <span className={`inline-flex items-center justify-center w-9 h-9 rounded-xl ${bg}`}>
-                        <Icon size={17} className={color} />
-                      </span>
-                      <h3 className="font-semibold text-gray-900 text-sm">{cat}</h3>
+                {Object.entries(skills).map(
+                  ([cat, { icon: Icon, color, bg, items }]) => (
+                    <div
+                      key={cat}
+                      className="reveal group rounded-2xl border border-gray-100 p-5 hover:border-gray-200 hover:shadow-md transition-all duration-300"
+                      style={{
+                        opacity: 0,
+                        transform: "translateY(20px)",
+                        transition: "opacity 0.5s ease, transform 0.5s ease",
+                      }}
+                    >
+                      <div className="flex items-center gap-3 mb-4">
+                        <span
+                          className={`inline-flex items-center justify-center w-9 h-9 rounded-xl ${bg}`}
+                        >
+                          <Icon size={17} className={color} />
+                        </span>
+                        <h3 className="font-semibold text-gray-900 text-sm">
+                          {cat}
+                        </h3>
+                      </div>
+                      <ul className="space-y-1.5">
+                        {items.map((skill) => (
+                          <li
+                            key={skill}
+                            className="flex items-center gap-2 text-sm text-gray-600"
+                          >
+                            <span className="w-1 h-1 rounded-full bg-gray-300 flex-shrink-0" />
+                            {skill}
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                    <ul className="space-y-1.5">
-                      {items.map((skill) => (
-                        <li key={skill} className="flex items-center gap-2 text-sm text-gray-600">
-                          <span className="w-1 h-1 rounded-full bg-gray-300 flex-shrink-0" />
-                          {skill}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
+                  ),
+                )}
               </div>
             )}
 
@@ -339,7 +371,9 @@ export default function AboutPage() {
                     key={lang.name}
                     className="rounded-2xl border border-gray-100 p-6 text-center hover:shadow-md transition-all duration-300"
                   >
-                    <p className="font-semibold text-gray-900 text-lg mb-1">{lang.name}</p>
+                    <p className="font-semibold text-gray-900 text-lg mb-1">
+                      {lang.name}
+                    </p>
                     <p className="text-gray-400 text-sm mb-5">{lang.level}</p>
                     <div className="w-full h-1.5 bg-gray-100 rounded-full overflow-hidden mb-2">
                       <div
@@ -347,7 +381,9 @@ export default function AboutPage() {
                         style={{ width: `${lang.pct}%` }}
                       />
                     </div>
-                    <p className="text-xs text-gray-400">{lang.pct}% proficiency</p>
+                    <p className="text-xs text-gray-400">
+                      {lang.pct}% proficiency
+                    </p>
                   </div>
                 ))}
               </div>
@@ -361,13 +397,23 @@ export default function AboutPage() {
                     key={i}
                     className="flex gap-4 rounded-2xl border border-gray-100 p-5 hover:shadow-md transition-all duration-300"
                   >
-                    <div className={`shrink-0 px-3 py-1.5 rounded-xl text-xs font-medium h-fit mt-0.5 ${edu.color}`}>
+                    <div
+                      className={`shrink-0 px-3 py-1.5 rounded-xl text-xs font-medium h-fit mt-0.5 ${edu.color}`}
+                    >
                       {edu.date}
                     </div>
                     <div>
-                      <p className="font-semibold text-gray-900 text-sm sm:text-base">{edu.degree}</p>
-                      <p className="text-sky-600 text-sm font-medium mt-0.5">{edu.school}</p>
-                      {edu.detail && <p className="text-gray-500 text-xs mt-1.5 leading-relaxed">{edu.detail}</p>}
+                      <p className="font-semibold text-gray-900 text-sm sm:text-base">
+                        {edu.degree}
+                      </p>
+                      <p className="text-sky-600 text-sm font-medium mt-0.5">
+                        {edu.school}
+                      </p>
+                      {edu.detail && (
+                        <p className="text-gray-500 text-xs mt-1.5 leading-relaxed">
+                          {edu.detail}
+                        </p>
+                      )}
                     </div>
                   </div>
                 ))}
@@ -386,12 +432,16 @@ export default function AboutPage() {
                       <span className="flex items-center justify-center w-11 h-11 rounded-xl bg-gray-900">
                         <Icon size={18} className="text-white" />
                       </span>
-                      <span className="text-sm font-medium text-gray-700">{label}</span>
+                      <span className="text-sm font-medium text-gray-700">
+                        {label}
+                      </span>
                     </div>
                   ))}
                 </div>
                 <div className="rounded-2xl border border-gray-100 p-6">
-                  <p className="text-sm font-semibold text-gray-900 mb-4 text-center">Personal Qualities</p>
+                  <p className="text-sm font-semibold text-gray-900 mb-4 text-center">
+                    Personal Qualities
+                  </p>
                   <div className="flex flex-wrap justify-center gap-2">
                     {qualities.map((q) => (
                       <span
@@ -427,7 +477,11 @@ export default function AboutPage() {
                 <div
                   key={i}
                   className="reveal flex gap-5"
-                  style={{ opacity: 0, transform: "translateY(20px)", transition: `opacity 0.5s ease ${i * 0.1}s, transform 0.5s ease ${i * 0.1}s` }}
+                  style={{
+                    opacity: 0,
+                    transform: "translateY(20px)",
+                    transition: `opacity 0.5s ease ${i * 0.1}s, transform 0.5s ease ${i * 0.1}s`,
+                  }}
                 >
                   {/* dot */}
                   <div className="hidden sm:flex shrink-0 flex-col items-center">
@@ -443,13 +497,17 @@ export default function AboutPage() {
                   {/* card */}
                   <div
                     className={`flex-1 rounded-2xl border p-5 sm:p-6 transition-shadow duration-300 hover:shadow-md ${
-                      item.current ? "border-gray-900 bg-white" : "border-gray-100 bg-white"
+                      item.current
+                        ? "border-gray-900 bg-white"
+                        : "border-gray-100 bg-white"
                     }`}
                   >
                     <div className="flex flex-wrap items-center gap-2 mb-3">
                       <span
                         className={`px-2.5 py-1 rounded-full text-xs font-medium ${
-                          item.current ? "bg-emerald-100 text-emerald-700" : "bg-gray-100 text-gray-600"
+                          item.current
+                            ? "bg-emerald-100 text-emerald-700"
+                            : "bg-gray-100 text-gray-600"
                         }`}
                       >
                         {item.type}
@@ -459,16 +517,27 @@ export default function AboutPage() {
                           📍 {item.location}
                         </span>
                       )}
-                      <span className="ml-auto text-xs text-gray-400">{item.period}</span>
+                      <span className="ml-auto text-xs text-gray-400">
+                        {item.period}
+                      </span>
                     </div>
 
-                    <h3 className="text-base sm:text-lg font-bold text-gray-900">{item.title}</h3>
-                    <p className="text-sky-600 text-sm font-medium mb-2">{item.company}</p>
-                    <p className="text-gray-500 text-sm mb-3 leading-relaxed">{item.description}</p>
+                    <h3 className="text-base sm:text-lg font-bold text-gray-900">
+                      {item.title}
+                    </h3>
+                    <p className="text-sky-600 text-sm font-medium mb-2">
+                      {item.company}
+                    </p>
+                    <p className="text-gray-500 text-sm mb-3 leading-relaxed">
+                      {item.description}
+                    </p>
 
                     <ul className="space-y-1.5">
                       {item.achievements.map((a, j) => (
-                        <li key={j} className="flex items-start gap-2 text-xs text-gray-600">
+                        <li
+                          key={j}
+                          className="flex items-start gap-2 text-xs text-gray-600"
+                        >
                           <span className="w-1 h-1 rounded-full bg-gray-400 flex-shrink-0 mt-1.5" />
                           {a}
                         </li>
@@ -496,25 +565,39 @@ export default function AboutPage() {
               <div
                 key={i}
                 className="reveal rounded-2xl border border-gray-100 p-5 sm:p-6 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col"
-                style={{ opacity: 0, transform: "translateY(20px)", transition: `opacity 0.5s ease ${i * 0.08}s, transform 0.5s ease ${i * 0.08}s` }}
+                style={{
+                  opacity: 0,
+                  transform: "translateY(20px)",
+                  transition: `opacity 0.5s ease ${i * 0.08}s, transform 0.5s ease ${i * 0.08}s`,
+                }}
               >
                 <div className="flex items-start justify-between gap-3 mb-2">
-                  <h3 className="font-bold text-gray-900 text-base sm:text-lg">{p.name}</h3>
-                  <span className={`shrink-0 px-2.5 py-1 rounded-full text-xs font-medium ${statusStyle(p.status)}`}>
+                  <h3 className="font-bold text-gray-900 text-base sm:text-lg">
+                    {p.name}
+                  </h3>
+                  <span
+                    className={`shrink-0 px-2.5 py-1 rounded-full text-xs font-medium ${statusStyle(p.status)}`}
+                  >
                     {p.status}
                   </span>
                 </div>
 
-                <p className="text-sky-600 text-sm font-medium mb-3">{p.type}</p>
+                <p className="text-sky-600 text-sm font-medium mb-3">
+                  {p.type}
+                </p>
 
                 {p.award && (
                   <div className="flex items-center gap-2 bg-amber-50 border border-amber-200 rounded-xl px-3 py-2 mb-3">
                     <Trophy size={14} className="text-amber-600 shrink-0" />
-                    <span className="text-amber-800 text-xs font-medium leading-snug">{p.award}</span>
+                    <span className="text-amber-800 text-xs font-medium leading-snug">
+                      {p.award}
+                    </span>
                   </div>
                 )}
 
-                <p className="text-gray-500 text-sm leading-relaxed mb-4 flex-1">{p.description}</p>
+                <p className="text-gray-500 text-sm leading-relaxed mb-4 flex-1">
+                  {p.description}
+                </p>
 
                 <div className="flex flex-wrap gap-1.5">
                   {p.tech.map((t) => (
@@ -546,12 +629,18 @@ export default function AboutPage() {
               <div
                 key={title}
                 className="reveal rounded-2xl bg-white border border-gray-100 p-6 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 text-center"
-                style={{ opacity: 0, transform: "translateY(20px)", transition: `opacity 0.5s ease ${i * 0.12}s, transform 0.5s ease ${i * 0.12}s` }}
+                style={{
+                  opacity: 0,
+                  transform: "translateY(20px)",
+                  transition: `opacity 0.5s ease ${i * 0.12}s, transform 0.5s ease ${i * 0.12}s`,
+                }}
               >
                 <span className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gray-900 mb-4">
                   <Icon size={20} className="text-white" />
                 </span>
-                <h3 className="font-bold text-gray-900 text-base mb-2">{title}</h3>
+                <h3 className="font-bold text-gray-900 text-base mb-2">
+                  {title}
+                </h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{desc}</p>
               </div>
             ))}
@@ -568,7 +657,8 @@ export default function AboutPage() {
             Ready to collaborate?
           </h2>
           <p className="text-gray-400 text-base leading-relaxed mb-8 max-w-xl mx-auto">
-            Available for freelance missions and innovative projects. Let's discuss your next technical challenge.
+            Available for freelance missions and innovative projects. Let's
+            discuss your next technical challenge.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link
