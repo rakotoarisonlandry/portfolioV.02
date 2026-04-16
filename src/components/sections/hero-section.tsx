@@ -80,8 +80,8 @@ export function HeroSection() {
               >
                 <p className="text-lg text-gray-600 max-w-lg leading-relaxed">
                   As a fullstack developer. I strive to build immersive and
-                  beautiful web applications through carefully crafted
-                  user-friendly design.
+                  beautiful mobile and web applications through carefully crafted user-friendly
+                  design.
                 </p>
               </div>
             </div>
