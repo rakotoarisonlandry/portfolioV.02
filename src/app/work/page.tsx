@@ -5,7 +5,6 @@ import { ExternalLink, Github, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-// ─── Data ────────────────────────────────────────────────────────────────────
 
 const projects = [
   {
@@ -85,8 +84,6 @@ const projects = [
 ];
 
 const categories = ["All", "Web Development", "Mobile App", "Design"];
-
-// ─── ProjectCard ─────────────────────────────────────────────────────────────
 
 function ProjectCard({
   title,
@@ -171,8 +168,6 @@ function ProjectCard({
     </div>
   );
 }
-
-// ─── Page ────────────────────────────────────────────────────────────────────
 
 export default function WorkPage() {
   const [activeCategory, setActiveCategory] = useState("All");
