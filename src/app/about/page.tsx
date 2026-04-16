@@ -111,7 +111,7 @@ const qualities = [
 
 const timeline = [
   {
-    period: "July 2024 – 2025",
+    period: "July 2024 – 2026",
     title: "Fullstack Developer",
     company: "PLASTIKÔO Madagascar",
     type: "Startup",
