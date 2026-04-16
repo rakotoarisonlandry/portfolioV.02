@@ -98,7 +98,7 @@ export function Navigation() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden py-4 border-t border-gray-100">
+          <div className="lg:hidden bg-white py-4 border-t border-gray-100">
             {navItems.map((item) => (
               <Link
                 key={item.href}
