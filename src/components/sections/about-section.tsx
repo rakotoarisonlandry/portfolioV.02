@@ -206,10 +206,19 @@ export function AboutSection() {
               {activeTab === "experience" && (
                 <div className="space-y-4">
                   <p className="text-gray-700 leading-relaxed">
-                    02+ years of professional experience in UI/UX design and web
+                    02+ years of professional experience in web
                     development, working with clients worldwide to create
                     exceptional digital experiences.
                   </p>
+                  <div className="relative">
+                    <Button
+                      className="bg-gray-900 text-white hover:bg-gray-800 flex items-center gap-1"
+                      onClick={handleDownloadInFrench}
+                    >
+                      <Download size={16} className="mr-2" />
+                      Download CV
+                    </Button>
+                  </div>
                 </div>
               )}
             </div>

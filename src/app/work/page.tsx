@@ -72,11 +72,11 @@ const projects = [
   },
   {
     id: 7,
-    title: "Metropolitan Traffic Management",
-    liveUrl: "https://petri-network-simulation.vercel.app/",
+    title: "Maze Pathfinding Visualizer",
+    liveUrl: "https://labyrinthe-wvfp.onrender.com/",
     description:
-      "Petri net simulation to model and optimize urban transport flows with 5 stations and 3 automated trains.",
-    image: "/assets/petri.png",
+      "Advanced 3D maze visualization with multi-objective pathfinding comparison",
+    image: "/assets/mage.png",
     tags: ["Next.js"],
     category: ["Web Development", "Design"],
     githubUrl: "https://github.com/rakotoarisonlandry/petri-network-simulation",
