@@ -43,7 +43,6 @@ export function Navigation() {
       >
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
           <div className="flex items-center justify-between gap-6">
-
             {/* Logo */}
             <Link
               href="/"
@@ -97,7 +96,9 @@ export function Navigation() {
       {/* Mobile drawer overlay */}
       <div
         className={`fixed inset-0 z-40 lg:hidden transition-all duration-300 ${
-          isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          isOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
         }`}
         onClick={() => setIsOpen(false)}
       >
@@ -144,7 +145,7 @@ export function Navigation() {
           <Link
             href="/contact"
             onClick={() => setIsOpen(false)}
-            className="flex items-center justify-center gap-2 w-full px-5 py-3 text-sm font-medium text-white bg-gray-900 rounded-full hover:bg-gray-700 transition-colors duration-200"
+            className="flex items-center justify-center gap-2 w-full px-5 py-3 text-sm font-medium text-white bg-[#8b02e7] rounded-full hover:bg-[#8b02e773] transition-colors duration-200"
           >
             Contact
             <ArrowRight size={14} />
