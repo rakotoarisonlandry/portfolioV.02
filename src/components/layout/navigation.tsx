@@ -73,7 +73,7 @@ export function Navigation() {
               {/* CTA button — desktop */}
               <Link
                 href="/contact"
-                className="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-white bg-gray-900 rounded-full hover:bg-gray-700 hover:shadow-lg hover:-translate-y-px active:translate-y-0 transition-all duration-200"
+                className="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-white bg-[#8b02e7] rounded-full hover:bg-[#8b02e773] hover:shadow-lg hover:-translate-y-px active:translate-y-0 transition-all duration-200"
               >
                 Contact
                 <ArrowRight size={14} />
