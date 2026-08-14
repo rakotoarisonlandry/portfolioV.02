@@ -39,8 +39,8 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="pt-24 pb-16 lg:px-28">
-      <div className="max-w-7xl mx-6 lg:mx-auto sm:mx-4">
+    <section ref={sectionRef} className="pt-24 pb-16 px-5 sm:px-8 lg:px-10">
+      <div className="max-w-7xl mx-auto">
         <div className="flex justify-center mb-12">
           <div className="animate-on-scroll opacity-0">
             <div className="text-gradient  text-white px-6 py-3 rounded-full text-sm font-semibold flex items-center space-x-2">
@@ -51,20 +51,20 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-2  items-center">
+        <div className="grid lg:grid-cols-2 lg:gap-6  items-start">
           {/* Left Content */}
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8 order-2 lg:order-1">
             <div className="space-y-4">
               <div className="animate-on-scroll opacity-0">
                 <ProfileBadge text="hello world" />
-                <p className="text-gray-600 mt-4 text-lg mb-2">I am</p>
+                <p className="text-gray-600 mt-4 text-base sm:text-lg mb-2">I am</p>
               </div>
 
               <div
                 className="animate-on-scroll opacity-0"
                 style={{ animationDelay: "0.2s" }}
               >
-                <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight">
                   <span className="block text-gray-900">a Fullstack</span>
                   <span className="block">
                     <span className="text-gray-900">Develo</span>
@@ -78,7 +78,7 @@ export function HeroSection() {
                 className="animate-on-scroll opacity-0"
                 style={{ animationDelay: "0.4s" }}
               >
-                <p className="text-lg text-gray-600 max-w-lg leading-relaxed">
+                <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-full sm:max-w-lg leading-relaxed">
                   As a fullstack developer. I strive to build immersive and
                   beautiful mobile and web applications through carefully crafted user-friendly
                   design.
@@ -87,7 +87,7 @@ export function HeroSection() {
             </div>
 
             <div
-              className="animate-on-scroll opacity-0 lg:flex hidden lg:relative  items-center space-x-1"
+              className="animate-on-scroll opacity-0 flex justify-center lg:justify-start items-center space-x-1"
               style={{ animationDelay: "0.6s" }}
             >
               <div className="flex space-x-4">
@@ -117,51 +117,24 @@ export function HeroSection() {
           </div>
 
           {/* Right Content - Profile Image */}
-          <div className="flex justify-center lg:justify-end">
+          <div className="flex justify-center lg:justify-center lg:-ml-4 order-1 lg:order-2">
             <div
               className="animate-on-scroll opacity-0"
               style={{ animationDelay: "0.8s" }}
             >
-              <div
-                className="animate-on-scroll lg:hidden opacity-0 flex justify-center items-center space-x-1"
-                style={{ animationDelay: "0.6s" }}
-              >
-                <div className="flex space-x-4">
-                  <Link
-                    href="https://github.com/rakotoarisonlandry"
-                    target="_blank"
-                    className="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center"
-                  >
-                    <span className="text-white text-xs">Git</span>
-                  </Link>
-                  <Link
-                    href="https://web.facebook.com/rakotoarison.landry.2025"
-                    target="_blank"
-                    className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center"
-                  >
-                    <span className="text-white text-xs">f</span>
-                  </Link>
-                  <Link
-                    href="https://www.linkedin.com/in/tsaraefadahy-landry-rakotoarison-224578265/"
-                    target="_blank"
-                    className="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center"
-                  >
-                    <span className="text-white text-xs">in</span>
-                  </Link>
-                </div>
-              </div>
+
               <div className="relative">
                 <Image
                   src="/assets/profil.png"
                   alt="Landry - Creative Developer"
-                  width={400}
-                  height={400}
-                  className="rounded-4xl "
+                  width={350}
+                  height={350}
+                  className="rounded-4xl w-full max-w-[300px] sm:max-w-[350px] lg:max-w-[400px] h-auto"
                 />
-                <div className="flex justify-center space-x-4 mt-8">
+                <div className="flex justify-center space-x-3 sm:space-x-4 mt-6 sm:mt-8">
                   <Button
                     onClick={() => redirect("/contact")}
-                    className="accent-bg rounded-full flex items-center gap-2 text-white hover:shadow-lg transition-all duration-300"
+                    className="accent-bg rounded-full flex items-center gap-2 text-white hover:shadow-lg transition-all duration-300 text-sm sm:text-base px-4 sm:px-5 py-2.5 sm:py-3"
                   >
                     Let&apos;s Talk
                     <ArrowRight size={14} />
@@ -169,7 +142,7 @@ export function HeroSection() {
                   <Button
                     variant="outline"
                     onClick={() => redirect("/work")}
-                    className="border-gray-300 text-black rounded-full text- flex items-center gap-2 hover:border-gray-400 bg-transparent"
+                    className="border-gray-300 text-black rounded-full flex items-center gap-2 hover:border-gray-400 bg-transparent text-sm sm:text-base px-4 sm:px-5 py-2.5 sm:py-3"
                   >
                     My Work
                     <ArrowRight size={14} />

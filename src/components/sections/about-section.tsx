@@ -37,9 +37,9 @@ export function AboutSection() {
   //   setShowDownloadOptions(false);
   // };
   return (
-    <section className="py-20 px-6 lg:px-8">
-      <div className="max-w-7xl mx-6 lg:mx-auto sm:mx-4">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+    <section className="py-16 sm:py-20 px-5 sm:px-8 lg:px-10">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
           <div className="lg:flex hidden justify-start">
             <div className="relative">
               <div className="absolute -top-4 -right-4 z-10">
@@ -61,67 +61,67 @@ export function AboutSection() {
 
           <div className="space-y-8">
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                About me
-              </h2>
-              <p className="text-gray-600 mb-8">Details introduce</p>
-            </div>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              About me
+            </h2>
+            <p className="text-gray-600 mb-6 sm:mb-8">Details introduce</p>
+          </div>
 
-            {/* Tabs */}
-            <div className="flex flex-wrap gap-2 mb-8">
-              {tabs.map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                    activeTab === tab.id
-                      ? "bg-gray-900 text-white"
-                      : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-                  }`}
-                >
-                  {tab.label}
-                </button>
-              ))}
-            </div>
+          {/* Tabs */}
+          <div className="flex flex-wrap gap-2 mb-6 sm:mb-8">
+            {tabs.map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 ${
+                  activeTab === tab.id
+                    ? "bg-gray-900 text-white"
+                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                }`}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
 
-            {/* Tab Content */}
-            <div className="space-y-6">
-              {activeTab === "who" && (
-                <div className="space-y-4">
-                  <div className="text-gray-700 flex text-justify space-x-4 leading-relaxed">
-                    <span>
-                      <SparklesIcon color="purple" />
+          {/* Tab Content */}
+          <div className="space-y-6">
+            {activeTab === "who" && (
+              <div className="space-y-4">
+                <div className="text-gray-700 flex text-justify space-x-3 sm:space-x-4 leading-relaxed text-sm sm:text-base">
+                  <span>
+                    <SparklesIcon color="purple" size={18} />
+                  </span>
+                  <p>
+                    My full name is{" "}
+                    <span className="font-semibold">
+                      Rakotoarison Tsarefadahy Landry Brigea
                     </span>
-                    <p>
-                      My full name is{" "}
-                      <span className="font-semibold">
-                        Rakotoarison Tsarefadahy Landry Brigea
-                      </span>
-                      , a passionate Fullstack Developer with over 01+ years of
-                      experience in building dynamic web and mobile
-                      applications. I specialize in creating user-friendly
-                      interfaces
-                    </p>
-                  </div>
-                  <div className="relative">
-                    <span className="flex space-x-5">
-                      <Button
-                        className="bg-gray-900 size text-white hover:bg-gray-800 flex items-center gap-1"
-                        onClick={handleDownloadInFrench
-                        }
-                      >
-                        <Download size={16} className="mr-2" />
-                        Download CV
-                        
-                      </Button>
-                      <Button
-                        onClick={() => redirect("/about")}
-                        className="accent-bg text-white hover:shadow-lg transition-all duration-300"
-                      >
-                        more about me
-                        <ArrowRight height={14} />
-                      </Button>
-                    </span>
+                    , a passionate Fullstack Developer with over 01+ years of
+                    experience in building dynamic web and mobile
+                    applications. I specialize in creating user-friendly
+                    interfaces
+                  </p>
+                </div>
+                <div className="relative">
+                  <span className="flex flex-col sm:flex-row gap-3 sm:gap-5">
+                    <Button
+                      className="bg-gray-900 text-white hover:bg-gray-800 flex items-center justify-center gap-1 text-sm sm:text-base"
+                      onClick={handleDownloadInFrench
+                      }
+                    >
+                      <Download size={16} className="mr-2" />
+                      Download CV
+                      
+                    </Button>
+                    <Button
+                      onClick={() => redirect("/about")}
+                      className="accent-bg text-white hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-1 text-sm sm:text-base"
+                    >
+                      more about me
+                      <ArrowRight size={14} />
+                    </Button>
+                  </span>
 
                     {/* {showDownloadOptions && (
                       <div className="absolute z-10 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
@@ -151,29 +151,29 @@ export function AboutSection() {
                 </div>
               )}
               {activeTab === "education" && (
-                <div className="space-y-4">
-                  <div className="text-gray-700 flex space-x-4 leading-relaxed">
-                    <span>
-                      <SparklesIcon color="purple" />
+              <div className="space-y-4">
+                <div className="text-gray-700 flex space-x-3 sm:space-x-4 leading-relaxed text-sm sm:text-base">
+                  <span>
+                    <SparklesIcon color="purple" size={18} />
+                  </span>
+                  <span>
+                    Master degree in{" "}
+                    <span className="font-semibold">
+                      Computer Science from the University of
+                      Fianarantsoa(ENI)
                     </span>
-                    <span>
-                      Master degree in{" "}
-                      <span className="font-semibold">
-                        Computer Science from the University of
-                        Fianarantsoa(ENI)
-                      </span>
-                      , with a focus on software development and web/mobile
-                      technologies .
-                    </span>
-                  </div>
-                  <div className="relative">
-                    <Button
-                      className="bg-gray-900 text-white hover:bg-gray-800 flex items-center gap-1"
-                      onClick={handleDownloadInFrench}
-                    >
-                      <Download size={16} className="mr-2" />
-                      Download CV
-                    </Button>
+                    , with a focus on software development and web/mobile
+                    technologies .
+                  </span>
+                </div>
+                <div className="relative">
+                  <Button
+                    className="bg-gray-900 text-white hover:bg-gray-800 flex items-center justify-center gap-1 text-sm sm:text-base"
+                    onClick={handleDownloadInFrench}
+                  >
+                    <Download size={16} className="mr-2" />
+                    Download CV
+                  </Button>
 
                     {/* {showDownloadOptions && (
                       <div className="absolute z-10 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
@@ -204,20 +204,20 @@ export function AboutSection() {
               )}
 
               {activeTab === "experience" && (
-                <div className="space-y-4">
-                  <p className="text-gray-700 leading-relaxed">
-                    02+ years of professional experience in web
-                    development, working with clients worldwide to create
-                    exceptional digital experiences.
-                  </p>
-                  <div className="relative">
-                    <Button
-                      className="bg-gray-900 text-white hover:bg-gray-800 flex items-center gap-1"
-                      onClick={handleDownloadInFrench}
-                    >
-                      <Download size={16} className="mr-2" />
-                      Download CV
-                    </Button>
+              <div className="space-y-4">
+                <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
+                  02+ years of professional experience in web
+                  development, working with clients worldwide to create
+                  exceptional digital experiences.
+                </p>
+                <div className="relative">
+                  <Button
+                    className="bg-gray-900 text-white hover:bg-gray-800 flex items-center justify-center gap-1 text-sm sm:text-base"
+                    onClick={handleDownloadInFrench}
+                  >
+                    <Download size={16} className="mr-2" />
+                    Download CV
+                  </Button>
                   </div>
                 </div>
               )}
