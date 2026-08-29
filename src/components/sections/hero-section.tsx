@@ -63,7 +63,7 @@ export function HeroSection() {
                 <ProfileBadge text="hello world" />
 
                 <div className="flex items-center gap-3 mt-5">
-                  <span className="h-px w-8 bg-primary" />
+                  {/* <span className="h-px w-8 bg-primary" /> */}
                   <p className="text-gray-600 text-sm sm:text-base font-medium tracking-wide">
                     I am
                   </p>
