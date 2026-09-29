@@ -62,7 +62,7 @@ const blogPosts = [
 
 export default function BlogPage() {
   return (
-    <div className="pt-24 pb-16">
+    <div className="blog-page pt-24 pb-16">
       {/* Hero Section */}
       <section className="px-6 lg:px-8 mb-16">
         <div className="max-w-7xl mx-auto text-center">

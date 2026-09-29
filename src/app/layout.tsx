@@ -1,36 +1,39 @@
-import type React from "react";
+﻿import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "@/components/layout/navigation";
 import { Footer } from "@/components/layout/footer";
-import { BackgroundCanvas } from "@/components/layout/background-canvas";
-import AppWrapper from "@/components/layout/AppWrapper";
-
+import { themeInitScript } from "@/lib/theme";
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  weight: ["400", "500", "600", "700", "800"],
   variable: "--font-poppins",
+  display: "swap",
 });
-
 export const metadata: Metadata = {
-  title: "Landry - Developer fullstack",
+  title: {
+    default: "Landry — Développeur fullstack, web & mobile",
+    template: "%s | Landry",
+  },
   description:
-    "A Fullstack Developer. I strive to build immersive and beautiful web applications through carefully crafted user-friendly design.",
+    "Portfolio de Landry Rakotoarison, développeur fullstack à Madagascar. Découvrez mes projets web et mobile : RobIA, Plastikôo et mes réalisations React, Next.js et React Native.",
 };
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="fr" className={poppins.variable}>
-      <body className="bg-white text-white font-poppins antialiased">
-        <AppWrapper>
-          {/* <BackgroundCanvas /> */}
-          <div className="relative z-10 flex flex-col min-h-screen">
-            <Navigation />
-            <main className="flex-1">{children}</main>
-            <Footer />
-          </div>
-        </AppWrapper>
+    <html lang="fr" className={poppins.variable} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
+      <body>
+        <a href="#main-content" className="skip-link">
+          Aller au contenu
+        </a>
+        <Navigation />
+        <main id="main-content" tabIndex={-1}>
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );
