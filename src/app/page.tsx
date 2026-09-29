@@ -24,9 +24,6 @@ export default function HomePage() {
             Du code.
             <br />
             <span>De l’impact.</span>
-            <span className="hero-spark" aria-hidden="true">
-              ✳
-            </span>
           </h1>
           <p className="hero-intro">
             Moi, c’est <strong>Landry.</strong> Je transforme des idées en
@@ -45,44 +42,31 @@ export default function HomePage() {
             collaborations à distance
           </div>
         </div>
-        <div className="hero-art">
-          <div className="portrait-backdrop">
-            <span className="portrait-outline" />
-            <span className="portrait-star" aria-hidden="true">
-              ✳
+        <figure className="profile-card">
+          <div className="profile-card-header">
+            <span className="profile-monogram" aria-hidden="true">
+              LR.
             </span>
+            <span>LE DÉVELOPPEUR DERRIÈRE LE CODE</span>
+          </div>
+          <div className="profile-stage">
             <Image
-              src="/assets/profil1.png"
-              alt="Landry Rakotoarison, développeur fullstack"
+              src="/assets/profil.png"
+              alt="Portrait de Landry Rakotoarison"
               fill
               priority
-              sizes="(max-width: 800px) 90vw, 45vw"
-              className="hero-portrait"
+              sizes="(max-width: 799px) 90vw, 42vw"
+              className="profile-photo"
             />
-            <span className="portrait-name" aria-hidden="true">
-              LANDRY
-            </span>
           </div>
-          <div className="floating-note note-top">
-            <span className="note-icon">
-              <Code2 size={20} />
-            </span>
+          <figcaption className="profile-caption">
             <div>
-              <strong>Du concept au produit.</strong>
-              <small>Design · Développement · Expérience</small>
+              <strong>Landry Rakotoarison</strong>
+              <span>Développeur fullstack</span>
             </div>
-          </div>
-          <div className="floating-note note-bottom">
-            <span className="note-icon">
-              <Smartphone size={20} />
-            </span>
-            <div>
-              <strong>Web & mobile</strong>
-              <small>Une expérience, plusieurs écrans.</small>
-            </div>
-            <ArrowUpRight size={19} />
-          </div>
-        </div>
+            <span className="profile-specialty">Web & mobile</span>
+          </figcaption>
+        </figure>
       </section>
       <div className="tech-strip">
         <div className="shell">

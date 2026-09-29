@@ -2129,3 +2129,254 @@ html.dark {
     padding: 24px;
   }
 }
+
+/* Editorial portrait: a single composed frame, without floating decorations. */
+.profile-card {
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  max-width: 480px;
+  justify-self: end;
+  border: 1px solid #dfdce3;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #f0eef1;
+  box-shadow: 0 24px 55px -35px #33283f38;
+}
+.profile-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 24px;
+  border-bottom: 1px solid #dedbe3;
+}
+.profile-monogram {
+  font-size: 19px;
+  letter-spacing: -1px;
+  font-weight: 600;
+  color: #67517d;
+}
+.profile-card-header > span:last-child {
+  font-size: 8px;
+  letter-spacing: 1.5px;
+  color: #716b78;
+  text-align: right;
+}
+.profile-stage {
+  position: relative;
+  height: 395px;
+  background: linear-gradient(145deg, #f5f3f6, #e6e2e9);
+}
+.profile-photo {
+  object-fit: contain;
+  object-position: center;
+  padding: 12px 24px 0;
+}
+.profile-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 23px 24px;
+  background: #faf9fb;
+  border-top: 1px solid #dfdce3;
+}
+.profile-caption strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.35px;
+}
+.profile-caption div > span {
+  display: block;
+  margin-top: 5px;
+  font-size: 11px;
+  color: var(--portfolio-muted);
+}
+.profile-specialty {
+  flex-shrink: 0;
+  font-size: 9px;
+  border: 1px solid #dcd4e5;
+  border-radius: 5px;
+  padding: 7px 10px;
+  color: #6b527e;
+}
+/* Neutral charcoal surfaces let photography and lavender accents stand out. */
+html.dark {
+  --portfolio-ink: #f0f0f3;
+  --portfolio-muted: #aaaab5;
+  --portfolio-purple: #b6a1f1;
+  --portfolio-line: #303138;
+}
+.dark body {
+  background: #131418;
+}
+.dark .site-header {
+  background: #131418f2;
+}
+.dark .mobile-nav,
+.dark .expertise-card,
+.dark .skip-link,
+.dark .contact-panel {
+  background: #1c1d23;
+}
+.dark .mobile-nav a:hover,
+.dark .mobile-nav a[aria-current] {
+  background: #292735;
+}
+.dark .button-dark {
+  background: #eeedf3;
+  color: #202027;
+}
+.dark .button-dark:hover {
+  background: #d9d3e8;
+}
+.dark .button-primary {
+  background: #7858cf;
+}
+.dark .button-primary:hover {
+  background: #6848be;
+}
+.dark .theme-toggle:hover {
+  background: #25242e;
+}
+.dark .hero h1 {
+  color: #f3f2f5;
+}
+.dark .hero-intro {
+  color: #b5b4bf;
+}
+.dark .hero-location {
+  color: #a6a5b1;
+}
+.dark .hero-eyebrow {
+  color: #bcbac7;
+}
+.dark .status-dot {
+  background: #93b69c;
+  box-shadow: 0 0 0 4px #93b69c12;
+}
+.dark .profile-card {
+  background: #1c1d23;
+  border-color: #38373f;
+  box-shadow: 0 28px 65px -32px #0009;
+}
+.dark .profile-card-header {
+  border-color: #34333d;
+}
+.dark .profile-monogram {
+  color: #c1b0e9;
+}
+.dark .profile-card-header > span:last-child {
+  color: #a7a2b4;
+}
+.dark .profile-stage {
+  background: linear-gradient(145deg, #292933, #212128);
+}
+.dark .profile-caption {
+  background: #1c1d23;
+  border-color: #34333d;
+}
+.dark .profile-specialty {
+  color: #c5b8e0;
+  border-color: #484150;
+  background: #26232e;
+}
+.dark .tech-strip {
+  background: #17181d;
+}
+.dark .tech-strip strong {
+  color: #c4c2cd;
+}
+.dark .expertise-section {
+  background: #17181d;
+}
+.dark .service-card {
+  background: #1c1d23;
+}
+.dark .tags span {
+  background: #25252e;
+  color: #c3bacf;
+}
+.dark .violet,
+.dark .robia-visual {
+  background: #2d2939;
+}
+.dark .mint {
+  background: #26352f;
+}
+.dark .blue {
+  background: #28303c;
+}
+.dark .peach {
+  background: #38302e;
+}
+.dark .project-visual {
+  border-color: #ffffff0a;
+}
+.dark .project-open {
+  background: #e8e4f0;
+  color: #30263e;
+}
+.dark .project-visual:hover .project-open {
+  background: #b6a1f1;
+  color: #20172d;
+}
+.dark .architecture-note {
+  background: #272330;
+}
+.dark .contact-form input,
+.dark .contact-form textarea {
+  background: #14151a;
+  border-color: #41404a;
+}
+.dark .site-footer {
+  background: #0e0f12;
+}
+.dark .footer-bottom {
+  border-color: #2c2b33;
+}
+@media (max-width: 1050px) {
+  .profile-stage {
+    height: 350px;
+  }
+  .profile-card-header,
+  .profile-caption {
+    padding: 18px;
+  }
+  .profile-caption {
+    gap: 10px;
+  }
+  .profile-caption strong {
+    font-size: 13px;
+  }
+  .profile-specialty {
+    padding: 6px 8px;
+    font-size: 8px;
+  }
+}
+@media (max-width: 799px) {
+  .profile-card {
+    justify-self: center;
+    max-width: 430px;
+  }
+  .profile-stage {
+    height: 390px;
+  }
+}
+@media (max-width: 560px) {
+  .profile-stage {
+    height: 350px;
+  }
+  .profile-photo {
+    padding: 8px 14px 0;
+  }
+  .profile-card-header > span:last-child {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+  .profile-caption {
+    flex-wrap: wrap;
+  }
+}
