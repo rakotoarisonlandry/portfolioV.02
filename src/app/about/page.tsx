@@ -17,7 +17,7 @@ export default function AboutPage() {
       <section className="about-profile">
         <div className="about-photo">
           <Image
-            src="/assets/profil1.png"
+            src="/assets/profil.png"
             alt="Portrait de Landry"
             fill
             priority
