@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+﻿# Portfolio de Landry
 
-## Getting Started
+Portfolio Next.js / TypeScript, en français, avec présentations détaillées des projets web et mobile.
 
-First, run the development server:
+## Développement
 
-```bash
+```sh
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ouvrir http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Vérifications
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```sh
+npm run lint
+npm run typecheck
+npm run build
+```
 
-## Learn More
+## Modifier les projets
 
-To learn more about Next.js, take a look at the following resources:
+Les contenus sont centralisés dans `src/data/projects.ts`. Chaque projet possède une fiche `/work/[slug]` générée statiquement. Les catégories alimentent les filtres de la galerie. Les visuels existants se trouvent dans `public/assets`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+La présentation RobIA s’appuie sur la documentation et les manifests du monorepo local : vitrine React/Vite, dashboard React/Vite et application React Native/Expo. Le backend NestJS et le moteur IA Python/FastAPI sont maintenus dans un dépôt séparé. Le visuel RobIA est une illustration conceptuelle en HTML/CSS, explicitement signalée comme telle. Aucun code privé RobIA n’est copié dans ce portfolio.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Formulaire de contact
 
-## Deploy on Vercel
+Configurer `SMTP_EMAIL` et `SMTP_PASS` dans `.env.local` (ou les variables d’environnement de l’hébergement). Le transport existant utilise Gmail ; `SMTP_PASS` doit être un mot de passe d’application adapté au compte.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Sans configuration SMTP, l’API renvoie 503 et le formulaire propose l’adresse email directe. Les messages sont validés côté serveur. L’adresse de l’utilisateur sert de `replyTo`, l’expéditeur reste le compte SMTP. Aucun envoi réel n’est nécessaire pour les contrôles d’interface.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Interface
+
+- Accueil, galerie filtrable et huit fiches projets, dont RobIA.
+- Pages parcours, expertises et contact.
+- Navigation mobile avec fermeture via Échap, lien d’évitement et focus visible.
+- Mise en page responsive et prise en compte de la réduction des animations.
+- Aucun délai artificiel de chargement.
+- Les routes historiques `/blog` et `/testimonial` restent disponibles.
+
+Les tests visuels temporaires et leurs captures sont conservés dans `.qa/`, exclu de Git.
+
+## Hébergement
+
+Le portfolio utilise le runtime serveur de Next.js pour `/contact/api` : déployer sur un hébergement compatible Next.js/Node.js. L’ancien `output: "export"` a été retiré, car un export HTML seul ne peut pas exécuter cette API.
+
+Après compilation, `npm start` lance le serveur de production.
