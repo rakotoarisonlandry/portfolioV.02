@@ -1,170 +1,114 @@
-"use client";
-
-import type React from "react";
-
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Send, CheckCircle } from "lucide-react";
-
+﻿"use client";
+import { useState, type FormEvent } from "react";
+import { ArrowUpRight, CheckCircle } from "lucide-react";
 export function ContactForm() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    const res = await fetch("/contact/api", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
-
-    setIsSubmitting(false);
-
-    if (res.ok) {
-      setIsSubmitted(true);
-
-      // Reset form
-      setFormData({ name: "", email: "", subject: "", message: "" });
-
-      // Hide success alert after 3s
-      setTimeout(() => {
-        setIsSubmitted(false);
-      }, 3000);
-    } else {
-      alert("❌ Une erreur est survenue, merci d'essayer plus tard !");
+  const [pending, setPending] = useState(false);
+  const [sent, setSent] = useState(false);
+  const [error, setError] = useState("");
+  async function submit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (pending) return;
+    const form = event.currentTarget;
+    setPending(true);
+    setError("");
+    try {
+      const data = Object.fromEntries(new FormData(form));
+      const response = await fetch("/contact/api", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (!response.ok) throw new Error("Envoi impossible");
+      setSent(true);
+      form.reset();
+    } catch {
+      setError(
+        "Votre message n’a pas pu être envoyé. Réessayez ou écrivez directement à landrybrigea@gmail.com.",
+      );
+    } finally {
+      setPending(false);
     }
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
-  };
-
-  if (isSubmitted) {
+  }
+  if (sent)
     return (
-      <div className="bg-green-50 border border-green-200 rounded-2xl p-8 text-center">
-        <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-        <h3 className="text-2xl font-bold text-green-800 mb-2">
-          Message Sent!
-        </h3>
-        <p className="text-green-600">
-          Thank you for reaching out. I&apos;ll get back to you soon!
+      <div className="form-success" role="status">
+        <CheckCircle size={38} />
+        <h2>Message bien reçu.</h2>
+        <p>
+          Merci pour votre message. Je reviendrai vers vous pour en discuter.
         </p>
+        <button className="button button-dark" onClick={() => setSent(false)}>
+          Envoyer un autre message
+        </button>
       </div>
     );
-  }
-
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="grid md:grid-cols-2 gap-6">
-        <div>
-          <label
-            htmlFor="name"
-            className="block text-sm font-medium text-gray-700 mb-2"
-          >
-            Full Name
-          </label>
+    <form onSubmit={submit} className="contact-form" aria-busy={pending}>
+      <h2>Parlez-moi de votre projet.</h2>
+      <p>Les champs marqués d’un * sont obligatoires.</p>
+      <div className="form-row">
+        <label htmlFor="name">
+          Votre nom *
           <input
-            type="text"
             id="name"
             name="name"
-            value={formData.name}
-            onChange={handleChange}
+            autoComplete="name"
             required
-            className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200"
-            placeholder="Your full name"
+            maxLength={100}
+            placeholder="Comment vous appelez-vous ?"
           />
-        </div>
-
-        <div>
-          <label
-            htmlFor="email"
-            className="block text-sm font-medium text-gray-700 mb-2"
-          >
-            Email Address
-          </label>
+        </label>
+        <label htmlFor="email">
+          Votre email *
           <input
-            type="email"
             id="email"
             name="email"
-            value={formData.email}
-            onChange={handleChange}
+            type="email"
+            autoComplete="email"
             required
-            className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200"
-            placeholder="your.email@example.com"
+            maxLength={254}
+            placeholder="vous@exemple.com"
           />
-        </div>
-      </div>
-
-      <div>
-        <label
-          htmlFor="subject"
-          className="block text-sm font-medium text-gray-700 mb-2"
-        >
-          Subject
         </label>
+      </div>
+      <label htmlFor="subject">
+        Sujet *
         <input
-          type="text"
           id="subject"
           name="subject"
-          value={formData.subject}
-          onChange={handleChange}
           required
-          className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200"
-          placeholder="What's this about?"
+          maxLength={160}
+          placeholder="Site web, application mobile, collaboration…"
         />
-      </div>
-
-      <div>
-        <label
-          htmlFor="message"
-          className="block text-sm font-medium text-gray-700 mb-2"
-        >
-          Message
-        </label>
+      </label>
+      <label htmlFor="message">
+        Votre message *
         <textarea
           id="message"
           name="message"
-          value={formData.message}
-          onChange={handleChange}
           required
+          minLength={10}
+          maxLength={5000}
           rows={6}
-          className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200 resize-none"
-          placeholder="Tell me about your project..."
+          placeholder="Votre idée, vos besoins, votre calendrier…"
         />
-      </div>
-
-      <Button
+      </label>
+      {error && (
+        <p className="form-error" role="alert">
+          {error}
+        </p>
+      )}
+      <button
+        disabled={pending}
+        className="button button-primary"
         type="submit"
-        disabled={isSubmitting}
-        className="w-full accent-bg text-white py-4 text-lg font-semibold hover:shadow-lg transition-all duration-300 disabled:opacity-50"
       >
-        {isSubmitting ? (
-          <div className="flex items-center justify-center space-x-2">
-            <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-            <span>Sending...</span>
-          </div>
-        ) : (
-          <div className="flex items-center justify-center space-x-2">
-            <Send size={20} />
-            <span>Send Message</span>
-          </div>
-        )}
-      </Button>
+        {pending ? "Envoi en cours…" : "Envoyer mon message"}
+        <ArrowUpRight size={18} />
+      </button>
+      <p className="form-privacy">
+        Vos coordonnées servent uniquement à répondre à votre demande.
+      </p>
     </form>
   );
 }

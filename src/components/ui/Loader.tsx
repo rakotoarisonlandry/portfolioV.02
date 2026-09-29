@@ -1,21 +1,13 @@
-"use client";
-
-import { useEffect, useState } from "react";
+﻿"use client";
 import Lottie from "lottie-react";
-
+import animationData from "../../../public/assets/lottie/logo.json";
 export default function Loader() {
-  const [animationData, setAnimationData] = useState<any>(null);
-
-  useEffect(() => {
-    fetch("/assets/lottie/logo.json") // chemin relatif à /public
-      .then((res) => res.json())
-      .then((data) => setAnimationData(data));
-  }, []);
-
-  if (!animationData) return null; // ou un simple fallback
-
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-white">
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-white"
+      role="status"
+      aria-label="Chargement"
+    >
       <Lottie
         animationData={animationData}
         loop
