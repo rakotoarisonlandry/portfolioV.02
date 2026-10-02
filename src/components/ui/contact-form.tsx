@@ -34,23 +34,23 @@ export function ContactForm() {
   }
   if (sent)
     return (
-      <div className="form-success" role="status">
+      <div className="flex flex-col items-center gap-4 text-center" role="status">
         <CheckCircle size={38} />
         <h2>{english ? "Message received." : "Message bien reçu."}</h2>
         <p>
           {english ? "Thank you for your message. I will get back to you soon." : "Merci pour votre message. Je reviendrai vers vous pour en discuter."}
         </p>
-        <button className="button button-dark" onClick={() => setSent(false)}>
+        <button className="rounded-md bg-[#27252e] px-6 py-3 text-xs font-medium text-white" onClick={() => setSent(false)}>
           {english ? "Send another message" : "Envoyer un autre message"}
         </button>
       </div>
     );
   return (
-    <form onSubmit={submit} className="contact-form" aria-busy={pending}>
-      <h2>{english ? "Tell me about your project." : "Parlez-moi de votre projet."}</h2>
-      <p>{english ? "Fields marked with * are required." : "Les champs marqués d’un * sont obligatoires."}</p>
-      <div className="form-row">
-        <label htmlFor="name">
+    <form onSubmit={submit} className="space-y-5" aria-busy={pending}>
+      <h2 className="text-2xl font-medium">{english ? "Tell me about your project." : "Parlez-moi de votre projet."}</h2>
+      <p className="text-sm text-[var(--portfolio-muted)]">{english ? "Fields marked with * are required." : "Les champs marqués d’un * sont obligatoires."}</p>
+      <div className="grid grid-cols-2 gap-4 max-[600px]:grid-cols-1">
+        <label className="grid gap-2 text-xs font-medium" htmlFor="name">
           {english ? "Your name *" : "Votre nom *"}
           <input
             id="name"
@@ -58,10 +58,11 @@ export function ContactForm() {
             autoComplete="name"
             required
             maxLength={100}
+            className="rounded-md border border-[var(--portfolio-line)] bg-transparent px-3 py-3 text-sm outline-none focus:border-[var(--portfolio-purple)]"
             placeholder={english ? "What is your name?" : "Comment vous appelez-vous ?"}
           />
         </label>
-        <label htmlFor="email">
+        <label className="grid gap-2 text-xs font-medium" htmlFor="email">
           {english ? "Your email *" : "Votre email *"}
           <input
             id="email"
@@ -70,21 +71,23 @@ export function ContactForm() {
             autoComplete="email"
             required
             maxLength={254}
+            className="rounded-md border border-[var(--portfolio-line)] bg-transparent px-3 py-3 text-sm outline-none focus:border-[var(--portfolio-purple)]"
             placeholder={english ? "you@example.com" : "vous@exemple.com"}
           />
         </label>
       </div>
-      <label htmlFor="subject">
+      <label className="grid gap-2 text-xs font-medium" htmlFor="subject">
         {english ? "Subject *" : "Sujet *"}
         <input
           id="subject"
           name="subject"
           required
           maxLength={160}
+          className="rounded-md border border-[var(--portfolio-line)] bg-transparent px-3 py-3 text-sm outline-none focus:border-[var(--portfolio-purple)]"
           placeholder={english ? "Website, mobile app, collaboration…" : "Site web, application mobile, collaboration…"}
         />
       </label>
-      <label htmlFor="message">
+      <label className="grid gap-2 text-xs font-medium" htmlFor="message">
         {english ? "Your message *" : "Votre message *"}
         <textarea
           id="message"
@@ -93,23 +96,24 @@ export function ContactForm() {
           minLength={10}
           maxLength={5000}
           rows={6}
+          className="rounded-md border border-[var(--portfolio-line)] bg-transparent px-3 py-3 text-sm outline-none focus:border-[var(--portfolio-purple)]"
           placeholder={english ? "Your idea, needs, timeline…" : "Votre idée, vos besoins, votre calendrier…"}
         />
       </label>
       {error && (
-        <p className="form-error" role="alert">
+        <p className="text-sm text-red-600" role="alert">
           {error}
         </p>
       )}
       <button
         disabled={pending}
-        className="button button-primary"
+        className="inline-flex min-h-12 items-center justify-center gap-3.5 rounded-md bg-[var(--portfolio-purple)] px-6 py-3.5 text-xs font-medium text-white transition hover:-translate-y-0.5 hover:bg-[#5933b5]"
         type="submit"
       >
         {pending ? t("sending") : t("sendMessage")}
         <ArrowUpRight size={18} />
       </button>
-      <p className="form-privacy">
+      <p className="text-xs text-[var(--portfolio-muted)]">
         {english ? "Your details are only used to answer your request." : "Vos coordonnées servent uniquement à répondre à votre demande."}
       </p>
     </form>

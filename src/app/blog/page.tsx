@@ -62,13 +62,13 @@ const blogPosts = [
 
 export default function BlogPage() {
   return (
-    <div className="blog-page pt-24 pb-16">
+    <div className="px-6 py-24 lg:px-8">
       {/* Hero Section */}
       <section className="px-6 lg:px-8 mb-16">
         <div className="max-w-7xl mx-auto text-center">
           <div className="space-y-6">
             <h1 className="text-5xl lg:text-6xl font-bold text-gray-900">
-              My <span className="gradient-text">Blog</span>
+              My               <span className="bg-gradient-to-r from-yellow-400 to-purple-600 bg-clip-text text-transparent">Blog</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Thoughts, tutorials, and insights about web development, design, and the ever-evolving world of
@@ -97,7 +97,7 @@ export default function BlogPage() {
                   <span>•</span>
                   <span>{blogPosts[0].readTime}</span>
                 </div>
-                <button className="accent-bg text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
+                <button className="bg-gradient-to-r from-purple-700 to-purple-600 px-6 py-3 text-white rounded-full font-semibold hover:shadow-lg transition-all duration-300">
                   Read Article
                 </button>
               </div>
@@ -143,7 +143,7 @@ export default function BlogPage() {
       {/* Newsletter Section */}
       <section className="px-6 lg:px-8 mt-20">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gray-900 text-white rounded-3xl p-12">
+          <div className="rounded-3xl bg-gray-900 p-12 text-white">
             <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               Subscribe to my newsletter to get the latest articles and insights delivered directly to your inbox.
@@ -154,7 +154,7 @@ export default function BlogPage() {
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 rounded-full text-gray-900 focus:outline-none focus:ring-2 focus:ring-orange-500"
               />
-              <button className="accent-bg text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
+              <button className="bg-gradient-to-r from-purple-700 to-purple-600 px-6 py-3 text-white rounded-full font-semibold hover:shadow-lg transition-all duration-300">
                 Subscribe
               </button>
             </div>

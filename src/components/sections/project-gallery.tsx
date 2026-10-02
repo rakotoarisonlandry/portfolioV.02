@@ -13,14 +13,15 @@ export function ProjectGallery() {
   );
   return (
     <>
-      <div className="filter-row">
+      <div className="mb-8 flex items-center justify-between gap-4 max-[600px]:items-start max-[600px]:flex-col">
         <div
-          className="filter-buttons"
+          className="flex flex-wrap gap-2"
           role="group"
           aria-label={language === "en" ? "Filter projects" : "Filtrer les projets"}
         >
           {filters.map((item, index) => (
             <button
+              className="rounded-full border border-[var(--portfolio-line)] px-4 py-2 text-xs text-[var(--portfolio-muted)] transition hover:border-[var(--portfolio-purple)] hover:text-[var(--portfolio-purple)] aria-pressed:bg-[var(--portfolio-purple)] aria-pressed:text-white"
               key={item}
               aria-pressed={filter === item}
               onClick={() => setFilter(item)}
@@ -36,9 +37,9 @@ export function ProjectGallery() {
             </button>
           ))}
         </div>
-        <p aria-live="polite">{projectsToDiscover(visible.length)}</p>
+        <p className="text-xs text-[var(--portfolio-muted)]" aria-live="polite">{projectsToDiscover(visible.length)}</p>
       </div>
-      <div className="projects-grid">
+      <div className="grid grid-cols-2 gap-6 max-[799px]:grid-cols-1">
         {visible.map((project) => (
           <PortfolioCard key={project.slug} project={project} />
         ))}

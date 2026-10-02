@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Star, Quote } from "lucide-react";
-import Link from "next/link";
 
 type Testimonial = {
   id: number;
@@ -74,7 +73,7 @@ export default function TestimonialPage() {
         <div className="max-w-7xl mx-auto text-center">
           <div className="space-y-6">
             <h1 className="text-5xl lg:text-6xl font-bold text-gray-900">
-              <span className="gradient-text">Testimonials</span>
+              <span className="bg-gradient-to-r from-yellow-400 to-purple-600 bg-clip-text text-transparent">Testimonials</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Don&apos;t just take my word for it. Here&apos;s what my colaborator
@@ -89,19 +88,19 @@ export default function TestimonialPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div className="space-y-2">
-              <div className="text-4xl font-bold gradient-text">50+</div>
+              <div className="bg-gradient-to-r from-yellow-400 to-purple-600 bg-clip-text text-4xl font-bold text-transparent">50+</div>
               <p className="text-gray-600">Happy Clients</p>
             </div>
             <div className="space-y-2">
-              <div className="text-4xl font-bold gradient-text">100%</div>
+              <div className="bg-gradient-to-r from-yellow-400 to-purple-600 bg-clip-text text-4xl font-bold text-transparent">100%</div>
               <p className="text-gray-600">Satisfaction Rate</p>
             </div>
             <div className="space-y-2">
-              <div className="text-4xl font-bold gradient-text">25+</div>
+              <div className="bg-gradient-to-r from-yellow-400 to-purple-600 bg-clip-text text-4xl font-bold text-transparent">25+</div>
               <p className="text-gray-600">Projects Delivered</p>
             </div>
             <div className="space-y-2">
-              <div className="text-4xl font-bold gradient-text">3+</div>
+              <div className="bg-gradient-to-r from-yellow-400 to-purple-600 bg-clip-text text-4xl font-bold text-transparent">3+</div>
               <p className="text-gray-600">Years Experience</p>
             </div>
           </div>
@@ -203,7 +202,7 @@ export default function TestimonialPage() {
       {/* Featured Testimonial */}
       <section className="px-6 lg:px-8 mb-20">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-r from-orange-50 to-yellow-50 rounded-3xl p-12 text-center">
+          <div className="rounded-3xl bg-gradient-to-r from-orange-50 to-yellow-50 p-12 text-center">
             <Quote className="text-orange-300 mx-auto mb-6" size={48} />
             <blockquote className="text-2xl lg:text-3xl font-medium text-gray-900 mb-8 leading-relaxed">
               &quot;Landry is not just a developer, he&apos;s a problem solver.

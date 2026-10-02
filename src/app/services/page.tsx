@@ -62,28 +62,28 @@ export default function ServicesPage() {
     { ...services[3], title: "Product evolution", text: "Start from what you have to identify friction points and improve the experience.", items: ["Interface and journey review", "Component redesign", "Improved maintainability"] },
   ] : services;
   return (
-    <div className="shell section-space">
-      <header className="page-heading">
-        <p className="eyebrow">{en ? "EXPERTISE / FROM NEED TO PRODUCT" : "EXPERTISES / DU BESOIN AU PRODUIT"}</p>
-        <h1>
+    <div className="mx-auto w-[min(1200px,calc(100%-96px))] py-[88px] max-[1050px]:w-[calc(100%-64px)] max-[799px]:w-[calc(100%-40px)] max-[799px]:py-[58px]">
+      <header className="mb-[55px] max-w-[850px]">
+        <p className="mb-5 text-[10px] font-semibold leading-[1.6] tracking-[1.9px] text-[var(--portfolio-muted)]">{en ? "EXPERTISE / FROM NEED TO PRODUCT" : "EXPERTISES / DU BESOIN AU PRODUIT"}</p>
+        <h1 className="mb-6 text-[clamp(42px,5.4vw,70px)] font-medium leading-[1.15] tracking-[-3px]">
           {en ? "Your vision." : "Votre vision."}
           <br />
           {en ? <>My know-<em>how.</em></> : <>Mon savoir-<em>faire.</em></>}
         </h1>
-        <p>
+        <p className="max-w-[660px] text-[15px] leading-[1.9] text-[var(--portfolio-muted)] max-[799px]:text-[13px]">
           {en ? "Technical support focused on what matters: your users, your goals and product quality." : "Un accompagnement technique attentif à l’essentiel : vos utilisateurs, vos objectifs et la qualité du produit."}
         </p>
       </header>
-      <div className="services-grid">
+      <div className="grid grid-cols-2 gap-6 max-[799px]:grid-cols-1">
         {localizedServices.map(({ icon: Icon, title, text, items }) => (
-          <article className="service-card" key={title}>
-            <Icon size={28} />
-            <h2>{title}</h2>
-            <p>{text}</p>
-            <ul className="feature-list">
+          <article className="rounded-[12px] border border-[var(--portfolio-line)] bg-[#f1eeef] p-[34px] max-[799px]:p-[25px]" key={title}>
+            <Icon size={28} className="mb-6 text-[var(--portfolio-purple)]" />
+            <h2 className="text-[26px] tracking-[-1px]">{title}</h2>
+            <p className="my-5 text-[13px] leading-[1.9] text-[var(--portfolio-muted)]">{text}</p>
+            <ul className="grid list-none gap-[17px] p-0">
               {items.map((item) => (
-                <li key={item}>
-                  <Check size={16} />
+                <li className="flex items-start gap-3 text-[13px] leading-[1.7]" key={item}>
+                  <Check className="mt-[3px] shrink-0 text-[var(--portfolio-purple)]" size={16} />
                   {item}
                 </li>
               ))}
@@ -91,12 +91,12 @@ export default function ServicesPage() {
           </article>
         ))}
       </div>
-      <section className="section-space">
-        <p className="eyebrow">{en ? "A CLEAR COLLABORATION" : "UNE COLLABORATION LISIBLE"}</p>
-        <h2>
+      <section className="py-[88px] max-[799px]:py-[58px]">
+        <p className="mb-5 text-[10px] font-semibold leading-[1.6] tracking-[1.9px] text-[var(--portfolio-muted)]">{en ? "A CLEAR COLLABORATION" : "UNE COLLABORATION LISIBLE"}</p>
+        <h2 className="text-[clamp(28px,3.2vw,43px)] font-medium tracking-[-1.8px]">
           {en ? <>Move forward, <em>step by step.</em></> : <>Avancer, <em>étape par étape.</em></>}
         </h2>
-        <div className="process-grid">
+        <div className="my-10 grid grid-cols-4 gap-[25px] max-[799px]:grid-cols-2">
           {[
             {
               title: en ? "Understand" : "Comprendre",
@@ -116,13 +116,13 @@ export default function ServicesPage() {
             },
           ].map((item, i) => (
             <div key={item.title}>
-              <span>0{i + 1}</span>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
+              <span className="text-[12px] text-[var(--portfolio-purple)]">0{i + 1}</span>
+              <h3 className="mt-[18px] font-medium">{item.title}</h3>
+              <p className="text-[12px] leading-[1.9] text-[var(--portfolio-muted)]">{item.text}</p>
             </div>
           ))}
         </div>
-        <Link href="/contact" className="button button-primary">
+        <Link href="/contact" className="inline-flex min-h-12 items-center justify-center gap-3.5 rounded-md bg-[var(--portfolio-purple)] px-6 py-3.5 text-xs font-medium text-white transition hover:-translate-y-0.5 hover:bg-[#5933b5]">
           {en ? "Let’s discuss your needs" : "Parlons de votre besoin"} <ArrowUpRight size={18} />
         </Link>
       </section>

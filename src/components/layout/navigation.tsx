@@ -35,9 +35,9 @@ export function Navigation() {
     };
   }, []);
   return (
-    <header className="site-header">
-      <nav className="shell nav-bar" aria-label="Navigation principale">
-        <Link href="/" className="wordmark" onClick={() => setOpen(false)}>
+    <header className="sticky top-0 z-40 border-b border-[var(--portfolio-line)] bg-[#faf9f6ed] backdrop-blur-[16px]">
+      <nav className="relative mx-auto flex min-h-[92px] w-[min(1200px,calc(100%-96px))] items-center justify-between gap-6 max-[1050px]:w-[calc(100%-64px)] max-[799px]:min-h-[76px] max-[799px]:w-[calc(100%-40px)]" aria-label="Navigation principale">
+        <Link href="/" className="text-[30px] font-bold tracking-[-1.8px]" onClick={() => setOpen(false)}>
           landry<span>.</span>
           <span className="wordmark-caption">DEV & CREATIVE</span>
         </Link>
@@ -63,7 +63,7 @@ export function Navigation() {
         <div className="nav-actions">
           <LanguageSwitcher />
           <ThemeToggle />
-          <Link href="/contact" className="button button-dark nav-contact">
+          <Link href="/contact" className="inline-flex min-h-12 items-center gap-3 rounded-md bg-[#27252e] px-5 text-xs font-medium text-white max-[799px]:hidden">
             {t("contact")} <ArrowUpRight size={16} />
           </Link>
           <button
