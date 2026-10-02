@@ -72,10 +72,10 @@ export default function TestimonialPage() {
       <section className="px-6 lg:px-8 mb-16">
         <div className="max-w-7xl mx-auto text-center">
           <div className="space-y-6">
-            <h1 className="text-5xl lg:text-6xl font-bold text-gray-900">
+            <h1 className="text-5xl font-bold text-gray-900 dark:text-gray-100 lg:text-6xl">
               <span className="bg-gradient-to-r from-yellow-400 to-purple-600 bg-clip-text text-transparent">Testimonials</span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="mx-auto max-w-3xl text-xl leading-relaxed text-gray-600 dark:text-gray-300">
               Don&apos;t just take my word for it. Here&apos;s what my colaborator
               have to say about working with me.
             </p>
@@ -114,7 +114,7 @@ export default function TestimonialPage() {
             {testimonials.map((testimonial) => (
               <div
                 key={testimonial.id}
-                className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 relative"
+                className="relative rounded-2xl border border-gray-200 bg-white p-8 transition-all duration-300 hover:shadow-xl dark:border-[#39323f] dark:bg-[#1c1d23]"
               >
                 <Quote
                   className="absolute top-6 right-6 text-orange-200"
@@ -130,10 +130,10 @@ export default function TestimonialPage() {
                     className="rounded-full mr-4"
                   />
                   <div className="text-justify">
-                    <h3 className="font-bold text-gray-900">
+                    <h3 className="font-bold text-gray-900 dark:text-gray-100">
                       {testimonial.name}
                     </h3>
-                    <p className="text-gray-600  text-sm text-justify">
+                    <p className="text-justify text-sm text-gray-600 dark:text-gray-300">
                       {testimonial.role}
                     </p>
                     <p className="text-gray-500 text-sm">
@@ -184,7 +184,7 @@ export default function TestimonialPage() {
                   })}
                 </div>
 
-                <p className="text-gray-700 text-justify leading-relaxed mb-4">
+                <p className="mb-4 text-justify leading-relaxed text-gray-700 dark:text-gray-300">
                   &quot;{testimonial.text}&quot;
                 </p>
 

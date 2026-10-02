@@ -18,7 +18,7 @@ export default function AboutPage() {
         </h1>
       </header>
       <section className="grid grid-cols-[0.85fr_1.15fr] items-center gap-[70px] max-[1050px]:gap-[35px] max-[799px]:grid-cols-1">
-        <div className="relative h-[430px] overflow-hidden rounded-[100px_100px_12px_12px] bg-[#e8dff2] max-[799px]:h-[400px] max-[799px]:w-full max-[799px]:max-w-[420px]">
+        <div className="relative h-[430px] overflow-hidden rounded-[100px_100px_12px_12px] bg-[#e8dff2] dark:bg-[#2d2939] max-[799px]:h-[400px] max-[799px]:w-full max-[799px]:max-w-[420px]">
           <Image
             src="/assets/profil.png"
             alt="Portrait de Landry"
@@ -93,7 +93,7 @@ export default function AboutPage() {
               <h3 className="text-base font-medium">{group.title}</h3>
               <div className="mt-[15px] flex flex-wrap gap-[7px]">
                 {group.items.map((item) => (
-                  <span className="rounded-[4px] bg-[#efedf0] px-[9px] py-[5px] text-[9px] text-[#625b6c]" key={item}>{item}</span>
+                  <span className="rounded-[4px] bg-[#efedf0] px-[9px] py-[5px] text-[9px] text-[#625b6c] dark:bg-[#25252e] dark:text-[#c3bacf]" key={item}>{item}</span>
                 ))}
               </div>
             </div>

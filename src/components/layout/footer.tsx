@@ -7,7 +7,7 @@ export function Footer() {
   const { language } = useLanguage();
   const english = language === "en";
   return (
-    <footer className="bg-[#27252e] py-4 text-white">
+    <footer className="bg-[#27252e] py-4 text-white dark:bg-[#111116]">
       <div className="mx-auto w-[min(1200px,calc(100%-96px))] max-[799px]:w-[calc(100%-40px)]">
         <div className="flex items-end justify-between gap-8 py-16 max-[799px]:flex-col max-[799px]:items-start">
           <div>

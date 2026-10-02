@@ -87,7 +87,7 @@ export default function HomePage() {
           )}
         </div>
       </section>
-      <section className="bg-[#f2eff8]">
+      <section className="bg-[#f2eff8] dark:bg-[#17181d]">
         <div className="mx-auto w-[min(1200px,calc(100%-96px))] py-[88px] max-[1050px]:w-[calc(100%-64px)]">
           <div className="mb-10 flex items-end justify-between gap-8 max-[799px]:items-start max-[799px]:flex-col">
             <div>
@@ -123,7 +123,7 @@ export default function HomePage() {
                 tags: "Node.js / API REST / Bases de données",
               },
             ].map(({ icon: Icon, title, text, tags }, i) => (
-              <Link href="/services" className="group rounded-xl border border-[#e6e3e9] bg-white p-7 transition hover:-translate-y-1 hover:shadow-lg" key={title}>
+              <Link href="/services" className="group rounded-xl border border-[#e6e3e9] bg-white p-7 transition hover:-translate-y-1 hover:shadow-lg dark:border-[#39323f] dark:bg-[#1c1d23]" key={title}>
                 <div className="flex items-center justify-between text-[#7046d5]">
                   <Icon size={25} />
                   <span>0{i + 1}</span>

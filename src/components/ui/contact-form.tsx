@@ -58,7 +58,7 @@ export function ContactForm() {
             autoComplete="name"
             required
             maxLength={100}
-            className="rounded-md border border-[var(--portfolio-line)] bg-transparent px-3 py-3 text-sm outline-none focus:border-[var(--portfolio-purple)]"
+            className="rounded-md border border-[var(--portfolio-line)] bg-transparent px-3 py-3 text-sm outline-none focus:border-[var(--portfolio-purple)] dark:text-[#f0edf5]"
             placeholder={english ? "What is your name?" : "Comment vous appelez-vous ?"}
           />
         </label>
@@ -71,7 +71,7 @@ export function ContactForm() {
             autoComplete="email"
             required
             maxLength={254}
-            className="rounded-md border border-[var(--portfolio-line)] bg-transparent px-3 py-3 text-sm outline-none focus:border-[var(--portfolio-purple)]"
+            className="rounded-md border border-[var(--portfolio-line)] bg-transparent px-3 py-3 text-sm outline-none focus:border-[var(--portfolio-purple)] dark:text-[#f0edf5]"
             placeholder={english ? "you@example.com" : "vous@exemple.com"}
           />
         </label>
@@ -83,7 +83,7 @@ export function ContactForm() {
           name="subject"
           required
           maxLength={160}
-          className="rounded-md border border-[var(--portfolio-line)] bg-transparent px-3 py-3 text-sm outline-none focus:border-[var(--portfolio-purple)]"
+          className="rounded-md border border-[var(--portfolio-line)] bg-transparent px-3 py-3 text-sm outline-none focus:border-[var(--portfolio-purple)] dark:text-[#f0edf5]"
           placeholder={english ? "Website, mobile app, collaboration…" : "Site web, application mobile, collaboration…"}
         />
       </label>
@@ -96,7 +96,7 @@ export function ContactForm() {
           minLength={10}
           maxLength={5000}
           rows={6}
-          className="rounded-md border border-[var(--portfolio-line)] bg-transparent px-3 py-3 text-sm outline-none focus:border-[var(--portfolio-purple)]"
+          className="rounded-md border border-[var(--portfolio-line)] bg-transparent px-3 py-3 text-sm outline-none focus:border-[var(--portfolio-purple)] dark:text-[#f0edf5]"
           placeholder={english ? "Your idea, needs, timeline…" : "Votre idée, vos besoins, votre calendrier…"}
         />
       </label>

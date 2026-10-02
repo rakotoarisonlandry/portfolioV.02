@@ -16,10 +16,10 @@ export function PortfolioCard({
   const { language, t } = useLanguage();
   const english = language === "en";
   return (
-    <article className={`overflow-hidden rounded-xl border border-[var(--portfolio-line)] bg-white ${featured ? "col-span-2" : ""}`}>
+    <article className={`overflow-hidden rounded-xl border border-[var(--portfolio-line)] bg-white dark:bg-[#1c1d23] ${featured ? "col-span-2" : ""}`}>
       <Link
         href={`/work/${project.slug}`}
-        className={`relative block h-[285px] overflow-hidden bg-gradient-to-br from-[#f0eafa] to-[#faf9f6] max-[600px]:h-[240px]`}
+        className={`relative block h-[285px] overflow-hidden bg-gradient-to-br from-[#f0eafa] to-[#faf9f6] dark:from-[#2d2939] dark:to-[#24222c] max-[600px]:h-[240px]`}
         aria-label={`${t("discover")} ${project.title}`}
       >
         {project.image ? (
@@ -46,7 +46,7 @@ export function PortfolioCard({
         <p className="mt-3 text-sm leading-7 text-[var(--portfolio-muted)]">{project.summary}</p>
         <div className="mt-5 flex flex-wrap gap-2">
           {project.stack.slice(0, 4).map((tag) => (
-            <span className="rounded bg-[#efedf0] px-2 py-1 text-[10px] text-[#625b6c]" key={tag}>{tag}</span>
+            <span className="rounded bg-[#efedf0] px-2 py-1 text-[10px] text-[#625b6c] dark:bg-[#25252e] dark:text-[#c3bacf]" key={tag}>{tag}</span>
           ))}
         </div>
       </div>

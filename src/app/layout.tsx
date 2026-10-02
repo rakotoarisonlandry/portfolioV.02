@@ -27,7 +27,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
       <body>
-        <a href="#main-content" className="fixed -top-24 left-5 z-[100] rounded-lg border-2 border-[#7046d5] bg-white px-5 py-3 focus:top-3">
+        <a href="#main-content" className="fixed -top-24 left-5 z-[100] rounded-lg border-2 border-[#7046d5] bg-white px-5 py-3 dark:bg-[#24222c] dark:text-white focus:top-3">
           Aller au contenu
         </a>
         <LanguageProvider>

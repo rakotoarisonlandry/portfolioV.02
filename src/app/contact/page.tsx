@@ -56,7 +56,7 @@ export default function ContactPage() {
             {en ? "Find my code on GitHub" : "Retrouvez mon code sur GitHub"} <ArrowUpRight size={16} />
           </a>
         </aside>
-        <div className="rounded-[12px] border border-[var(--portfolio-line)] bg-white p-[35px] max-[1050px]:p-6 max-[799px]:p-[23px_18px]">
+        <div className="rounded-[12px] border border-[var(--portfolio-line)] bg-white p-[35px] dark:bg-[#1c1d23] max-[1050px]:p-6 max-[799px]:p-[23px_18px]">
           <ContactForm />
         </div>
       </div>

@@ -67,10 +67,10 @@ export default function BlogPage() {
       <section className="px-6 lg:px-8 mb-16">
         <div className="max-w-7xl mx-auto text-center">
           <div className="space-y-6">
-            <h1 className="text-5xl lg:text-6xl font-bold text-gray-900">
+            <h1 className="text-5xl font-bold text-gray-900 dark:text-gray-100 lg:text-6xl">
               My               <span className="bg-gradient-to-r from-yellow-400 to-purple-600 bg-clip-text text-transparent">Blog</span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="mx-auto max-w-3xl text-xl leading-relaxed text-gray-600 dark:text-gray-300">
               Thoughts, tutorials, and insights about web development, design, and the ever-evolving world of
               technology.
             </p>
@@ -81,7 +81,7 @@ export default function BlogPage() {
       {/* Featured Post */}
       <section className="px-6 lg:px-8 mb-16">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-gradient-to-r from-orange-50 to-yellow-50 rounded-3xl p-8 lg:p-12">
+          <div className="rounded-3xl bg-gradient-to-r from-orange-50 to-yellow-50 p-8 dark:from-[#30243f] dark:to-[#24222c] lg:p-12">
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div className="space-y-6">
                 <div className="flex items-center space-x-2">
@@ -90,8 +90,8 @@ export default function BlogPage() {
                   </span>
                   <span className="text-gray-600 text-sm">Latest Post</span>
                 </div>
-                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">{blogPosts[0].title}</h2>
-                <p className="text-gray-600 leading-relaxed">{blogPosts[0].excerpt}</p>
+                <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 lg:text-4xl">{blogPosts[0].title}</h2>
+                <p className="leading-relaxed text-gray-600 dark:text-gray-300">{blogPosts[0].excerpt}</p>
                 <div className="flex items-center space-x-4 text-sm text-gray-500">
                   <span>{blogPosts[0].date}</span>
                   <span>•</span>
@@ -119,8 +119,8 @@ export default function BlogPage() {
       <section className="px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">All Articles</h2>
-            <p className="text-gray-600">Explore all my articles and tutorials</p>
+            <h2 className="mb-4 text-3xl font-bold text-gray-900 dark:text-gray-100">All Articles</h2>
+            <p className="text-gray-600 dark:text-gray-300">Explore all my articles and tutorials</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
