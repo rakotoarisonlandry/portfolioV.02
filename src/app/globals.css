@@ -2192,13 +2192,14 @@ html.dark {
 }
 .profile-stage {
   position: relative;
-  height: 395px;
-  background: linear-gradient(145deg, #f5f3f6, #e6e2e9);
+  height: clamp(440px, 46vw, 620px);
+  background: transparent;
 }
+
 .profile-photo {
   object-fit: contain;
   object-position: center;
-  padding: 12px 24px 0;
+  padding: 0;
 }
 .profile-caption {
   display: flex;
@@ -2299,7 +2300,7 @@ html.dark {
   color: #a7a2b4;
 }
 .dark .profile-stage {
-  background: linear-gradient(145deg, #292933, #212128);
+  background: transparent;
 }
 .dark .profile-caption {
   background: #1c1d23;
@@ -2366,7 +2367,7 @@ html.dark {
 }
 @media (max-width: 1050px) {
   .profile-stage {
-    height: 350px;
+    height: clamp(400px, 48vw, 500px);
   }
   .profile-card-header,
   .profile-caption {
@@ -2389,15 +2390,15 @@ html.dark {
     max-width: 430px;
   }
   .profile-stage {
-    height: 390px;
+    height: clamp(390px, 82vw, 540px);
   }
 }
 @media (max-width: 560px) {
   .profile-stage {
-    height: 350px;
+    height: min(125vw, 470px);
   }
   .profile-photo {
-    padding: 8px 14px 0;
+    padding: 0;
   }
   .profile-card-header > span:last-child {
     font-size: 7px;
