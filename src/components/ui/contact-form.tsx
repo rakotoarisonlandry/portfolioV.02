@@ -1,7 +1,10 @@
 ﻿"use client";
 import { useState, type FormEvent } from "react";
 import { ArrowUpRight, CheckCircle } from "lucide-react";
+import { useLanguage } from "@/components/layout/language-provider";
 export function ContactForm() {
+  const { language, t } = useLanguage();
+  const english = language === "en";
   const [pending, setPending] = useState(false);
   const [sent, setSent] = useState(false);
   const [error, setError] = useState("");
@@ -33,33 +36,33 @@ export function ContactForm() {
     return (
       <div className="form-success" role="status">
         <CheckCircle size={38} />
-        <h2>Message bien reçu.</h2>
+        <h2>{english ? "Message received." : "Message bien reçu."}</h2>
         <p>
-          Merci pour votre message. Je reviendrai vers vous pour en discuter.
+          {english ? "Thank you for your message. I will get back to you soon." : "Merci pour votre message. Je reviendrai vers vous pour en discuter."}
         </p>
         <button className="button button-dark" onClick={() => setSent(false)}>
-          Envoyer un autre message
+          {english ? "Send another message" : "Envoyer un autre message"}
         </button>
       </div>
     );
   return (
     <form onSubmit={submit} className="contact-form" aria-busy={pending}>
-      <h2>Parlez-moi de votre projet.</h2>
-      <p>Les champs marqués d’un * sont obligatoires.</p>
+      <h2>{english ? "Tell me about your project." : "Parlez-moi de votre projet."}</h2>
+      <p>{english ? "Fields marked with * are required." : "Les champs marqués d’un * sont obligatoires."}</p>
       <div className="form-row">
         <label htmlFor="name">
-          Votre nom *
+          {english ? "Your name *" : "Votre nom *"}
           <input
             id="name"
             name="name"
             autoComplete="name"
             required
             maxLength={100}
-            placeholder="Comment vous appelez-vous ?"
+            placeholder={english ? "What is your name?" : "Comment vous appelez-vous ?"}
           />
         </label>
         <label htmlFor="email">
-          Votre email *
+          {english ? "Your email *" : "Votre email *"}
           <input
             id="email"
             name="email"
@@ -67,22 +70,22 @@ export function ContactForm() {
             autoComplete="email"
             required
             maxLength={254}
-            placeholder="vous@exemple.com"
+            placeholder={english ? "you@example.com" : "vous@exemple.com"}
           />
         </label>
       </div>
       <label htmlFor="subject">
-        Sujet *
+        {english ? "Subject *" : "Sujet *"}
         <input
           id="subject"
           name="subject"
           required
           maxLength={160}
-          placeholder="Site web, application mobile, collaboration…"
+          placeholder={english ? "Website, mobile app, collaboration…" : "Site web, application mobile, collaboration…"}
         />
       </label>
       <label htmlFor="message">
-        Votre message *
+        {english ? "Your message *" : "Votre message *"}
         <textarea
           id="message"
           name="message"
@@ -90,7 +93,7 @@ export function ContactForm() {
           minLength={10}
           maxLength={5000}
           rows={6}
-          placeholder="Votre idée, vos besoins, votre calendrier…"
+          placeholder={english ? "Your idea, needs, timeline…" : "Votre idée, vos besoins, votre calendrier…"}
         />
       </label>
       {error && (
@@ -103,11 +106,11 @@ export function ContactForm() {
         className="button button-primary"
         type="submit"
       >
-        {pending ? "Envoi en cours…" : "Envoyer mon message"}
+        {pending ? t("sending") : t("sendMessage")}
         <ArrowUpRight size={18} />
       </button>
       <p className="form-privacy">
-        Vos coordonnées servent uniquement à répondre à votre demande.
+        {english ? "Your details are only used to answer your request." : "Vos coordonnées servent uniquement à répondre à votre demande."}
       </p>
     </form>
   );

@@ -1,8 +1,11 @@
-﻿import Image from "next/image";
+"use client";
+
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import type { Project } from "@/data/projects";
 import { RobiaVisual } from "./robia-visual";
+import { useLanguage } from "@/components/layout/language-provider";
 export function PortfolioCard({
   project,
   featured = false,
@@ -10,12 +13,14 @@ export function PortfolioCard({
   project: Project;
   featured?: boolean;
 }) {
+  const { language, t } = useLanguage();
+  const english = language === "en";
   return (
     <article className={`portfolio-card ${featured ? "featured-card" : ""}`}>
       <Link
         href={`/work/${project.slug}`}
         className={`project-visual ${project.color}`}
-        aria-label={`Découvrir le projet ${project.title}`}
+        aria-label={`${t("discover")} ${project.title}`}
       >
         {project.image ? (
           <Image
@@ -36,7 +41,7 @@ export function PortfolioCard({
         <p className="eyebrow">{project.label}</p>
         <h3>
           <Link href={`/work/${project.slug}`}>{project.title}</Link>
-          <span>{project.category.join(" + ")}</span>
+          <span>{project.category.map((category) => english && category === "Expérimentation" ? "Experiment" : category).join(" + ")}</span>
         </h3>
         <p>{project.summary}</p>
         <div className="tags">

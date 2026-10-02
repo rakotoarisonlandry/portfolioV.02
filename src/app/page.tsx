@@ -42,13 +42,7 @@ export default function HomePage() {
             collaborations à distance
           </div>
         </div>
-        <figure className="profile-card">
-          <div className="profile-card-header">
-            <span className="profile-monogram" aria-hidden="true">
-              LR.
-            </span>
-            <span>LE DÉVELOPPEUR DERRIÈRE LE CODE</span>
-          </div>
+          
           <div className="profile-stage">
             <Image
               src="/assets/profil.png"
@@ -59,14 +53,6 @@ export default function HomePage() {
               className="profile-photo"
             />
           </div>
-          <figcaption className="profile-caption">
-            <div>
-              <strong>Landry Rakotoarison</strong>
-              <span>Développeur fullstack</span>
-            </div>
-            <span className="profile-specialty">Web & mobile</span>
-          </figcaption>
-        </figure>
       </section>
       <div className="tech-strip">
         <div className="shell">

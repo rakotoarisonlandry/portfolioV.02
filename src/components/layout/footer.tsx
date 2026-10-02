@@ -1,20 +1,25 @@
-﻿import Link from "next/link";
+"use client";
+
+import Link from "next/link";
 import { ArrowUpRight, Github } from "lucide-react";
+import { useLanguage } from "./language-provider";
 export function Footer() {
+  const { language } = useLanguage();
+  const english = language === "en";
   return (
     <footer className="site-footer">
       <div className="shell">
         <div className="footer-top">
           <div>
-            <p className="eyebrow">UNE IDÉE, UN DÉFI, UN PROJET ?</p>
+            <p className="eyebrow">{english ? "AN IDEA, A CHALLENGE, A PROJECT?" : "UNE IDÉE, UN DÉFI, UN PROJET ?"}</p>
             <h2>
-              Créons quelque chose
+              {english ? "Let's create something" : "Créons quelque chose"}
               <br />
-              qui fait la <em>différence.</em>
+              {english ? "that makes a " : "qui fait la "}<em>{english ? "difference." : "différence."}</em>
             </h2>
           </div>
           <Link href="/contact" className="button button-light">
-            Discutons ensemble <ArrowUpRight size={18} />
+            {english ? "Let's talk" : "Discutons ensemble"} <ArrowUpRight size={18} />
           </Link>
         </div>
         <div className="footer-bottom">
@@ -24,7 +29,7 @@ export function Footer() {
           <p>© {new Date().getFullYear()} Landry Rakotoarison</p>
           <div>
             <a href="mailto:landrybrigea@gmail.com">
-              Email <ArrowUpRight size={14} />
+              {english ? "Email" : "Email"} <ArrowUpRight size={14} />
             </a>
             <a
               href="https://github.com/rakotoarisonlandry"

@@ -4,13 +4,16 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
-const links = [
-  { href: "/", label: "Accueil" },
-  { href: "/work", label: "Projets" },
-  { href: "/about", label: "À propos" },
-  { href: "/services", label: "Expertises" },
-];
+import { LanguageSwitcher } from "./language-switcher";
+import { useLanguage } from "./language-provider";
 export function Navigation() {
+  const { t } = useLanguage();
+  const links = [
+    { href: "/", label: t("home") },
+    { href: "/work", label: t("work") },
+    { href: "/about", label: t("about") },
+    { href: "/services", label: t("services") },
+  ];
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const toggle = useRef<HTMLButtonElement>(null);
@@ -58,9 +61,10 @@ export function Navigation() {
           ))}
         </div>
         <div className="nav-actions">
+          <LanguageSwitcher />
           <ThemeToggle />
           <Link href="/contact" className="button button-dark nav-contact">
-            Parlons de votre projet <ArrowUpRight size={16} />
+            {t("contact")} <ArrowUpRight size={16} />
           </Link>
           <button
             ref={toggle}
@@ -75,7 +79,7 @@ export function Navigation() {
         </div>
         {open && (
           <div id="mobile-menu" className="mobile-nav">
-            {[...links, { href: "/contact", label: "Me contacter ↗" }].map(
+            {[...links, { href: "/contact", label: t("contactShort") }].map(
               (link) => (
                 <Link
                   href={link.href}

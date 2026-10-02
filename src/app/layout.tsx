@@ -5,6 +5,7 @@ import "./globals.css";
 import { Navigation } from "@/components/layout/navigation";
 import { Footer } from "@/components/layout/footer";
 import { themeInitScript } from "@/lib/theme";
+import { LanguageProvider } from "@/components/layout/language-provider";
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
@@ -29,11 +30,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <a href="#main-content" className="skip-link">
           Aller au contenu
         </a>
-        <Navigation />
-        <main id="main-content" tabIndex={-1}>
-          {children}
-        </main>
-        <Footer />
+        <LanguageProvider>
+          <Navigation />
+          <main id="main-content" tabIndex={-1}>
+            {children}
+          </main>
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );
