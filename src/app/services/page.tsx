@@ -76,14 +76,14 @@ export default function ServicesPage() {
       </header>
       <div className="grid grid-cols-2 gap-6 max-[799px]:grid-cols-1">
         {localizedServices.map(({ icon: Icon, title, text, items }) => (
-          <article className="rounded-[12px] border border-[var(--portfolio-line)] bg-[#f1eeef] p-[34px] max-[799px]:p-[25px]" key={title}>
-            <Icon size={28} className="mb-6 text-[var(--portfolio-purple)]" />
-            <h2 className="text-[26px] tracking-[-1px]">{title}</h2>
-            <p className="my-5 text-[13px] leading-[1.9] text-[var(--portfolio-muted)]">{text}</p>
+          <article className="rounded-[12px] border border-[var(--portfolio-line)] bg-[#f1eeef] p-[34px] transition-colors max-[799px]:p-[25px] dark:border-[#39323f] dark:bg-[#201b27]" key={title}>
+            <Icon size={28} className="mb-6 text-[var(--portfolio-purple)] dark:text-[#c4a6fa]" />
+            <h2 className="text-[26px] tracking-[-1px] dark:text-[#f0edf5]">{title}</h2>
+            <p className="my-5 text-[13px] leading-[1.9] text-[var(--portfolio-muted)] dark:text-[#b8b1c3]">{text}</p>
             <ul className="grid list-none gap-[17px] p-0">
               {items.map((item) => (
-                <li className="flex items-start gap-3 text-[13px] leading-[1.7]" key={item}>
-                  <Check className="mt-[3px] shrink-0 text-[var(--portfolio-purple)]" size={16} />
+                <li className="flex items-start gap-3 text-[13px] leading-[1.7] dark:text-[#ded9e8]" key={item}>
+                  <Check className="mt-[3px] shrink-0 text-[var(--portfolio-purple)] dark:text-[#c4a6fa]" size={16} />
                   {item}
                 </li>
               ))}

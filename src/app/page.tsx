@@ -87,18 +87,18 @@ export default function HomePage() {
           )}
         </div>
       </section>
-      <section className="bg-[#f2eff8] dark:bg-[#17181d]">
+      <section className="border-y border-[#e6e3e9] bg-[#f2eff8] dark:border-[#39323f] dark:bg-[#17181d]">
         <div className="mx-auto w-[min(1200px,calc(100%-96px))] py-[88px] max-[1050px]:w-[calc(100%-64px)]">
           <div className="mb-10 flex items-end justify-between gap-8 max-[799px]:items-start max-[799px]:flex-col">
             <div>
-              <p className="mb-5 text-[10px] font-semibold tracking-[1.9px] text-[#696773]">02 / {en ? "WHAT I CAN BRING" : "CE QUE JE PEUX APPORTER"}</p>
-              <h2 className="text-[clamp(28px,3.2vw,43px)] font-medium leading-tight tracking-[-1.8px]">
+              <p className="mb-5 text-[10px] font-semibold tracking-[1.9px] text-[#696773] dark:text-[#b8b1c3]">02 / {en ? "WHAT I CAN BRING" : "CE QUE JE PEUX APPORTER"}</p>
+              <h2 className="text-[clamp(28px,3.2vw,43px)] font-medium leading-tight tracking-[-1.8px] dark:text-[#f0edf5]">
                 {en ? "Think about the experience." : "Penser l’expérience."}
                 <br />
                 <em>{en ? "Build the solution." : "Construire la solution."}</em>
               </h2>
             </div>
-            <p className="max-w-[390px] text-sm leading-7 text-[#696773]">
+            <p className="max-w-[390px] text-sm leading-7 text-[#696773] dark:text-[#b8b1c3]">
               {en ? "From interface to data, I connect technical details to users’ needs." : "De l’interface aux données, je relie les détails techniques aux besoins des utilisateurs."}
             </p>
           </div>
@@ -123,15 +123,15 @@ export default function HomePage() {
                 tags: "Node.js / API REST / Bases de données",
               },
             ].map(({ icon: Icon, title, text, tags }, i) => (
-              <Link href="/services" className="group rounded-xl border border-[#e6e3e9] bg-white p-7 transition hover:-translate-y-1 hover:shadow-lg dark:border-[#39323f] dark:bg-[#1c1d23]" key={title}>
-                <div className="flex items-center justify-between text-[#7046d5]">
+              <Link href="/services" className="group rounded-xl border border-[#e6e3e9] bg-white p-7 transition hover:-translate-y-1 hover:border-[#b59cd9] hover:shadow-lg dark:border-[#39323f] dark:bg-[#201b27] dark:hover:border-[#8e6acb]" key={title}>
+                <div className="flex items-center justify-between text-[#7046d5] dark:text-[#c4a6fa]">
                   <Icon size={25} />
-                  <span>0{i + 1}</span>
+                  <span className="text-[#8b8494] dark:text-[#b8a6ca]">0{i + 1}</span>
                 </div>
-                <h3 className="mt-7 text-lg font-medium">{title}</h3>
-                <p className="mt-3 text-sm leading-7 text-[#696773]">{text}</p>
-                <small className="mt-5 block text-[10px] font-medium tracking-wide text-[#696773]">{tags}</small>
-                <ArrowUpRight className="mt-6 transition group-hover:translate-x-1" size={20} />
+                <h3 className="mt-7 text-lg font-medium dark:text-[#f0edf5]">{title}</h3>
+                <p className="mt-3 text-sm leading-7 text-[#696773] dark:text-[#b8b1c3]">{text}</p>
+                <small className="mt-5 block text-[10px] font-medium tracking-wide text-[#696773] dark:text-[#b8a6ca]">{tags}</small>
+                <ArrowUpRight className="mt-6 text-[#7046d5] transition group-hover:translate-x-1 dark:text-[#c4a6fa]" size={20} />
               </Link>
             ))}
           </div>
