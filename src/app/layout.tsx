@@ -14,7 +14,7 @@ const poppins = Poppins({
 });
 export const metadata: Metadata = {
   title: {
-    default: "Landry — Développeur fullstack, web & mobile",
+    default: "Landry - Développeur fullstack, web & mobile",
     template: "%s | Landry",
   },
   description:
