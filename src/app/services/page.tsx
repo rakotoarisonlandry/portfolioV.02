@@ -66,9 +66,9 @@ export default function ServicesPage() {
       <header className="mb-[55px] max-w-[850px]">
         <p className="mb-5 text-[10px] font-semibold leading-[1.6] tracking-[1.9px] text-[var(--portfolio-muted)]">{en ? "EXPERTISE / FROM NEED TO PRODUCT" : "EXPERTISES / DU BESOIN AU PRODUIT"}</p>
         <h1 className="mb-6 text-[clamp(42px,5.4vw,70px)] font-medium leading-[1.15] tracking-[-3px]">
-          {en ? "Your vision." : "Votre vision."}
+          {en ? "Your vision" : "Votre vision"}
           <br />
-          {en ? <>My know-<em>how.</em></> : <>Mon savoir-<em>faire.</em></>}
+          {en ? <>My know-<em>how</em></> : <>Mon savoir-<em>faire</em></>}
         </h1>
         <p className="max-w-[660px] text-[15px] leading-[1.9] text-[var(--portfolio-muted)] max-[799px]:text-[13px]">
           {en ? "Technical support focused on what matters: your users, your goals and product quality." : "Un accompagnement technique attentif à l’essentiel : vos utilisateurs, vos objectifs et la qualité du produit."}

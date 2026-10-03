@@ -12,7 +12,7 @@ export default function WorkPage() {
         <h1 className="mb-6 text-[clamp(42px,5.4vw,70px)] font-medium leading-[1.15] tracking-[-3px]">
           {en ? "Every project," : "Chaque projet,"}
           <br />
-          {en ? <>a new <em>perspective.</em></> : <>une nouvelle <em>perspective.</em></>}
+          {en ? <>a new <em>perspective</em></> : <>une nouvelle <em>perspective</em></>}
         </h1>
         <p className="max-w-[660px] text-[15px] leading-[1.9] text-[var(--portfolio-muted)] max-[799px]:text-[13px]">
           {en ? "Useful products, technical challenges and the desire to improve with every iteration. Explore the projects and what happens behind the scenes." : "Des produits utiles, des défis techniques et l’envie de faire mieux à chaque itération. Explorez les projets et leurs coulisses."}

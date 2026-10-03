@@ -12,9 +12,9 @@ export default function AboutPage() {
       <header className="mb-[55px] max-w-[850px]">
         <p className="mb-5 text-[10px] font-semibold leading-[1.6] tracking-[1.9px] text-[var(--portfolio-muted)]">{en ? "ABOUT / LANDRY RAKOTOARISON" : "À PROPOS / LANDRY RAKOTOARISON"}</p>
         <h1 className="mb-6 text-[clamp(42px,5.4vw,70px)] font-medium leading-[1.15] tracking-[-3px] max-[799px]:text-[42px]">
-          {en ? "A curious mind." : "Un esprit curieux."}
+          {en ? "A curious mind" : "Un esprit curieux"}
           <br />
-          {en ? <>Concrete <em>solutions.</em></> : <>Des solutions <em>concrètes.</em></>}
+          {en ? <>Concrete <em>solutions</em></> : <>Des solutions <em>concrètes</em></>}
         </h1>
       </header>
       <section className="grid grid-cols-[0.85fr_1.15fr] items-center gap-[70px] max-[1050px]:gap-[35px] max-[799px]:grid-cols-1">
@@ -30,7 +30,7 @@ export default function AboutPage() {
         </div>
         <div>
           <p className="mb-5 text-[10px] font-semibold leading-[1.6] tracking-[1.9px] text-[var(--portfolio-muted)]">{en ? "FULLSTACK DEVELOPER · MADAGASCAR" : "DÉVELOPPEUR FULLSTACK · MADAGASCAR"}</p>
-          <h2>{en ? "Hello, I’m Landry." : "Bonjour, moi c’est Landry."}</h2>
+          <h2>{en ? "Hello, I’m Landry" : "Bonjour, moi c’est Landry"}</h2>
           <p className="mt-5 text-[14px] leading-[1.9] text-[var(--portfolio-muted)]">
             {en ? "I build web and mobile applications by connecting interface design, business logic and data. What drives me: understanding a need, simplifying journeys and building a meaningful solution." : <>Je développe des applications web et mobiles en reliant conception
             d’interface, logique métier et données. Ce qui m’intéresse :
