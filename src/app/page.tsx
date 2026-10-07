@@ -24,9 +24,9 @@ export default function HomePage() {
             <span className="h-2 w-2 rounded-full bg-[#527d5c] shadow-[0_0_0_4px_#527d5c12]" /> {en ? "FULLSTACK DEVELOPER · WEB & MOBILE" : "DÉVELOPPEUR FULLSTACK · WEB & MOBILE"}
           </p>
           <h1 className="my-7 text-[clamp(52px,6.25vw,85px)] font-medium leading-[1.05] tracking-[-5px] max-[1050px]:tracking-[-3.5px] max-[799px]:text-[clamp(60px,12vw,85px)]">
-            {en ? "Ideas." : "Des idées."}
+            {en ? "Ideas," : "Des idées,"}
             <br />
-            {en ? "Code." : "Du code."}
+            {en ? "Code," : "Du code,"}
             <br />
             <span>{en ? "Impact." : "De l’impact."}</span>
           </h1>
