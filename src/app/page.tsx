@@ -72,7 +72,7 @@ export default function HomePage() {
           <div>
             <p className="mb-5 text-[10px] font-semibold tracking-[1.9px] text-[#696773]">01 / {en ? "SELECTED PROJECTS" : "PROJETS SÉLECTIONNÉS"}</p>
             <h2 className="text-[clamp(28px,3.2vw,43px)] font-medium leading-tight tracking-[-1.8px]">
-              {en ? <>Code comes <em>to life.</em></> : <>Le code prend <em>vie.</em></>}
+              {en ? <>Code comes <em className="animate-heartbeat">to life.</em></> : <>Le code prend <em className="animate-heartbeat">la vie.</em></>}
             </h2>
           </div>
           <Link href="/work" className="inline-flex items-center gap-2 text-xs font-medium text-[#696773] transition hover:text-[#7046d5]">
