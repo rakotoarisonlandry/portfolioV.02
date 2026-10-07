@@ -1,18 +1,22 @@
 ﻿"use client";
+
 import Lottie from "lottie-react";
 import animationData from "../../../public/assets/lottie/logo.json";
+
 export default function Loader() {
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-white"
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-white dark:bg-[#17141c]"
       role="status"
-      aria-label="Chargement"
+      aria-live="polite"
+      aria-label="Chargement du portfolio"
     >
       <Lottie
         animationData={animationData}
         loop
         autoplay
-        style={{ width: 270, height: 270 }}
+        className="h-auto w-[min(82vw,460px)]"
+        aria-hidden="true"
       />
     </div>
   );

@@ -4,6 +4,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "@/components/layout/navigation";
 import { Footer } from "@/components/layout/footer";
+import AppWrapper from "@/components/layout/AppWrapper";
 import { themeInitScript } from "@/lib/theme";
 import { LanguageProvider } from "@/components/layout/language-provider";
 const poppins = Poppins({
@@ -30,13 +31,15 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <a href="#main-content" className="fixed -top-24 left-5 z-[100] rounded-lg border-2 border-[#7046d5] bg-white px-5 py-3 dark:bg-[#24222c] dark:text-white focus:top-3">
           Aller au contenu
         </a>
-        <LanguageProvider>
-          <Navigation />
-          <main id="main-content" tabIndex={-1}>
-            {children}
-          </main>
-          <Footer />
-        </LanguageProvider>
+        <AppWrapper>
+          <LanguageProvider>
+            <Navigation />
+            <main id="main-content" tabIndex={-1}>
+              {children}
+            </main>
+            <Footer />
+          </LanguageProvider>
+        </AppWrapper>
       </body>
     </html>
   );
